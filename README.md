@@ -1,0 +1,2 @@
+# LinguistaFrontend
+frontend | react app
