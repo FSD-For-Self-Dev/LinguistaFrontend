@@ -1,25 +1,77 @@
 @import '@styles/colors';
+@import '@styles/mixins';
 
 header {
 	color: #202020;
 	border-bottom: 1px solid #ddd;
 	height: 100px;
-	display: flex;
+	border: 1px solid red;
 	padding: 0 25px;
 }
 
-.searching {
+.contetnt {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
+	flex-direction: row;
 	justify-content: space-between;
+	width: 100%;
+}
+
+.logoBlock {
+	text-decoration: none;
+	color: #202020;
+	display: flex;
+	align-items: center;
+}
+.logoImg {
+	width: 75px;
+	border-right: 1px solid $gray_light;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logoText {
+	@include font-source-sans(
+		24px,
+		$neutral-text-main-color,
+		500,
+		29px,
+		'Fredoka'
+	);
+	padding: 0 29px;
+
+	span {
+		@include font-source-sans(
+			16px,
+			$neutral-text-dark-color,
+			400,
+			19px,
+			'Fredoka'
+		);
+	}
+}
+
+.searching {
+	gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	align-items: center;
+	border: 1px solid red;
 }
 
 .searchInput {
 	border: 1px solid #ddd;
 	position: relative;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 11px 20px;
+	@include font-source-sans(
+		12px,
+		$neutral-text-dark-color,
+		400,
+		14.5px,
+		'Inter'
+	);
 
 	&:hover,
 	&:focus {
@@ -27,16 +79,28 @@ header {
 	}
 }
 
-.searchBlock {
+.inputBlock {
 	position: relative;
 }
 
-.searchIcon {
+// .searchIcon {
+// 	position: absolute;
+// 	right: 20px;
+// 	top: 10px;
+// 	width: 20px;
+// 	height: 20px;
+// }
+
+.searchBtn {
 	position: absolute;
-	right: 20px;
-	top: 10px;
-	width: 20px;
-	height: 20px;
+	right: 0;
+	top: 0;
+	width: 61px;
+	height: 100%;
+	border: 1px solid $neutral-line-color;
+	border-radius: 0 10px 10px 0;
+	background: $neutral-background-second-color
+		url('../../assets/icons/icon_search.svg') center/20px 20px no-repeat;
 }
 
 .filter {
@@ -109,21 +173,6 @@ header {
 	align-items: center;
 }
 
-.logoBlock {
-	text-decoration: none;
-	color: #202020;
-	display: flex;
-	align-items: center;
-}
-
-.logoText {
-	font-weight: 500;
-	padding-left: 53px;
-
-	span {
-		font-weight: 400;
-	}
-}
 @media screen and (min-width: 960px) {
 	header {
 		display: flex;
@@ -133,10 +182,10 @@ header {
 	}
 
 	.searching {
-		width: 769px;
+		width: 779px;
 	}
 
-	.searchBlock {
+	.inputBlock {
 		width: 520px;
 	}
 
