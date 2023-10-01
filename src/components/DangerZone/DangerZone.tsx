@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import DangerZoneWord from '@components/DangerZone/DangerZoneWords';
-
+import { Button } from '@ui/Button';
 import triangle from '@assets/icons/warning-triangle.svg';
 import styles from './DangerZone.module.scss';
 
@@ -17,7 +17,8 @@ function DangerZone() {
 					</p>
 				</div>
 				<div className={styles.title_right}>
-					<button className={styles.helpButton}>Спасти!</button>
+					<Button className={styles.button}>Спасти!</Button>
+
 					<Link to="/dangerZoneCards" className={styles.linkButton}>
 						{/* TODO счетчик кол-ва карточек (вместо цифры 15) */}
 						Смотри все (15)

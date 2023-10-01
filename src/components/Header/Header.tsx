@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { Button } from '@ui/Button';
 import iconSearch from '@assets/icons/icon_search.svg';
 import iconGlobus from '@assets/icons/icon_globus.svg';
 import iconMoon from '@assets/icons/icon_moon.svg';
@@ -9,6 +10,7 @@ import iconFilter from '@assets/icons/icon_filter.svg';
 import iconTags from '@assets/icons/icon_tags.svg';
 import logo from '@assets/icons/logo.svg';
 import style from './Header.module.scss';
+
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
 	//const [language, changeLanguage] = useState('RU');
@@ -39,9 +41,7 @@ const Header = () => {
 				<div className={style.sortingBlock}>
 					<img className={style.sorting} src={iconTags} />
 				</div>
-				<button className={`${style.typeAdd} button button-blue`}>
-					+ Добавить
-				</button>
+				<Button>+&nbsp;Добавить</Button>
 			</div>
 			<div className={style.rightPanel}>
 				<div className={style.userInterface}>

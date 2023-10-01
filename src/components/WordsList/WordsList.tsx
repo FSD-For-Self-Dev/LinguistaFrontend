@@ -3,6 +3,7 @@ import styles from './WordsList.module.scss';
 import { WordCard } from './elements/WordCard';
 import SvgIconHistory from '@assets/icons/icon_history.svg?react';
 import SvgIconView from '@assets/icons/icon_view.svg?react';
+import { Button } from '../ui/Button';
 
 const data: Array<IWordCard> = [
 	{
@@ -58,12 +59,12 @@ export const WordsList = () => {
 					<span className={styles.subTitle}>146 слов и&nbsp;фраз</span>
 				</div>
 				<div className={styles.headerActions}>
-					<button className={`${styles.btn} ${styles.btnBlue}`}>
+					<Button className={styles.btn} size="tall">
 						Добавить в&nbsp;словарь
-					</button>
-					<button className={`${styles.btn} ${styles.btnWhite}`}>
+					</Button>
+					<Button className={styles.btn} theme="transparent" size="tall">
 						Добавить в&nbsp;коллекцию
-					</button>
+					</Button>
 				</div>
 				<div className={styles.headerLinks}>
 					<button className="btn-img" title="Посмотреть историю">
