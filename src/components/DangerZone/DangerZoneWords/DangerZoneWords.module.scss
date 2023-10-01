@@ -1,0 +1,16 @@
+@import '@styles/colors.scss';
+@import '@styles/mixins';
+
+.container {
+	background-color: $white;
+	border: 1px solid $gray_light;
+	border-radius: 10px;
+	width: 278px;
+	height: 178px;
+	padding: 10px;
+
+	.icons_container {
+		display: flex;
+		gap: 10px;
+	}
+}

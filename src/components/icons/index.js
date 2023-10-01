@@ -1,0 +1,14 @@
+export { SvgStatusActive } from './StatusActive';
+export { SvgIconCopy } from './IconCopy';
+export { SvgAddToFavorite } from './AddToFavorite';
+export { SvgIconDots } from './SvgIconDots/SvgIconDots';
+export { SvgIconView } from './IconView';
+export { SvgStatusNotActive } from './StatusNotActive';
+export { SvgIconQuestion } from './IconHelp';
+export { SvgIconHome } from './IconHome';
+export { SvgIconLanguages } from './IconLanguages';
+export { SvgIconDictionary } from './IconDictionary';
+export { SvgIconCollections } from './IconCollections';
+export { SvgIconFavorite } from './IconFavorite';
+export { SvgIconExercises } from './IconExercises';
+export { SvgIconInfo } from './IconInfo';

@@ -1,0 +1,171 @@
+@import '@styles/colors';
+
+header {
+	color: #202020;
+	border-bottom: 1px solid #ddd;
+	height: 100px;
+	display: flex;
+	padding: 0 25px;
+}
+
+.searching {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.searchInput {
+	border: 1px solid #ddd;
+	position: relative;
+	border-radius: 5px;
+	padding: 11px 20px;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+.searchBlock {
+	position: relative;
+}
+
+.searchIcon {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.filter {
+	width: 25px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.sorting {
+	width: 24px;
+	height: 24px;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.typeAdd {
+	border-radius: 5px;
+	background: $blue_dark;
+	cursor: pointer;
+}
+
+.lang {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.selectLang {
+	appearance: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-left: 10px;
+	border: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+.userInterface {
+	button {
+		cursor: pointer;
+	}
+}
+
+.themeSelect {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.notification {
+	width: 20px;
+	height: 21px;
+	cursor: pointer;
+}
+
+.userCabinet {
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+}
+
+.userInterface {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logoBlock {
+	text-decoration: none;
+	color: #202020;
+	display: flex;
+	align-items: center;
+}
+
+.logoText {
+	font-weight: 500;
+	padding-left: 53px;
+
+	span {
+		font-weight: 400;
+	}
+}
+@media screen and (min-width: 960px) {
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.searching {
+		width: 769px;
+	}
+
+	.searchBlock {
+		width: 520px;
+	}
+
+	.searchInput {
+		width: 100%;
+	}
+
+	.typeAdd {
+		padding: 13px 19px;
+	}
+
+	.rightPanel {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.lang {
+		margin-left: 50px;
+	}
+
+	.userInterface {
+		width: 118px;
+	}
+
+	.logoText {
+		font-size: 24px;
+
+		span {
+			font-size: 16px;
+		}
+	}
+}

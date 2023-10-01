@@ -1,0 +1,101 @@
+@import '@styles/colors.scss';
+@import '@styles/mixins';
+
+.card {
+	box-sizing: border-box;
+	padding: 20px 33px 33px;
+	border-radius: 10px;
+	border: solid 1px $gray_light;
+	background-color: $white;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&.withBg {
+		.cardBody {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.svgAddToFavorite {
+			stroke: #fafafa;
+		}
+	}
+
+	&:not(.withBg) {
+		.cardBody {
+			background-color: #f4f4f4;
+		}
+
+		.svgAddToFavorite {
+			stroke: #595d68;
+		}
+	}
+
+	.svgFavorite {
+		fill: #ff482f;
+		stroke: #ff482f;
+	}
+}
+
+.cardHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 28px;
+}
+
+.cardActions {
+	display: flex;
+	gap: 12px;
+}
+
+.cardBody {
+	background-color: #f4f4f4;
+	box-sizing: border-box;
+	padding: 25px 30px;
+	border: solid 1px $gray_light;
+	border-radius: 10px;
+	margin-bottom: 16px;
+}
+
+.type {
+	@include font-source-sans(12px, $dark, 400, 'auto', 'Fredoka');
+	text-transform: uppercase;
+	margin-top: 0;
+	text-align: center;
+}
+
+.word {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 23px 0 21px;
+}
+
+.wordText {
+	@include font-source-sans(24px, $black, 500);
+	text-align: center;
+}
+
+.levelWrapper {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.level {
+	padding: 6px 12px;
+	border-radius: 5px;
+	@include font-source-sans(10px, $dark, 400, 'normal', 'Fredoka');
+	text-transform: uppercase;
+	background-color: $blue;
+}
+
+.cardFooter {
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	padding: 26px 0 24px;
+	text-align: center;
+}

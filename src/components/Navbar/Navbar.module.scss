@@ -1,0 +1,98 @@
+@import '@styles/colors.scss';
+@import '@styles/mixins';
+
+.container {
+	width: 100px;
+	height: 100vh;
+	background-color: $white;
+	border-right: 1px solid $gray_light;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.4s ease-out;
+}
+
+.navigation {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0;
+		margin: 0 auto;
+
+		li {
+			height: 44px;
+			margin: 12px 0 12px 28px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			svg {
+				margin: 0 24.5px 0 9.5px;
+			}
+
+			&:hover {
+				background-color: $blue_dark;
+				border-radius: 5px;
+
+				&:hover .title {
+					@include font-source-sans(16px, $white, 400, 19px);
+				}
+			}
+		}
+	}
+}
+
+.link {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #202020;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+.title {
+	display: none;
+	width: 100px;
+	margin-right: 17.5px;
+	text-align: start;
+	@include font-source-sans(16px, $black, 400, 19px);
+}
+
+.border {
+	border: 0.5px solid $gray_light;
+	width: 100%;
+	margin: 0;
+}
+
+.container:hover {
+	width: 252px;
+}
+
+.container:hover .title {
+	display: inline;
+}
+
+.btn_up {
+	width: 15px;
+	height: 9px;
+	background-color: transparent;
+	background-image: url('@assets/icons/icon_arrow_up.svg');
+	background-position: center;
+	cursor: pointer;
+	margin-bottom: 54px;
+	border: none;
+}

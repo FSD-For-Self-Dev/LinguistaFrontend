@@ -1,0 +1,52 @@
+@import '@styles/colors.scss';
+@import '@styles/mixins';
+
+.section {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5em;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.title_left {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			.itemRed {
+				@include font-source-sans(16px, $red, 400, 19px);
+			}
+
+			.itemGrey {
+				@include font-source-sans(12px, $gray_danger, 400, 15px);
+			}
+		}
+
+		.title_right {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			.helpButton {
+				background-color: $blue;
+				border-radius: 5px;
+				padding: 12px 45px;
+				border: none;
+				@include font-source-sans(14px, $black, 500, 17px);
+			}
+
+			.linkButton {
+				@include font-source-sans(12px, $gray_danger, 400, 15px);
+				text-decoration: none;
+			}
+		}
+	}
+
+	.slider {
+		display: flex;
+		justify-content: space-between;
+	}
+}

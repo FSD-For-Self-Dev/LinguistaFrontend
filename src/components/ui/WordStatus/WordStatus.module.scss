@@ -1,0 +1,19 @@
+@import '@styles/colors.scss';
+@import '@styles//mixins';
+
+.status {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 12px;
+	font-weight: 500;
+
+	&.light {
+		@include font-source-sans(12px, $white, 500);
+	}
+
+	&.dark {
+		@include font-source-sans(12px, $black, 500);
+	}
+}

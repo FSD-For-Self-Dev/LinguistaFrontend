@@ -1,0 +1,50 @@
+@import '@styles/colors.scss';
+
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.userInfo {
+	display: flex;
+	align-items: center;
+}
+
+.userIcon {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.name {
+	@include font-source-sans(20px, $black_text, 400, 24px, 'Fredoka');
+
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.username {
+	@include font-source-sans(16px, $white_aluminum, 400, 20px, 'Fredoka');
+
+	margin: 0;
+}
+
+.dateAdded {
+	display: flex;
+	align-items: center;
+}
+
+.added {
+	@include font-source-sans(14px, $black_text, 400, 17px);
+
+	display: inline-block;
+	margin: 0;
+}
+
+.ago {
+	@include font-source-sans(10px, $white_aluminum, 400, 12px);
+
+	display: inline-block;
+	margin: 0 10px 0;
+}
