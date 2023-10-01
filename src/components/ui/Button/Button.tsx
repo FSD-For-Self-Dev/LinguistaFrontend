@@ -11,7 +11,7 @@ interface Props {
 	size?: ButtonSize;
 	type?: 'submit' | 'reset' | 'button';
 	disabled?: boolean;
-	icon?: boolean;
+	active?: boolean;
 	onClick?: () => void;
 }
 
@@ -22,7 +22,7 @@ export const Button = ({
 	size = 'normal',
 	type = 'button',
 	disabled = false,
-
+	active,
 	onClick,
 }: Props) => {
 	return (
@@ -31,6 +31,7 @@ export const Button = ({
 				styles.button,
 				styles[`button_${theme}`],
 				styles[`button_${size}`],
+				active && styles[`button_${theme}_active`],
 				className
 			)}
 			onClick={onClick}

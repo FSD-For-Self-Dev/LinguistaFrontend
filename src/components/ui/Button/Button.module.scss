@@ -33,10 +33,10 @@
 
 		&:hover {
 			color: $neutral-text-contrast-color;
+		}
 
-			& .withIcon {
-				color: $neutral-text-contrast-color;
-			}
+		&_active {
+			background-color: $primary-button-dark-color;
 		}
 	}
 
@@ -46,6 +46,10 @@
 
 		&:hover {
 			color: $neutral-text-contrast-color;
+		}
+
+		&_active {
+			background-color: $secondary-button-bright-color;
 		}
 	}
 
