@@ -51,21 +51,10 @@
 }
 
 .btn {
-	@include font-source-sans(12px, $black);
-	padding: 23px 32px;
-	border-radius: 5px;
-
+	width: 185px;
+	padding: 22px 15px !important;
 	@include media($max-width: 830px) {
 		padding: 10px 15px;
-	}
-
-	&Blue {
-		background-color: $accent-light;
-	}
-
-	&White {
-		border: solid 1px $gray_light;
-		background-color: $white;
 	}
 }
 
