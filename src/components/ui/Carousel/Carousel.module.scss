@@ -15,17 +15,21 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: $black;
 	cursor: pointer;
 }
 
 .prev_arrow {
-	transform: rotate(180deg);
+	transform: rotate(270deg);
 }
 
+.next_arrow {
+	transform: rotate(90deg);
+}
 .next_arrow,
 .prev_arrow {
-	width: 11px;
-	height: 17px;
+	height: 10px;
+	width: 17px;
 	transition: opacity 0.3s ease-in-out;
 	z-index: 2;
 

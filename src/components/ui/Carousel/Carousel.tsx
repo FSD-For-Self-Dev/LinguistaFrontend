@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import SvgArrow from '@assets/icons/wordProfile/arrowRight.svg?react';
+import SvgArrow from '@assets/icons/icon_arrow_up.svg?react';
 import styles from './Carousel.module.scss';
 
 interface CarouselProps {
