@@ -11,14 +11,14 @@ const SelectLang = () => {
 		<div className={styles.lang}>
 			<ButtonIcon>
 				<SvgIconLang />
+				<select
+					className={styles.selectLang}
+					onChange={(evt) => changeLanguage(evt.target.value)}
+				>
+					<option value="ru">ru</option>
+					<option value="eng">eng</option>
+				</select>
 			</ButtonIcon>
-			<select
-				className={styles.selectLang}
-				onChange={(evt) => changeLanguage(evt.target.value)}
-			>
-				<option value="ru">ru</option>
-				<option value="eng">eng</option>
-			</select>
 		</div>
 	);
 };

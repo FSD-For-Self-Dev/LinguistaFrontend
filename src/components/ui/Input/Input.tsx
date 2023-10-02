@@ -1,4 +1,6 @@
+import cx from 'classnames';
 import { ChangeEvent } from 'react';
+import styles from './Input.module.scss';
 
 interface Props {
 	type: string;
@@ -25,7 +27,7 @@ function Input({
 			name={name}
 			id={id}
 			placeholder={placeholder}
-			className={className}
+			className={cx(styles.input, className)}
 			onChange={onChange}
 			value={value}
 		/>

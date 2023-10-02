@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 
 import { Button } from '@ui/Button';
 import CustomLink from '../CustomLink';
-import Input from '../Input';
+import Input from '@ui/Input';
 import ThemeSwitcher from '../ThemeSwitcher';
 import SelectLang from '../SelectLang';
 
@@ -47,7 +47,7 @@ const Header = () => {
 							onChange={(evt) => changeSearchText(evt.target.value)}
 							value={searchText}
 						/>
-						<button type="button" className={styles.searchBtn}></button>
+						<button type="submit" className={styles.searchBtn}></button>
 					</div>
 
 					<div className={styles.filterBLock}>
