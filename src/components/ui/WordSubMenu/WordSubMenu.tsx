@@ -17,7 +17,9 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 	return (
 		<DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
 			<DropdownMenu.Trigger className={styles.btn}>
-				<SvgIconDots colorTheme={colorTheme} />
+				<button data-colorTheme={colorTheme}>
+					<SvgIconDots />
+				</button>
 			</DropdownMenu.Trigger>
 			<DropdownMenu.Portal>
 				<DropdownMenu.Content
