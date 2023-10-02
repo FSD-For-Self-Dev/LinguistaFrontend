@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import CustomLink from '@components/CustomLink';
 
 import SvgIconHome from '@assets/icons/icon_home.svg?react';
@@ -21,8 +22,8 @@ function Navbar() {
 				<ul className={styles.list}>
 					<li>
 						<CustomLink
-							className={styles.link}
-							href="#"
+							className={cx(styles.link)}
+							href="/"
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -33,7 +34,7 @@ function Navbar() {
 					<li>
 						<CustomLink
 							className={styles.link}
-							href="#"
+							href="/languages"
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -44,7 +45,7 @@ function Navbar() {
 					<li>
 						<CustomLink
 							className={styles.link}
-							href="#"
+							href="/vocabulary"
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -55,7 +56,7 @@ function Navbar() {
 					<li>
 						<CustomLink
 							className={styles.link}
-							href="#"
+							href="/collections"
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -66,7 +67,7 @@ function Navbar() {
 					<li>
 						<CustomLink
 							className={styles.link}
-							href="#"
+							href="/favorite"
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -78,7 +79,7 @@ function Navbar() {
 					<li className={styles.exercises}>
 						<CustomLink
 							className={styles.link}
-							href="#"
+							href="/exercises"
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -90,7 +91,7 @@ function Navbar() {
 					<li>
 						<CustomLink
 							className={styles.link}
-							href="#"
+							href="/about-us"
 							target="_self"
 							onClick={() => console.log('click')}
 						>

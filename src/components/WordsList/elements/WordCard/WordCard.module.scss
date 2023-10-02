@@ -16,12 +16,9 @@
 	overflow: hidden;
 
 	&.withBg {
+		background-color: $primary-background-color;
 		.cardBody {
 			background-color: rgba(255, 255, 255, 0.8);
-		}
-
-		.svgAddToFavorite {
-			stroke: #fafafa;
 		}
 	}
 
@@ -29,15 +26,6 @@
 		.cardBody {
 			background-color: #f4f4f4;
 		}
-
-		.svgAddToFavorite {
-			stroke: #595d68;
-		}
-	}
-
-	.svgFavorite {
-		fill: #ff482f;
-		stroke: #ff482f;
 	}
 }
 
@@ -108,6 +96,8 @@
 	align-items: center;
 	justify-content: center;
 	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .level {

@@ -1,5 +1,6 @@
 import { WordStatus, WordSubMenu } from '@ui/index';
 import { AddToFavorite, CopyText } from './elements';
+import { Badge } from '@ui/Badge';
 import { IWordCard } from '@/shared/interfaces/IWordCard';
 import { Carousel } from '@ui/Carousel/Carousel';
 import styles from './WordCard.module.scss';
@@ -34,7 +35,11 @@ export const WordCard = ({ item }: Props) => {
 				<WordStatus status={status} colorTheme={img ? 'light' : 'dark'} />
 
 				<span className={styles.cardActions}>
-					<AddToFavorite isFavorite={favorite} id={word} />
+					<AddToFavorite
+						colorTheme={img ? 'light' : 'dark'}
+						isFavorite={favorite}
+						id={word}
+					/>
 					<WordSubMenu colorTheme={img ? 'light' : 'dark'} />
 				</span>
 			</div>
@@ -44,10 +49,14 @@ export const WordCard = ({ item }: Props) => {
 					<span className={styles.wordText}>{word}</span>
 					<CopyText text={word} />
 				</p>
-				<p className={styles.levelWrapper}>
-					<span className={styles.level}>легкое</span>
-					<span className={styles.level}>{level}</span>
-				</p>
+				<ul className={styles.levelWrapper} aria-label="Теги для слова">
+					<li>
+						<Badge>легкое</Badge>
+					</li>
+					<li>
+						<Badge>{level}</Badge>
+					</li>
+				</ul>
 			</div>
 
 			{translate ? (

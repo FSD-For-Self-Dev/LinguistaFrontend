@@ -1,69 +1,83 @@
 import { useState } from 'react';
+import styles from './Header.module.scss';
 
-import iconSearch from '@assets/icons/icon_search.svg';
-import iconGlobus from '@assets/icons/icon_globus.svg';
-import iconMoon from '@assets/icons/icon_moon.svg';
-import iconNotification from '@assets/icons/icon_notification.svg';
-import iconUserCabinet from '@assets/icons/icon_user_cabinet.svg';
+import { Button } from '@ui/Button';
+import CustomLink from '../CustomLink';
+import Input from '@ui/Input';
+import ThemeSwitcher from '../ThemeSwitcher';
+import SelectLang from '../SelectLang';
+
 import iconFilter from '@assets/icons/icon_filter.svg';
 import iconTags from '@assets/icons/icon_tags.svg';
-import logo from '@assets/icons/logo.svg';
-import style from './Header.module.scss';
+import SvgIconLogo from '@assets/icons/logo.svg?react';
+import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
+import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
+import { ButtonIcon } from '../ui/ButtonIcon';
+
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
-	//const [language, changeLanguage] = useState('RU');
+
 	return (
 		<header>
-			<a href="#" className={style.logoBlock}>
-				<img src={logo} alt="Логотип" />
-				<span className={style.logoText}>
+			<CustomLink
+				href="#"
+				target="_self"
+				className={styles.logoBlock}
+				onClick={() => console.log('click')}
+			>
+				<div className={styles.logoImg}>
+					<SvgIconLogo className={styles.icon} />
+				</div>
+			</CustomLink>
+			<div className={styles.contetnt}>
+				<CustomLink
+					href="#"
+					target="_self"
+					className={styles.logoText}
+					onClick={() => console.log('click')}
+				>
 					Linguista <span>Control & Repeat</span>
-				</span>
-			</a>
-			<div className={style.searching}>
-				<div className={style.searchBlock}>
-					<input
-						type="text"
-						name=""
-						id=""
-						placeholder="Найти слово или фразу.."
-						className={style.searchInput}
-						onChange={(evt) => changeSearchText(evt.target.value)}
-						value={searchText}
-					/>
-					<img src={iconSearch} alt="" className={style.searchIcon} />
+				</CustomLink>
+				<div className={styles.searching}>
+					<div className={styles.inputBlock}>
+						<Input
+							type="text"
+							placeholder="Найти слово или фразу.."
+							className={styles.searchInput}
+							onChange={(evt) => changeSearchText(evt.target.value)}
+							value={searchText}
+						/>
+						<button type="submit" className={styles.searchBtn}></button>
+					</div>
+
+					<div className={styles.filterBLock}>
+						<img className={styles.filter} src={iconFilter} />
+					</div>
+
+					<div className={styles.sortingBlock}>
+						<img className={styles.sorting} src={iconTags} />
+					</div>
 				</div>
-				<div className={style.filterBLock}>
-					<img className={style.filter} src={iconFilter} />
-				</div>
-				<div className={style.sortingBlock}>
-					<img className={style.sorting} src={iconTags} />
-				</div>
-				<button className={`${style.typeAdd} button button-blue`}>
-					+ Добавить
-				</button>
-			</div>
-			<div className={style.rightPanel}>
-				<div className={style.userInterface}>
-					<img className={style.themeSelect} src={iconMoon} alt="search" />
-					<img className={style.notification} src={iconNotification} alt="" />
-					<img
-						className={style.userCabinet}
-						src={iconUserCabinet}
-						alt="cabinet"
-					/>
-				</div>
-				<div className={style.lang}>
-					<img src={iconGlobus} alt="Иконка языка" />
-					<select
-						name=""
-						id=""
-						className={style.selectLang}
-						//	onChange={(evt) => changeLanguage(evt.target.value)}
-					>
-						<option value="ru">ru</option>
-						<option value="eng">eng</option>
-					</select>
+
+				{/* TODO вынести в отдельный кабинет с модальным окном */}
+				<Button className={styles.button} onClick={() => console.log('click')}>
+					+&nbsp;Добавить
+				</Button>
+
+				<div className={styles.rightPanel}>
+					<div className={styles.userInterface}>
+						<ThemeSwitcher />
+						{/* TODO вынести в отдельный компонент с модальным окном*/}
+						<ButtonIcon>
+							<SvgIconNotification />
+						</ButtonIcon>
+
+						{/* TODO вынести в отдельный компонент - с модальным окном */}
+						<ButtonIcon>
+							<SvgIconUserCabinet />
+						</ButtonIcon>
+					</div>
+					<SelectLang />
 				</div>
 			</div>
 		</header>

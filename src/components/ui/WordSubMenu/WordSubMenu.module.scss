@@ -1,24 +1,6 @@
 @import '@styles/colors';
 @import '@styles/mixins';
 
-.btn {
-	padding: 2px 2px 3px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-	border-style: solid;
-	border-width: 1px;
-	border-color: transparent;
-	background-color: transparent;
-	outline: none;
-
-	&:hover {
-		border-color: $grey-light;
-		cursor: pointer;
-	}
-}
-
 .DropdownMenuContent {
 	position: relative;
 	min-width: 220px;
