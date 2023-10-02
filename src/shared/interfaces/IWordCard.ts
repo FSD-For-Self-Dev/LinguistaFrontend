@@ -14,7 +14,7 @@ export interface IWordCard {
 	level: TWordLevel;
 	type: TWordType;
 	favorite?: boolean;
-	img?: string;
+	img?: Array<string>;
 	translate?: Array<string>;
 }
 
