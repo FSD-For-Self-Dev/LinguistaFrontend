@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Button } from '@ui/Button';
+import iconSearch from '@assets/icons/icon_search.svg';
 import iconGlobus from '@assets/icons/icon_globus.svg';
 import iconMoon from '@assets/icons/icon_moon.svg';
 import iconNotification from '@assets/icons/icon_notification.svg';
@@ -77,7 +79,7 @@ const Header = () => {
 							name=""
 							id=""
 							className={styles.selectLang}
-							//	onChange={(evt) => changeLanguage(evt.target.value)}
+						//	onChange={(evt) => changeLanguage(evt.target.value)}
 						>
 							<option value="ru">ru</option>
 							<option value="eng">eng</option>

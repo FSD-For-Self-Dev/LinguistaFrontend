@@ -1,10 +1,14 @@
 import { useState } from 'react';
+
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import SvgIconDots from '@assets/icons/icon_dots.svg?react';
 import styles from './WordSubMenu.module.scss';
+import { ButtonIcon } from '@ui/ButtonIcon';
+
+type ColorTheme = 'light' | 'dark';
 
 interface Props {
-	colorTheme: string;
+	colorTheme: ColorTheme;
 }
 
 export const WordSubMenu = ({ colorTheme }: Props) => {
@@ -16,8 +20,10 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 
 	return (
 		<DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-			<DropdownMenu.Trigger className={styles.btn}>
-				<SvgIconDots colorTheme={colorTheme} />
+			<DropdownMenu.Trigger>
+				<ButtonIcon colorTheme={colorTheme}>
+					<SvgIconDots />
+				</ButtonIcon>
 			</DropdownMenu.Trigger>
 			<DropdownMenu.Portal>
 				<DropdownMenu.Content
