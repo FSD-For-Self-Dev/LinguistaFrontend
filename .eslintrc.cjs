@@ -4,7 +4,7 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		"plugin:react/jsx-runtime",
+		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'prettier',
@@ -17,27 +17,27 @@ module.exports = {
 			'warn',
 			{ allowConstantExport: true },
 		],
-		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn",
-		"comma-dangle": ["error", "only-multiline"],
-		"react/prop-types": "off",
-		"react/display-name": "off",
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'warn',
+		'comma-dangle': ['error', 'only-multiline'],
+		'react/prop-types': 'off',
+		'react/display-name': 'off',
 		'react/jsx-uses-react': 'error',
 		'react/jsx-uses-vars': 'error',
-		"prettier/prettier": ["error", { "endOfLine": "auto" }],
-		"@typescript-eslint/explicit-function-return-type": "off",
-		"@typescript-eslint/interface-name-prefix": "off",
-		"@typescript-eslint/ban-ts-comment": "error",
-		"@typescript-eslint/no-non-null-assertion": "off",
-		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"@typescript-eslint/no-empty-function": "off",
-		"@typescript-eslint/no-explicit-any": "error",
-		"@typescript-eslint/no-var-reqiures": "off",
+		'prettier/prettier': ['error', { endOfLine: 'auto' }],
+		'@typescript-eslint/explicit-function-return-type': 'off',
+		'@typescript-eslint/interface-name-prefix': 'off',
+		'@typescript-eslint/ban-ts-comment': 'error',
+		'@typescript-eslint/no-non-null-assertion': 'off',
+		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'@typescript-eslint/no-empty-function': 'off',
+		'@typescript-eslint/no-explicit-any': 'error',
+		'@typescript-eslint/no-var-reqiures': 'off',
 	},
-	"settings": {
-		"react": {
-			"pragma": "React",
-			"version": "detect"
-		}
-	}
+	settings: {
+		react: {
+			pragma: 'React',
+			version: 'detect',
+		},
+	},
 };

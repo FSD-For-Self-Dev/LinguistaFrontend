@@ -62,7 +62,8 @@
 		"prettier": "3.0.0",
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9",
-		"vite-plugin-svgr": "^4.1.0"
+		"vite-plugin-svgr": "^4.1.0",
+		"vite-plugin-checker": "^0.6.2"
 	},
 	"lint-staged": {
 		"*.(ts|tsx)": [

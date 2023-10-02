@@ -1,7 +1,8 @@
+import * as path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
-import * as path from 'path';
+import checker from 'vite-plugin-checker';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,7 +24,14 @@ export default defineConfig({
 			'@api': path.resolve(__dirname, './src/api'),
 		},
 	},
-	plugins: [react(), svgr()],
+	plugins: [
+		react(),
+		svgr(),
+		checker({
+			typescript: true,
+			eslint: { lintCommand: 'eslint . --ext ts,tsx ' },
+		}),
+	],
 	server: {
 		port: 3000,
 	},
