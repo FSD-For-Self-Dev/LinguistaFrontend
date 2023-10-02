@@ -1,24 +1,24 @@
 import { useState } from 'react';
+import styles from './Header.module.scss';
 
 import { Button } from '@ui/Button';
-import iconSearch from '@assets/icons/icon_search.svg';
-import iconGlobus from '@assets/icons/icon_globus.svg';
-import iconMoon from '@assets/icons/icon_moon.svg';
-import iconNotification from '@assets/icons/icon_notification.svg';
-import iconUserCabinet from '@assets/icons/icon_user_cabinet.svg';
+import CustomLink from '../CustomLink';
+import Input from '../Input';
+import ThemeSwitcher from '../ThemeSwitcher';
+import SelectLang from '../SelectLang';
+
 import iconFilter from '@assets/icons/icon_filter.svg';
 import iconTags from '@assets/icons/icon_tags.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
-import styles from './Header.module.scss';
-import CustomLink from '../CustomLink';
-import Input from '../Input';
+import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
+import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
+import { ButtonIcon } from '../ui/ButtonIcon';
 
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
-	//const [language, changeLanguage] = useState('RU');
+
 	return (
 		<header>
-			{/* <div className={styles.container}> */}
 			<CustomLink
 				href="#"
 				target="_self"
@@ -30,10 +30,14 @@ const Header = () => {
 				</div>
 			</CustomLink>
 			<div className={styles.contetnt}>
-				<span className={styles.logoText}>
+				<CustomLink
+					href="#"
+					target="_self"
+					className={styles.logoText}
+					onClick={() => console.log('click')}
+				>
 					Linguista <span>Control & Repeat</span>
-				</span>
-
+				</CustomLink>
 				<div className={styles.searching}>
 					<div className={styles.inputBlock}>
 						<Input
@@ -53,41 +57,29 @@ const Header = () => {
 					<div className={styles.sortingBlock}>
 						<img className={styles.sorting} src={iconTags} />
 					</div>
-
-					<button className={`${styles.typeAdd} button button-blue`}>
-						+ Добавить
-					</button>
 				</div>
+
+				{/* TODO вынести в отдельный кабинет с модальным окном */}
+				<Button className={styles.button} onClick={() => console.log('click')}>
+					+&nbsp;Добавить
+				</Button>
 
 				<div className={styles.rightPanel}>
 					<div className={styles.userInterface}>
-						<img className={styles.themeSelect} src={iconMoon} alt="search" />
-						<img
-							className={styles.notification}
-							src={iconNotification}
-							alt=""
-						/>
-						<img
-							className={styles.userCabinet}
-							src={iconUserCabinet}
-							alt="cabinet"
-						/>
+						<ThemeSwitcher />
+						{/* TODO вынести в отдельный компонент с модальным окном*/}
+						<ButtonIcon>
+							<SvgIconNotification />
+						</ButtonIcon>
+
+						{/* TODO вынести в отдельный компонент - с модальным окном */}
+						<ButtonIcon>
+							<SvgIconUserCabinet />
+						</ButtonIcon>
 					</div>
-					<div className={styles.lang}>
-						<img src={iconGlobus} alt="Иконка языка" />
-						<select
-							name=""
-							id=""
-							className={styles.selectLang}
-						//	onChange={(evt) => changeLanguage(evt.target.value)}
-						>
-							<option value="ru">ru</option>
-							<option value="eng">eng</option>
-						</select>
-					</div>
+					<SelectLang />
 				</div>
 			</div>
-			{/* </div> */}
 		</header>
 	);
 };

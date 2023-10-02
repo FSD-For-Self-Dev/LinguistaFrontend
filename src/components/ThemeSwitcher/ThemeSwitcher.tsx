@@ -7,6 +7,7 @@ const ThemeSwitcher = () => {
 	// const [darkTheme, setDarkTheme] = useState(false);
 	// const themeText = darkTheme ? "Light" : "Dark";
 	// const ThemeIcon = darkTheme ? SunIcon : MoonIcon;
+
 	// эффект следящий за изменением темы и устанавливающий соответвующий атрибут
 	// body  в зависимости от состояния перемнной darkTheme
 	// useEffect(() => {

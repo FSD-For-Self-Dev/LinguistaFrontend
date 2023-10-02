@@ -5,8 +5,11 @@ header {
 	color: #202020;
 	border-bottom: 1px solid #ddd;
 	height: 100px;
-	border: 1px solid red;
 	padding: 0 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .contetnt {
@@ -40,6 +43,7 @@ header {
 		'Fredoka'
 	);
 	padding: 0 29px;
+	text-decoration: none;
 
 	span {
 		@include font-source-sans(
@@ -57,10 +61,10 @@ header {
 	display: grid;
 	grid-template-columns: repeat(4, auto);
 	align-items: center;
-	border: 1px solid red;
 }
 
 .searchInput {
+	width: 100%;
 	border: 1px solid #ddd;
 	position: relative;
 	border-radius: 10px;
@@ -81,15 +85,8 @@ header {
 
 .inputBlock {
 	position: relative;
+	min-width: 520px;
 }
-
-// .searchIcon {
-// 	position: absolute;
-// 	right: 20px;
-// 	top: 10px;
-// 	width: 20px;
-// 	height: 20px;
-// }
 
 .searchBtn {
 	position: absolute;
@@ -99,6 +96,7 @@ header {
 	height: 100%;
 	border: 1px solid $neutral-line-color;
 	border-radius: 0 10px 10px 0;
+	cursor: pointer;
 	background: $neutral-background-second-color
 		url('../../assets/icons/icon_search.svg') center/20px 20px no-repeat;
 }
@@ -116,36 +114,12 @@ header {
 	cursor: pointer;
 }
 
-.typeAdd {
-	border-radius: 5px;
-	background: $blue_dark;
-	cursor: pointer;
-}
-
-.lang {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.selectLang {
-	appearance: none;
-	text-transform: uppercase;
-	font-weight: 500;
-	margin-left: 10px;
-	border: none;
-	cursor: pointer;
-
-	&:hover,
-	&:focus {
-		outline: none;
-	}
-}
-
-.userInterface {
-	button {
-		cursor: pointer;
-	}
+.button {
+	max-width: 123px;
+	padding: 11px 23px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
 }
 
 .themeSelect {
@@ -154,16 +128,13 @@ header {
 	cursor: pointer;
 }
 
-.notification {
-	width: 20px;
-	height: 21px;
-	cursor: pointer;
-}
-
 .userCabinet {
 	width: 28px;
 	height: 28px;
 	cursor: pointer;
+	border: none;
+	background: transparent url('../../assets/icons/icon_user_cabinet.svg')
+		center/28px 28px no-repeat;
 }
 
 .userInterface {
@@ -171,50 +142,21 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	width: 118px;
+	margin-left: 24px;
 }
 
-@media screen and (min-width: 960px) {
-	header {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
+.rightPanel {
+	display: flex;
+	flex-direction: row;
+}
 
-	.searching {
-		width: 779px;
-	}
-
+@media screen and (max-width: 1280px) {
 	.inputBlock {
-		width: 520px;
-	}
-
-	.searchInput {
-		width: 100%;
-	}
-
-	.typeAdd {
-		padding: 13px 19px;
+		min-width: 420px;
 	}
 
 	.rightPanel {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.lang {
-		margin-left: 50px;
-	}
-
-	.userInterface {
-		width: 118px;
-	}
-
-	.logoText {
-		font-size: 24px;
-
-		span {
-			font-size: 16px;
-		}
+		flex-direction: column;
 	}
 }
