@@ -42,9 +42,30 @@
 			}
 		}
 	}
+	.carousel {
+		width: 100%;
+		position: relative;
 
-	.slider {
-		display: flex;
-		justify-content: space-between;
+		.slider {
+			width: 100%;
+			overflow: hidden;
+			margin-top: -40px;
+			padding-top: 40px;
+			& :global(.slick-list) {
+				overflow: visible;
+			}
+		}
+
+		.arrows {
+			position: absolute;
+
+			&:first-child {
+				left: -55px;
+			}
+
+			&:last-child {
+				right: -55px;
+			}
+		}
 	}
 }

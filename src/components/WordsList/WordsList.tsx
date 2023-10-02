@@ -1,6 +1,7 @@
 import { IWordCard } from '@/shared/interfaces/IWordCard';
 import styles from './WordsList.module.scss';
 import { WordCard } from './elements/WordCard';
+import image from '@assets/mock-for-card.png';
 import SvgIconHistory from '@assets/icons/icon_history.svg?react';
 import SvgIconView from '@assets/icons/icon_view.svg?react';
 import { Button } from '../ui/Button';
@@ -12,21 +13,23 @@ const data: Array<IWordCard> = [
 		level: 'C1',
 		type: 'глагол',
 		favorite: true,
-		img: 'bg1.png',
+		img: [image, image, image, image, image],
+		translate: ['понимать', 'осознать', 'узнать', 'уяснить'],
 	},
 	{
 		word: 'apple',
 		status: 'Активное',
 		level: 'A1',
 		type: 'существительное',
-		img: 'bg2.jpg',
+		img: [image],
+		translate: ['яблоко'],
 	},
 	{
 		word: 'I like freedom',
 		status: 'Активное',
 		level: 'A1',
 		type: 'существительное',
-		img: 'bg3.jpg',
+		img: [image, image, image],
 	},
 	{
 		word: "Don't worry, be happy",

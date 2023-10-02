@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import DangerZoneWord from '@components/DangerZone/DangerZoneWords';
+import { Carousel } from '@ui/Carousel/Carousel';
 import { Button } from '@ui/Button';
 import triangle from '@assets/icons/warning-triangle.svg';
 import styles from './DangerZone.module.scss';
@@ -21,16 +22,24 @@ function DangerZone() {
 
 					<Link to="/dangerZoneCards" className={styles.linkButton}>
 						{/* TODO счетчик кол-ва карточек (вместо цифры 15) */}
-						Смотри все (15)
+						Смотреть все (15)
 					</Link>
 				</div>
 			</div>
-			<div className={styles.slider}>
+
+			<Carousel
+				arrows
+				slides={4}
+				className={styles.carousel}
+				sliderClass={styles.slider}
+				buttonClass={styles.arrows}
+			>
 				<DangerZoneWord />
 				<DangerZoneWord />
 				<DangerZoneWord />
 				<DangerZoneWord />
-			</div>
+				<DangerZoneWord />
+			</Carousel>
 		</div>
 	);
 }
