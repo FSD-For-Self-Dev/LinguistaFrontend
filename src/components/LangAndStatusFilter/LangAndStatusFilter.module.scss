@@ -23,7 +23,13 @@
 		}
 
 		span {
-			@include font-source-sans(16px, #111111, 400, 19px, 'Fredoka');
+			@include font-source-sans(
+				16px,
+				$neutral-text-main-color,
+				400,
+				19px,
+				'Fredoka'
+			);
 			letter-spacing: 0em;
 		}
 	}

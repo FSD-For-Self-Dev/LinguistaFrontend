@@ -12,12 +12,12 @@
 	top: -235%;
 	left: 70%;
 	width: 187px;
-	background-color: $white;
-	border: 1px solid $gray_light;
+	background-color: $neutral-background-main-color;
+	border: 1px solid $neutral-line-color;
 	padding: 12px;
 	border-radius: 10px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	@include font-source-sans(12px, $black, 400, 15px);
+	@include font-source-sans(12px, $neutral-text-dark-color, 400, 15px);
 	text-align: center;
 	display: none;
 }

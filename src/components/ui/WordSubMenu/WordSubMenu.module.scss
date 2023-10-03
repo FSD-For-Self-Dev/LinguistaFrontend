@@ -5,7 +5,7 @@
 	position: relative;
 	min-width: 220px;
 	max-width: 285px;
-	background-color: $white;
+	background-color: $neutral-background-main-color;
 	border-radius: 5px;
 	box-shadow:
 		0px 0px 8px 0px rgba(17, 17, 26, 0.1),
@@ -49,11 +49,11 @@
 	}
 
 	&.red {
-		color: $warning-color;
+		color: $danger-color;
 	}
 
 	&:not(:last-child) {
-		border-bottom: solid 1px $grey-light;
+		border-bottom: solid 1px $neutral-line-color;
 	}
 }
 
@@ -63,7 +63,7 @@
 }
 
 .DropdownMenuItem[data-highlighted] {
-	background-color: darken($white, 4);
+	background-color: darken($neutral-background-main-color, 4);
 	cursor: pointer;
 }
 

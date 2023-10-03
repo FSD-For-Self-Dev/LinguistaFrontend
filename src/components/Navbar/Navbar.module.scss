@@ -4,8 +4,8 @@
 .container {
 	width: 100px;
 	height: 100vh;
-	background-color: $white;
-	border-right: 1px solid $gray_light;
+	background-color: $neutral-background-main-color;
+	border-right: 1px solid $neutral-line-color;
 	position: sticky;
 	top: 0;
 	z-index: 5;
@@ -42,11 +42,11 @@
 			}
 
 			&:hover {
-				background-color: $blue_dark;
+				background-color: $primary-brand-color;
 				border-radius: 5px;
 
 				&:hover .title {
-					@include font-source-sans(16px, $white, 400, 19px);
+					@include font-source-sans(16px, $neutral-text-contrast-color, 400, 19px);
 				}
 			}
 		}
@@ -61,7 +61,7 @@
 	color: #202020;
 
 	&:hover {
-		color: $white;
+		color: $neutral-text-contrast-color;
 	}
 }
 
@@ -70,11 +70,11 @@
 	width: 100px;
 	margin-right: 17.5px;
 	text-align: start;
-	@include font-source-sans(16px, $black, 400, 19px);
+	@include font-source-sans(16px, $neutral-text-dark-color, 400, 19px);
 }
 
 .border {
-	border: 0.5px solid $gray_light;
+	border: 0.5px solid $neutral-line-color;
 	width: 100%;
 	margin: 0;
 }
