@@ -13,3 +13,7 @@ export const VOCAB_DANGER_ROUTE = '/vocabulary/danger';
 export const VOCAB_POTENTIAL_ROUTE = '/vocabulary/potential';
 export const VOCAB_TROHIES_ROUTE = '/vocabulary/trophies';
 export const VOCAB_WORD_ROUTE = '/vocabulary/word';
+
+export const CONTACTS_ROUTE = '/contacts';
+export const POLICY_ROUTE = '/privacy-policy';
+export const TERMS_ROUTE = '/terms-of-use';
