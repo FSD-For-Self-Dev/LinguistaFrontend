@@ -28,7 +28,7 @@ footer {
 
 .link,
 .copyright {
-	@include font-source-sans(14px, $gray, 400, 16px);
+	@include font-source-sans(14px, $neutral-text-middle-color, 400, 16px);
 	text-decoration: none;
 }
 

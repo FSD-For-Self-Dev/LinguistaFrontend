@@ -24,13 +24,13 @@ code {
 }
 button {
 	border: none;
-	color: #fff;
+	color: $neutral-text-contrast-color;
 	background-color: transparent;
 }
 
 .button {
 	font-family: 'Inter', sans-serif;
 	&-blue {
-		background: $blue_dark;
+		background: $primary-brand-color;
 	}
 }
