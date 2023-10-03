@@ -44,7 +44,7 @@ const LangAndStatusFilter = () => {
 					<br />
 					тренируйте их в упражнениях
 				</span>
-				<Button className={styles.button} icon size="tall">
+				<Button className={styles.button} size="tall">
 					<IconDumbbell className={styles.icon} />
 					Тренировать
 				</Button>
