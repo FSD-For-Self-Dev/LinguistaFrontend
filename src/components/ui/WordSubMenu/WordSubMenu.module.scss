@@ -41,11 +41,11 @@
 	outline: none;
 
 	&.item {
-		@include font-source-sans(14px, #272932, 500, 17px);
+		@include font-source-sans(14px, $neutral-text-main-color, 500, 17px);
 	}
 
 	&.small {
-		@include font-source-sans(12px, #656a76, 400, 16px);
+		@include font-source-sans(12px, $neutral-text-middle-color, 400, 16px);
 	}
 
 	&.red {
@@ -58,7 +58,7 @@
 }
 
 .DropdownMenuItem[data-disabled] {
-	color: #656a76;
+	color: $neutral-text-middle-color;
 	pointer-events: none;
 }
 
