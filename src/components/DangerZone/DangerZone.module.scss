@@ -30,12 +30,10 @@
 			align-items: center;
 			gap: 16px;
 
-			.helpButton {
-				background-color: $blue;
-				border-radius: 5px;
-				padding: 12px 45px;
-				border: none;
-				@include font-source-sans(14px, $black, 500, 17px);
+			.button {
+				max-width: 142px;
+				padding: 13px 44px;
+				font-weight: 400;
 			}
 
 			.linkButton {
@@ -44,9 +42,30 @@
 			}
 		}
 	}
+	.carousel {
+		width: 100%;
+		position: relative;
 
-	.slider {
-		display: flex;
-		justify-content: space-between;
+		.slider {
+			width: 100%;
+			overflow: hidden;
+			margin-top: -40px;
+			padding-top: 40px;
+			& :global(.slick-list) {
+				overflow: visible;
+			}
+		}
+
+		.arrows {
+			position: absolute;
+
+			&:first-child {
+				left: -55px;
+			}
+
+			&:last-child {
+				right: -55px;
+			}
+		}
 	}
 }

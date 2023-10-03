@@ -1,13 +1,21 @@
 import { useState } from 'react';
+import { ButtonIcon } from '@ui/ButtonIcon';
 import SvgAddToFavorite from '@assets/icons/add_to_favorite.svg?react';
-import styles from '../WordCard.module.scss';
+import styles from './AddToFavorite.module.scss';
+
+type ColorTheme = 'light' | 'dark';
 
 interface Props {
+	colorTheme?: ColorTheme;
 	isFavorite?: boolean;
 	id: string;
 }
 
-export const AddToFavorite = ({ isFavorite = false, id }: Props) => {
+export const AddToFavorite = ({
+	isFavorite = false,
+	colorTheme = 'dark',
+	id,
+}: Props) => {
 	const [isActive, setIsActive] = useState(isFavorite);
 
 	const toggleClick = () => {
@@ -16,14 +24,13 @@ export const AddToFavorite = ({ isFavorite = false, id }: Props) => {
 	};
 
 	return (
-		<button
-			className="btn-img"
+		<ButtonIcon
 			onClick={toggleClick}
+			colorTheme={colorTheme}
 			title={isActive ? 'Удалить из Избранного' : 'Добавить в избранное'}
+			className={isActive ? styles.favorite : ''}
 		>
-			<SvgAddToFavorite
-				className={isActive ? styles.svgFavorite : styles.svgAddToFavorite}
-			/>
-		</button>
+			<SvgAddToFavorite className={isActive ? styles.favorite : ''} />
+		</ButtonIcon>
 	);
 };

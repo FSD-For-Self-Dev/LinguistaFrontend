@@ -8,12 +8,13 @@
 	border-right: 1px solid $gray_light;
 	position: sticky;
 	top: 0;
-	z-index: 2;
+	z-index: 5;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	transition: all 0.4s ease-out;
+	overflow: hidden;
 }
 
 .navigation {

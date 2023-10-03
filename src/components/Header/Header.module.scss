@@ -1,42 +1,91 @@
 @import '@styles/colors';
+@import '@styles/mixins';
 
 header {
 	color: #202020;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $neutral-line-color;
 	height: 100px;
-	display: flex;
 	padding: 0 25px;
-}
-
-.searching {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.searchInput {
-	border: 1px solid #ddd;
-	position: relative;
-	border-radius: 5px;
-	padding: 11px 20px;
+.contetnt {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
 
-	&:hover,
-	&:focus {
-		outline: none;
+.logoBlock {
+	text-decoration: none;
+	color: #202020;
+	display: flex;
+	align-items: center;
+}
+.logoImg {
+	width: 75px;
+	border-right: 1px solid $neutral-line-color;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logoText {
+	@include font-source-sans(
+		24px,
+		$neutral-text-main-color,
+		500,
+		29px,
+		'Fredoka'
+	);
+	padding: 0 29px;
+	text-decoration: none;
+
+	span {
+		@include font-source-sans(
+			16px,
+			$neutral-text-dark-color,
+			400,
+			19px,
+			'Fredoka'
+		);
 	}
 }
 
-.searchBlock {
-	position: relative;
+.searching {
+	gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	align-items: center;
 }
 
-.searchIcon {
+.searchInput {
+	width: 100%;
+	position: relative;
+	border-radius: 10px;
+	padding: 11px 20px;
+}
+
+.inputBlock {
+	position: relative;
+	min-width: 520px;
+}
+
+.searchBtn {
 	position: absolute;
-	right: 20px;
-	top: 10px;
-	width: 20px;
-	height: 20px;
+	right: 0;
+	top: 0;
+	width: 61px;
+	height: 100%;
+	border: 1px solid $neutral-line-color;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+	background: $neutral-background-second-color
+		url('@assets/icons/icon_search.svg') center/20px 20px no-repeat;
 }
 
 .filter {
@@ -52,36 +101,12 @@ header {
 	cursor: pointer;
 }
 
-.typeAdd {
-	border-radius: 5px;
-	background: $blue_dark;
-	cursor: pointer;
-}
-
-.lang {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.selectLang {
-	appearance: none;
-	text-transform: uppercase;
-	font-weight: 500;
-	margin-left: 10px;
-	border: none;
-	cursor: pointer;
-
-	&:hover,
-	&:focus {
-		outline: none;
-	}
-}
-
-.userInterface {
-	button {
-		cursor: pointer;
-	}
+.button {
+	max-width: 123px;
+	padding: 11px 23px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
 }
 
 .themeSelect {
@@ -90,16 +115,13 @@ header {
 	cursor: pointer;
 }
 
-.notification {
-	width: 20px;
-	height: 21px;
-	cursor: pointer;
-}
-
 .userCabinet {
 	width: 28px;
 	height: 28px;
 	cursor: pointer;
+	border: none;
+	background: transparent url('@assets/icons/icon_user_cabinet.svg') center/28px
+		28px no-repeat;
 }
 
 .userInterface {
@@ -107,65 +129,21 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	width: 118px;
+	margin-left: 24px;
 }
 
-.logoBlock {
-	text-decoration: none;
-	color: #202020;
+.rightPanel {
 	display: flex;
-	align-items: center;
+	flex-direction: row;
 }
 
-.logoText {
-	font-weight: 500;
-	padding-left: 53px;
-
-	span {
-		font-weight: 400;
-	}
-}
-@media screen and (min-width: 960px) {
-	header {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.searching {
-		width: 769px;
-	}
-
-	.searchBlock {
-		width: 520px;
-	}
-
-	.searchInput {
-		width: 100%;
-	}
-
-	.typeAdd {
-		padding: 13px 19px;
+@media screen and (max-width: 1280px) {
+	.inputBlock {
+		min-width: 420px;
 	}
 
 	.rightPanel {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.lang {
-		margin-left: 50px;
-	}
-
-	.userInterface {
-		width: 118px;
-	}
-
-	.logoText {
-		font-size: 24px;
-
-		span {
-			font-size: 16px;
-		}
+		flex-direction: column;
 	}
 }

@@ -1,6 +1,7 @@
+import { Button } from '@ui/Button';
 import styles from './LangAndStatusFilter.module.scss';
 import iconLanguages from '@assets/icons/icon_languages.svg';
-import iconDumbbell from '@assets/icons/icon_dumbbell.svg';
+import IconDumbbell from '@assets/icons/icon_dumbbell.svg?react';
 import iconNotActive from '@assets/icons/icon_not_active.svg';
 import iconActive from '@assets/icons/icon_active.svg';
 import iconCompleted from '@assets/icons/icon_completed.svg';
@@ -43,10 +44,10 @@ const LangAndStatusFilter = () => {
 					<br />
 					тренируйте их в упражнениях
 				</span>
-				<button>
-					<img src={iconDumbbell} alt="" />
-					<span>Тренировать</span>
-				</button>
+				<Button className={styles.button} icon size="tall">
+					<IconDumbbell className={styles.icon} />
+					Тренировать
+				</Button>
 			</div>
 		</div>
 	);

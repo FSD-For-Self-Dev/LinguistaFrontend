@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface Props {
 	href: string;
 	onClick?: () => void;
@@ -8,9 +10,9 @@ interface Props {
 
 function CustomLink({ href, onClick, children, target, className }: Props) {
 	return (
-		<a href={href} target={target} className={className} onClick={onClick}>
+		<Link to={href} target={target} className={className} onClick={onClick}>
 			{children}
-		</a>
+		</Link>
 	);
 }
 
