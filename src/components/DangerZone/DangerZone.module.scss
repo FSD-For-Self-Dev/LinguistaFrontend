@@ -48,11 +48,12 @@
 
 		.slider {
 			width: 100%;
-			overflow: hidden;
-			margin-top: -40px;
-			padding-top: 40px;
+
+			padding-top: 8px;
 			& :global(.slick-list) {
 				overflow: visible;
+				// overflow-y: visible;
+				overflow-x: clip;
 			}
 		}
 

@@ -88,6 +88,7 @@
 .wordText {
 	@include font-source-sans(24px, $black, 500);
 	text-align: center;
+	text-decoration: none;
 }
 
 .levelWrapper {

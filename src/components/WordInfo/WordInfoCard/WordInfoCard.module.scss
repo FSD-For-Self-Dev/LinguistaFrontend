@@ -1,4 +1,5 @@
-@import '~/src/styles';
+@import '@styles/colors.scss';
+@import '@styles/mixins.scss';
 
 .cardWord {
 	background-color: $white;

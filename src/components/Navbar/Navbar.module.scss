@@ -18,7 +18,7 @@
 }
 
 .navigation {
-	margin: 0 auto;
+	margin: 24px auto;
 	padding: 0;
 	width: 100%;
 
@@ -26,42 +26,40 @@
 		list-style: none;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
+		gap: 24px;
 		padding: 0;
 		margin: 0 auto;
-
-		li {
-			height: 44px;
-			margin: 12px 0 12px 28px;
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-
-			svg {
-				margin: 0 24.5px 0 9.5px;
-			}
-
-			&:hover {
-				background-color: $blue_dark;
-				border-radius: 5px;
-
-				&:hover .title {
-					@include font-source-sans(16px, $white, 400, 19px);
-				}
-			}
-		}
 	}
 }
 
 .link {
+	height: 44px;
+	padding: 10px;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
+	gap: 25px;
 	width: 100%;
-	color: #202020;
+	border-radius: 5px;
+	color: $neutral-text-main-color;
+	transition:
+		color 0.2s,
+		background-color 0.15s ease-in-out;
 
 	&:hover {
-		color: $white;
+		background-color: #d7e0ff;
+	}
+
+	&_active {
+		background-color: $primary-button-dark-color;
+		color: $neutral-text-contrast-color;
+		&:hover {
+			background-color: $primary-button-dark-color;
+		}
+	}
+	&_active .title {
+		@include font-source-sans(16px, $neutral-text-contrast-color, 400, 19px);
 	}
 }
 

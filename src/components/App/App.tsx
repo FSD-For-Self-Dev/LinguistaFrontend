@@ -4,7 +4,6 @@ function App() {
 	return (
 		<>
 			<AuthUserDictionary />
-			{/* TODO добавить страницу Проифля Слова */}
 		</>
 	);
 }
