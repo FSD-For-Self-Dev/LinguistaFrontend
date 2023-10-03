@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 export default function WordInfoCard({ type = 'default' }) {
 	const constructControlDots = () => {
-		const controlDots = new Array(5).fill(<></>).map((ratingElement, i) => {
+		const controlDots = new Array(5).fill(<></>).map((_ratingElement, i) => {
 			return (
 				<button className={cx('dotButton')} key={i}>
 					<span className={cx('dotIcon', { active: i === 1 })} />

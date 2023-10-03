@@ -38,7 +38,7 @@ export const Carousel: FC<CarouselProps> = ({
 	const settings = {
 		className: `${styles.slider}`,
 		infinite: true,
-		lazyLoad: true,
+		//lazyLoad: true,
 		arrows: false,
 		autoplay: false,
 		speed: 700,
@@ -67,6 +67,7 @@ export const Carousel: FC<CarouselProps> = ({
 					<SvgArrow className={styles.prev_arrow} />
 				</button>
 			)}
+
 			<Slider
 				ref={(slider) => (sliderRef.current = slider)}
 				{...carouselSettings}
@@ -74,6 +75,7 @@ export const Carousel: FC<CarouselProps> = ({
 			>
 				{children}
 			</Slider>
+
 			{arrows && (
 				<button
 					onClick={() => nextSlide()}
