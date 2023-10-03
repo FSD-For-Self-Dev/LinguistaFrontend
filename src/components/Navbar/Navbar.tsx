@@ -8,7 +8,7 @@ import {
 	FAVOR_ROUTE,
 	LANGS_ROUTE,
 	VOCAB_ROUTE,
-} from '@/utils/constants';
+} from '@/router/routes';
 import SvgIconHome from '@assets/icons/icon_home.svg?react';
 import SvgIconLanguages from '@assets/icons/icon_languages.svg?react';
 import SvgIconDictionary from '@assets/icons/icon_dictionary.svg?react';

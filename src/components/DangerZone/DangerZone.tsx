@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { VOCAB_DANGER_ROUTE } from '@/utils/constants';
+import { VOCAB_DANGER_ROUTE } from '@/router/routes';
 import DangerZoneWord from '@components/DangerZone/DangerZoneWords';
 import { Carousel } from '@ui/Carousel/Carousel';
 import { Button } from '@ui/Button';

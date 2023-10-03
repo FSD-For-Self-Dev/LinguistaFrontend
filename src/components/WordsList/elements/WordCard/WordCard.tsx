@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { WordStatus, WordSubMenu } from '@ui/index';
 import { AddToFavorite, CopyText } from './elements';
-import { VOCAB_WORD_ROUTE } from '@/utils/constants';
+import { VOCAB_WORD_ROUTE } from '@/router/routes';
 import { Badge } from '@ui/Badge';
 import { IWordCard } from '@/shared/interfaces/IWordCard';
 import { Carousel } from '@ui/Carousel/Carousel';
