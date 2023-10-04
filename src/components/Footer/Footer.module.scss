@@ -28,12 +28,5 @@ footer {
 
 .link,
 .copyright {
-	@include font-source-sans(14px, $gray, 400, 16px);
-	text-decoration: none;
-}
-
-.link {
-	&:hover {
-		text-decoration: underline;
-	}
+	@include font-source-sans(14px, $neutral-text-dark-color, 400, 16px);
 }

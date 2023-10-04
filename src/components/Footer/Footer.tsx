@@ -1,5 +1,5 @@
+import CustomLink from '../ui/CustomLink';
 import styles from './Footer.module.scss';
-// import { Link } from 'react-router-dom';
 
 const links = [
 	{
@@ -23,10 +23,14 @@ const links = [
 export default function Footer() {
 	const footerLinks = links.map((link, idx) => (
 		<li key={idx}>
-			{/* <Link to={link.href}>{link.title}</Link> */}
-			<a href={link.href} className={styles.link}>
+			<CustomLink
+				apperance="underline"
+				target="_blank"
+				href={link.href}
+				className={styles.link}
+			>
 				{link.title}
-			</a>
+			</CustomLink>
 		</li>
 	));
 

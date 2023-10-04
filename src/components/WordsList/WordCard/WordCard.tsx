@@ -1,5 +1,6 @@
 import { WordStatus, WordSubMenu } from '@ui/index';
-import { AddToFavorite, CopyText } from './elements';
+import { CopyText } from '@ui/CopyText';
+import { AddToFavorite } from '@ui/AddToFavorite';
 import { Badge } from '@ui/Badge';
 import { IWordCard } from '@/shared/interfaces/IWordCard';
 import { Carousel } from '@ui/Carousel/Carousel';

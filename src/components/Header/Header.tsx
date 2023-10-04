@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Header.module.scss';
 
 import { Button } from '@ui/Button';
-import CustomLink from '../CustomLink';
+import CustomLink from '../ui/CustomLink';
 import Input from '@ui/Input';
 import ThemeSwitcher from '../ThemeSwitcher';
 import SelectLang from '../SelectLang';

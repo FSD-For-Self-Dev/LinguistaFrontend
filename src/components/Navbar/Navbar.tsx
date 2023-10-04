@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import CustomLink from '@components/CustomLink';
+import CustomLink from '@/components/ui/CustomLink';
 
 import SvgIconHome from '@assets/icons/icon_home.svg?react';
 import SvgIconLanguages from '@assets/icons/icon_languages.svg?react';

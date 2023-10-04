@@ -1,6 +1,6 @@
 import { IWordCard } from '@/shared/interfaces/IWordCard';
 import styles from './WordsList.module.scss';
-import { WordCard } from './elements/WordCard';
+import { WordCard } from './WordCard';
 import image from '@assets/mock-for-card.png';
 import SvgIconHistory from '@assets/icons/icon_history.svg?react';
 import SvgIconView from '@assets/icons/icon_view.svg?react';

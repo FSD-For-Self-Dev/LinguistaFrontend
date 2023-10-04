@@ -1,0 +1,51 @@
+@import '@styles/colors.scss';
+@import '@styles/mixins';
+
+.link {
+	position: relative;
+	text-decoration: none;
+
+	cursor: pointer;
+
+	&_underline {
+		font-size: 12px;
+		color: $neutral-text-dark-color;
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			margin-top: 0;
+			width: 0;
+			height: 0.5px;
+			background: $neutral-text-dark-color;
+			transition: width 0.3s ease-in-out;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+
+		&_disabled {
+			&:hover::after {
+				width: 0;
+			}
+		}
+	}
+
+	&_button {
+		font-size: 12px;
+		width: 144px;
+		height: 38px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		color: $neutral-text-main-color;
+		border: 1px solid $neutral-line-color;
+		transition: opacity 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
