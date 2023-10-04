@@ -20,11 +20,9 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 
 	return (
 		<DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-			<DropdownMenu.Trigger>
-				<ButtonIcon colorTheme={colorTheme}>
-					<SvgIconDots />
-				</ButtonIcon>
-			</DropdownMenu.Trigger>
+			<ButtonIcon colorTheme={colorTheme} trigger>
+				<SvgIconDots />
+			</ButtonIcon>
 			<DropdownMenu.Portal>
 				<DropdownMenu.Content
 					className={styles.DropdownMenuContent}

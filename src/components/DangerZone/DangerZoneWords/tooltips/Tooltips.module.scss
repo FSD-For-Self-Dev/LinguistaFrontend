@@ -3,8 +3,8 @@
 
 .icon_container {
 	position: relative;
-	display: inline-block;
-	cursor: url('@assets/icons/mouse_pointer.svg'), auto;
+
+	//	cursor: url('@assets/icons/mouse_pointer.svg'), auto;
 }
 
 .tooltip {
@@ -20,6 +20,7 @@
 	@include font-source-sans(12px, $neutral-text-dark-color, 400, 15px);
 	text-align: center;
 	display: none;
+	z-index: 5;
 }
 
 .icon_container:hover .tooltip {

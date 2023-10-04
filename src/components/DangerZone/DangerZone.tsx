@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { VOCAB_DANGER_ROUTE } from '@/router/routes';
 import DangerZoneWord from '@components/DangerZone/DangerZoneWords';
 import { Carousel } from '@ui/Carousel/Carousel';
 import { Button } from '@ui/Button';
@@ -20,7 +20,7 @@ function DangerZone() {
 				<div className={styles.title_right}>
 					<Button className={styles.button}>Спасти!</Button>
 
-					<Link to="/dangerZoneCards" className={styles.linkButton}>
+					<Link to={VOCAB_DANGER_ROUTE} className={styles.linkButton}>
 						{/* TODO счетчик кол-ва карточек (вместо цифры 15) */}
 						Смотреть все (15)
 					</Link>
