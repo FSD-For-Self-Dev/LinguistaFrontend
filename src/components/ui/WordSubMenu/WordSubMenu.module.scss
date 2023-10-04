@@ -5,7 +5,7 @@
 	position: relative;
 	min-width: 220px;
 	max-width: 285px;
-	background-color: $white;
+	background-color: $neutral-background-main-color;
 	border-radius: 5px;
 	box-shadow:
 		0px 0px 8px 0px rgba(17, 17, 26, 0.1),
@@ -41,25 +41,25 @@
 	transition: color 0.2s ease-in-out;
 
 	&.item {
-		@include font-source-sans(14px, #272932, 500, 17px);
+		@include font-source-sans(14px, $neutral-text-main-color, 500, 17px);
 	}
 
 	&.small {
-		@include font-source-sans(12px, #656a76, 400, 16px);
+		@include font-source-sans(12px, $neutral-text-middle-color, 400, 16px);
 	}
 
 	&.red {
 		font-size: 14px;
-		color: $warning-color;
+		color: $danger-color;
 	}
 
 	&:not(:last-child) {
-		border-bottom: solid 1px $grey-light;
+		border-bottom: solid 1px $neutral-line-color;
 	}
 }
 
 .DropdownMenuItem[data-disabled] {
-	color: #656a76;
+	color: $neutral-text-middle-color;
 	pointer-events: none;
 }
 

@@ -10,10 +10,10 @@
 	font-weight: 500;
 
 	&.light {
-		@include font-source-sans(12px, $white, 500);
+		@include font-source-sans(12px, $neutral-text-contrast-color, 500);
 	}
 
 	&.dark {
-		@include font-source-sans(12px, $black, 500);
+		@include font-source-sans(12px, $neutral-text-main-color, 500);
 	}
 }

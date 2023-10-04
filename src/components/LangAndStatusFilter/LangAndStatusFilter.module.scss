@@ -6,7 +6,7 @@
 }
 
 .currentLanguageBlock {
-	width: 1169px;
+	width: 100%;
 	height: 63px;
 	display: flex;
 	align-items: center;
@@ -23,7 +23,13 @@
 		}
 
 		span {
-			@include font-source-sans(16px, #111111, 400, 19px, 'Fredoka');
+			@include font-source-sans(
+				16px,
+				$neutral-text-main-color,
+				400,
+				19px,
+				'Fredoka'
+			);
 			letter-spacing: 0em;
 		}
 	}
@@ -35,82 +41,49 @@
 		font-size: 12px;
 		line-height: 15px;
 		letter-spacing: 0em;
-		color: #656a76;
+		color: $neutral-text-middle-color;
 	}
 }
 
 .filtersBlock {
-	width: 1169px;
+	width: 100%;
 	height: 55px;
+	list-style: none;
+	padding: 0;
 	margin: 24px auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 64px;
 
-	.notActive {
+	.link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 12px;
+		text-decoration: none;
+		font-family: 'Fredoka';
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19px;
+		text-align: left;
+		color: $neutral-text-middle-color;
+		transition:
+			color 0.2s,
+			font-size 0.2s,
+			line-height 0.2s ease-in-out;
 
-		img {
-			width: 16px;
-			height: 16px;
+		&:hover {
+			color: $neutral-text-dark-color;
 		}
 
-		span {
-			font-family: 'Fredoka';
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 19px;
-			letter-spacing: 0em;
-			text-align: left;
-			color: #656a76;
-		}
-	}
-
-	.active {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 12px;
-
-		img {
-			width: 24px;
-			height: 32px;
-		}
-
-		span {
-			font-family: 'Fredoka';
+		&_active {
+			color: $neutral-text-main-color;
 			font-size: 24px;
-			font-weight: 400;
 			line-height: 29px;
-			letter-spacing: 0em;
-			text-align: left;
-			color: #272932;
-		}
-	}
-
-	.completed {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 12px;
-
-		img {
-			width: 16px;
-			height: 11px;
-		}
-
-		span {
-			font-family: 'Fredoka';
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 19px;
-			letter-spacing: 0em;
-			text-align: left;
-			color: #656a76;
+			&:hover {
+				color: $neutral-text-main-color;
+			}
 		}
 	}
 }

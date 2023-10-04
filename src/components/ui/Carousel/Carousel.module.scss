@@ -15,7 +15,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: $black;
+	color: $neutral-text-dark-color;
 	cursor: pointer;
 }
 
@@ -51,12 +51,12 @@
 	width: 9px;
 	height: 9px;
 	box-sizing: border-box;
-	background-color: $gray;
+	background-color: $neutral-text-middle-color;
 	border-radius: 50%;
 	opacity: 1;
 }
 .dots :global(li.slick-active) button::before {
-	background-color: $blue_dark;
+	background-color: $primary-brand-color;
 	opacity: 1;
 }
 

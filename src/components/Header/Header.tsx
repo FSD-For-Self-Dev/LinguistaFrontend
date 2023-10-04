@@ -20,7 +20,7 @@ const Header = () => {
 	return (
 		<header>
 			<CustomLink
-				href="#"
+				href="/"
 				target="_self"
 				className={styles.logoBlock}
 				onClick={() => console.log('click')}
@@ -31,7 +31,7 @@ const Header = () => {
 			</CustomLink>
 			<div className={styles.contetnt}>
 				<CustomLink
-					href="#"
+					href="/"
 					target="_self"
 					className={styles.logoText}
 					onClick={() => console.log('click')}

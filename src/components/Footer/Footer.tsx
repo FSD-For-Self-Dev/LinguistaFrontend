@@ -1,22 +1,28 @@
 import CustomLink from '../ui/CustomLink';
+import {
+	ABOUT_ROUTE,
+	CONTACTS_ROUTE,
+	POLICY_ROUTE,
+	TERMS_ROUTE,
+} from '@/router/routes';
 import styles from './Footer.module.scss';
 
 const links = [
 	{
 		title: 'О проекте',
-		href: '/about',
+		href: ABOUT_ROUTE,
 	},
 	{
 		title: 'Контакты',
-		href: '/contact',
+		href: CONTACTS_ROUTE,
 	},
 	{
 		title: 'Политика конфиденциальности',
-		href: '/privacy-policy',
+		href: POLICY_ROUTE,
 	},
 	{
 		title: 'Условия пользования',
-		href: '/terms-of-use',
+		href: TERMS_ROUTE,
 	},
 ];
 

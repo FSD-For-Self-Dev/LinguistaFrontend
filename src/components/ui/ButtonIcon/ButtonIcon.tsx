@@ -21,8 +21,8 @@ export const ButtonIcon = ({
 	colorTheme = 'dark',
 	className,
 	title,
-	type = 'button',
 	trigger,
+	type = 'button',
 	disabled = false,
 	onClick,
 }: Props) => {

@@ -21,7 +21,7 @@
 			}
 
 			.itemGrey {
-				@include font-source-sans(12px, $gray_danger, 400, 15px);
+				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px);
 			}
 		}
 
@@ -37,7 +37,7 @@
 			}
 
 			.linkButton {
-				@include font-source-sans(12px, $gray_danger, 400, 15px);
+				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px);
 				text-decoration: none;
 			}
 		}
@@ -48,11 +48,12 @@
 
 		.slider {
 			width: 100%;
-			overflow: hidden;
-			margin-top: -40px;
-			padding-top: 40px;
+
+			padding-top: 8px;
 			& :global(.slick-list) {
 				overflow: visible;
+				// overflow-y: visible;
+				overflow-x: clip;
 			}
 		}
 

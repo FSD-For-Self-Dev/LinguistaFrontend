@@ -1,6 +1,14 @@
+import { useLocation } from 'react-router';
 import cx from 'classnames';
-import CustomLink from '@/components/ui/CustomLink';
-
+import CustomLink from '@ui/CustomLink';
+import {
+	ABOUT_ROUTE,
+	COLLECT_ROUTE,
+	EXERCISES_ROUTE,
+	FAVOR_ROUTE,
+	LANGS_ROUTE,
+	VOCAB_ROUTE,
+} from '@/router/routes';
 import SvgIconHome from '@assets/icons/icon_home.svg?react';
 import SvgIconLanguages from '@assets/icons/icon_languages.svg?react';
 import SvgIconDictionary from '@assets/icons/icon_dictionary.svg?react';
@@ -11,6 +19,7 @@ import SvgIconInfo from '@assets/icons/icon_info.svg?react';
 import styles from './Navbar.module.scss';
 
 function Navbar() {
+	const location = useLocation();
 	const scrollToUp = (id: string) => {
 		const element = document.getElementById(id);
 		element && element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -22,7 +31,10 @@ function Navbar() {
 				<ul className={styles.list}>
 					<li>
 						<CustomLink
-							className={cx(styles.link)}
+							className={cx(
+								styles.link,
+								location.pathname === '/' && styles.link_active
+							)}
 							href="/"
 							target="_self"
 							onClick={() => console.log('click')}
@@ -33,8 +45,11 @@ function Navbar() {
 					</li>
 					<li>
 						<CustomLink
-							className={styles.link}
-							href="/languages"
+							className={cx(
+								styles.link,
+								location.pathname === LANGS_ROUTE && styles.link_active
+							)}
+							href={LANGS_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -44,8 +59,11 @@ function Navbar() {
 					</li>
 					<li>
 						<CustomLink
-							className={styles.link}
-							href="/vocabulary"
+							className={cx(
+								styles.link,
+								location.pathname.startsWith(VOCAB_ROUTE) && styles.link_active
+							)}
+							href={VOCAB_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -55,8 +73,12 @@ function Navbar() {
 					</li>
 					<li>
 						<CustomLink
-							className={styles.link}
-							href="/collections"
+							className={cx(
+								styles.link,
+								location.pathname.startsWith(COLLECT_ROUTE) &&
+									styles.link_active
+							)}
+							href={COLLECT_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -66,8 +88,11 @@ function Navbar() {
 					</li>
 					<li>
 						<CustomLink
-							className={styles.link}
-							href="/favorite"
+							className={cx(
+								styles.link,
+								location.pathname.startsWith(FAVOR_ROUTE) && styles.link_active
+							)}
+							href={FAVOR_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -78,8 +103,12 @@ function Navbar() {
 					<hr className={styles.border}></hr>
 					<li className={styles.exercises}>
 						<CustomLink
-							className={styles.link}
-							href="/exercises"
+							className={cx(
+								styles.link,
+								location.pathname.startsWith(EXERCISES_ROUTE) &&
+									styles.link_active
+							)}
+							href={EXERCISES_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>
@@ -90,8 +119,11 @@ function Navbar() {
 					<hr className={styles.border}></hr>
 					<li>
 						<CustomLink
-							className={styles.link}
-							href="/about-us"
+							className={cx(
+								styles.link,
+								location.pathname === ABOUT_ROUTE && styles.link_active
+							)}
+							href={ABOUT_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>

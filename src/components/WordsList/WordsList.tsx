@@ -1,54 +1,9 @@
-import { IWordCard } from '@/shared/interfaces/IWordCard';
 import styles from './WordsList.module.scss';
 import { WordCard } from './WordCard';
-import image from '@assets/mock-for-card.png';
+import { data } from '@/utils/mocks';
 import SvgIconHistory from '@assets/icons/icon_history.svg?react';
 import SvgIconView from '@assets/icons/icon_view.svg?react';
 import { Button } from '../ui/Button';
-
-const data: Array<IWordCard> = [
-	{
-		word: 'Learn',
-		status: 'Активное',
-		level: 'C1',
-		type: 'глагол',
-		favorite: true,
-		img: [image, image, image, image, image],
-		translate: ['понимать', 'осознать', 'узнать', 'уяснить'],
-	},
-	{
-		word: 'apple',
-		status: 'Активное',
-		level: 'A1',
-		type: 'существительное',
-		img: [image],
-		translate: ['яблоко'],
-	},
-	{
-		word: 'I like freedom',
-		status: 'Активное',
-		level: 'A1',
-		type: 'существительное',
-		img: [image, image, image],
-	},
-	{
-		word: "Don't worry, be happy",
-		status: 'Неактивное',
-		level: 'A2',
-		type: 'глагол',
-		favorite: true,
-	},
-	{ word: 'carrot', status: 'Неактивное', level: 'B1', type: 'прилагательное' },
-	{ word: 'banana', status: 'Активное', level: 'C1', type: 'глагол' },
-	{ word: 'carrot', status: 'Активное', level: 'B1', type: 'прилагательное' },
-	{
-		word: 'understand',
-		status: 'Неактивное',
-		level: 'B2',
-		type: 'наречие',
-		translate: ['понимать', 'осознать', 'узнать', 'уяснить'],
-	},
-];
 
 export const WordsList = () => {
 	const wordsList = data.map((wordItem, idx) => {
