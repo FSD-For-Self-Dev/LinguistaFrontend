@@ -7,16 +7,13 @@ module.exports = {
 		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
 		'plugin:@typescript-eslint/recommended',
-		'prettier',
+		'plugin:prettier/recommended',
 	],
 	ignorePatterns: ['dist', '.eslintrc.cjs'],
 	parser: '@typescript-eslint/parser',
 	plugins: ['@typescript-eslint', 'react', 'prettier', 'react-refresh'],
 	rules: {
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
-		],
+		'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 		'react-hooks/rules-of-hooks': 'error',
 		'react-hooks/exhaustive-deps': 'warn',
 		'comma-dangle': ['error', 'only-multiline'],
