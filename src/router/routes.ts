@@ -1,3 +1,4 @@
+export const MAIN_ROUTE = '/';
 export const LANGS_ROUTE = '/languages';
 export const COLLECT_ROUTE = '/collections';
 export const FAVOR_ROUTE = '/favorite';
