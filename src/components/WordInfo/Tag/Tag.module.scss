@@ -11,7 +11,7 @@
 }
 
 .text {
-	@include font-source-sans(12px, $black, 400, 14px);
+	@include font-source-sans(12px, $neutral-text-main-color, 400, 14px);
 
 	text-transform: uppercase;
 	margin: 0;
