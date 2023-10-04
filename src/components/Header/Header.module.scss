@@ -35,24 +35,12 @@ header {
 }
 
 .logoText {
-	@include font-source-sans(
-		24px,
-		$neutral-text-main-color,
-		500,
-		29px,
-		'Fredoka'
-	);
+	@include font-source-sans(24px, $neutral-text-main-color, 500, 29px, 'Fredoka');
 	padding: 0 29px;
 	text-decoration: none;
 
 	span {
-		@include font-source-sans(
-			16px,
-			$neutral-text-dark-color,
-			400,
-			19px,
-			'Fredoka'
-		);
+		@include font-source-sans(16px, $neutral-text-dark-color, 400, 19px, 'Fredoka');
 	}
 }
 
@@ -84,8 +72,8 @@ header {
 	border: 1px solid $neutral-line-color;
 	border-radius: 0 10px 10px 0;
 	cursor: pointer;
-	background: $neutral-background-second-color
-		url('@assets/icons/icon_search.svg') center/20px 20px no-repeat;
+	background: $neutral-background-second-color url('@assets/icons/icon_search.svg') center/20px 20px
+		no-repeat;
 }
 
 .filter {
@@ -107,6 +95,7 @@ header {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
+	text-wrap: nowrap;
 }
 
 .themeSelect {
@@ -120,8 +109,7 @@ header {
 	height: 28px;
 	cursor: pointer;
 	border: none;
-	background: transparent url('@assets/icons/icon_user_cabinet.svg') center/28px
-		28px no-repeat;
+	background: transparent url('@assets/icons/icon_user_cabinet.svg') center/28px 28px no-repeat;
 }
 
 .userInterface {

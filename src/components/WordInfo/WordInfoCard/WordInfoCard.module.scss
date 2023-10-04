@@ -196,13 +196,7 @@
 }
 
 .wordText {
-	@include font-source-sans(
-		32px,
-		$neutral-text-main-color,
-		400,
-		38px,
-		'Fredoka'
-	);
+	@include font-source-sans(32px, $neutral-text-main-color, 400, 38px, 'Fredoka');
 
 	margin: 0 4px 0 0;
 }

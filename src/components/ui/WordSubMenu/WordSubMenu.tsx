@@ -32,30 +32,19 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 					sideOffset={15}
 					onPointerLeave={closeMenu}
 				>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.item}`}
-					>
+					<DropdownMenu.Item className={`${styles.DropdownMenuItem} ${styles.item}`}>
 						Тренировать
 					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.item}`}
-					>
+					<DropdownMenu.Item className={`${styles.DropdownMenuItem} ${styles.item}`}>
 						Добавить в коллекцию
 					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.item}`}
-					>
+					<DropdownMenu.Item className={`${styles.DropdownMenuItem} ${styles.item}`}>
 						Редактировать
 					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.red}`}
-					>
+					<DropdownMenu.Item className={`${styles.DropdownMenuItem} ${styles.red}`}>
 						Удалить
 					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.small}`}
-						disabled
-					>
+					<DropdownMenu.Item className={`${styles.DropdownMenuItem} ${styles.small}`} disabled>
 						Редактировано пользователем user Вчера 14.09 в 13:00
 					</DropdownMenu.Item>
 				</DropdownMenu.Content>

@@ -16,13 +16,7 @@
 	margin-left: 10px;
 	border: none;
 	cursor: pointer;
-	@include font-source-sans(
-		15px,
-		$neutral-text-dark-color,
-		400,
-		18px,
-		'Fredoka'
-	);
+	@include font-source-sans(15px, $neutral-text-dark-color, 400, 18px, 'Fredoka');
 
 	&:hover,
 	&:focus {
