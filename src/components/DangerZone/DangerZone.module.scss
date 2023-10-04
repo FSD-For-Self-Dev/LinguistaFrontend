@@ -17,11 +17,11 @@
 			gap: 10px;
 
 			.itemRed {
-				@include font-source-sans(16px, $red, 400, 19px);
+				@include font-source-sans(16px, $danger-color, 400, 19px);
 			}
 
 			.itemGrey {
-				@include font-source-sans(12px, $gray_danger, 400, 15px);
+				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px);
 			}
 		}
 
@@ -37,7 +37,7 @@
 			}
 
 			.linkButton {
-				@include font-source-sans(12px, $gray_danger, 400, 15px);
+				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px);
 				text-decoration: none;
 			}
 		}

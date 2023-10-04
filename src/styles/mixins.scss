@@ -40,5 +40,5 @@
 }
 
 @mixin sub-title {
-	@include font-source-sans(12px, #656a76, 400);
+	@include font-source-sans(12px, $neutral-text-middle-color, 400);
 }
