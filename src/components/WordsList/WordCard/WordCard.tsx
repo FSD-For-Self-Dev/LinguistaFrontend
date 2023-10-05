@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { VOCAB_WORD_ROUTE } from '@/router/routes';
 import { WordStatus, WordSubMenu } from '@ui/index';
 import { CopyText } from '@ui/CopyText';
 import { AddToFavorite } from '@ui/AddToFavorite';
@@ -47,7 +49,9 @@ export const WordCard = ({ item }: Props) => {
 			<div className={styles.cardBody}>
 				<p className={styles.type}>{type}</p>
 				<p className={styles.word}>
-					<span className={styles.wordText}>{word}</span>
+					<Link to={VOCAB_WORD_ROUTE} className={styles.wordText}>
+						{word}
+					</Link>
 					<CopyText text={word} />
 				</p>
 				<ul className={styles.levelWrapper} aria-label="Теги для слова">
