@@ -3,31 +3,28 @@ import { useState } from 'react';
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import styles from './CustomDropdownMenu.module.scss';
-import { ButtonIcon } from '@ui/ButtonIcon';
 
-type ColorTheme = 'light' | 'dark';
 
 interface Props {
-    colorTheme: ColorTheme;
     items: string[];
     side: "top" | "right" | "bottom" | "left";
     sideOffset: number;
-    icon: React.ReactNode;
+    children: React.ReactNode;
 
 }
 
-export const CustomDropdownMenu = ({ colorTheme, items, side, sideOffset, icon }: Props) => {
+export const CustomDropdownMenu = ({ items, side, sideOffset, children }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
     const closeMenu = () => {
         setIsOpen(false);
     };
 
     return (
         <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-            <ButtonIcon colorTheme={colorTheme} trigger>
-                {icon}
-            </ButtonIcon>
+            <div onClick={toggleMenu}>{children}</div>
             <DropdownMenu.Portal>
                 <DropdownMenu.Content
                     className={styles.DropdownMenuContent}
