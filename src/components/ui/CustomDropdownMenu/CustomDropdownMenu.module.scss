@@ -44,14 +44,6 @@
 		@include font-source-sans(14px, $neutral-text-main-color, 500, 17px);
 	}
 
-	&.small {
-		@include font-source-sans(12px, $neutral-text-middle-color, 400, 16px);
-	}
-
-	&.red {
-		color: $danger-color;
-	}
-
 	&:not(:last-child) {
 		border-bottom: solid 1px $neutral-line-color;
 	}
@@ -65,4 +57,48 @@
 .DropdownMenuItem[data-highlighted] {
 	background-color: darken($neutral-background-main-color, 4);
 	cursor: pointer;
+}
+
+@keyframes slideUpAndFade {
+	from {
+		opacity: 0;
+		transform: translateY(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideRightAndFade {
+	from {
+		opacity: 0;
+		transform: translateX(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideDownAndFade {
+	from {
+		opacity: 0;
+		transform: translateY(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideLeftAndFade {
+	from {
+		opacity: 0;
+		transform: translateX(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

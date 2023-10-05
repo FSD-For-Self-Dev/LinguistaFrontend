@@ -10,21 +10,18 @@ interface Props {
     side: "top" | "right" | "bottom" | "left";
     sideOffset: number;
     children: React.ReactNode;
-
+    // onClick?: () => void;
 }
 
 export const CustomDropdownMenu = ({ items, side, sideOffset, children }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
     const closeMenu = () => {
         setIsOpen(false);
     };
 
     return (
         <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-            <div onClick={toggleMenu}>{children}</div>
+            <div onClick={() => console.log("click one")}>{children}</div>
             <DropdownMenu.Portal>
                 <DropdownMenu.Content
                     className={styles.DropdownMenuContent}

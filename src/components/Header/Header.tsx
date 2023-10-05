@@ -13,6 +13,7 @@ import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
 import { ButtonIcon } from '../ui/ButtonIcon';
+import { CustomDropdownMenu } from '../ui/CustomDropdownMenu';
 
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
@@ -59,10 +60,22 @@ const Header = () => {
 					</div>
 				</div>
 
-				{/* TODO вынести в отдельный кабинет с модальным окном */}
-				<Button className={styles.button} onClick={() => console.log('click')}>
-					+&nbsp;Добавить
-				</Button>
+				<CustomDropdownMenu
+					items={[
+						'Слово или фраза',
+						'Несколько подряд',
+						'Перевод',
+						'Пример использования',
+						'Ассоциация',
+						'Коллекция',
+					]}
+					side="bottom"
+					sideOffset={15}
+				>
+					<Button trigger className={styles.button}>
+						+&nbsp;Добавить
+					</Button>
+				</CustomDropdownMenu>
 
 				<div className={styles.rightPanel}>
 					<div className={styles.userInterface}>
