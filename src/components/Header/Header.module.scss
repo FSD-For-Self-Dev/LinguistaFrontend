@@ -116,14 +116,15 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	gap: 23px;
 	align-items: center;
-	width: 118px;
 	margin-left: 24px;
 }
 
 .rightPanel {
 	display: flex;
 	flex-direction: row;
+	gap: 40px;
 }
 
 @media screen and (max-width: 1280px) {

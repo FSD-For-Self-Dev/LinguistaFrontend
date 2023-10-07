@@ -6,7 +6,7 @@ import { ButtonIcon } from '@ui/ButtonIcon';
 import Input from '@ui/Input';
 import CustomLink from '../CustomLink';
 import ThemeSwitcher from '../ThemeSwitcher';
-import SelectLang from '../SelectLang';
+import { SelectLang } from '../SelectLang';
 
 import iconFilter from '@assets/icons/icon_filter.svg';
 import iconTags from '@assets/icons/icon_tags.svg';
