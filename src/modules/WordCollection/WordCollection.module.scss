@@ -1,30 +1,25 @@
 .content {
-	border: 1px solid red;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 40px;
 }
 
 .collection {
 	min-width: 707px;
-	border: 1px solid red;
 }
 
 .notes {
-	min-width: 413px;
+	width: 413px;
 	padding-left: 50px;
-	border: 1px solid red;
 }
 
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.note {
-	background-color: #fff;
-	height: 150px;
+	height: 38px;
+	margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -33,5 +28,7 @@
 	}
 	.notes {
 		padding-left: 0;
+		margin-top: 50px;
+		width: 707px;
 	}
 }

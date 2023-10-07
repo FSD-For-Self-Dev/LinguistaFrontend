@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import Tag from '@/components/WordInfo/Tag';
 import styles from './CardCollection.module.scss';
+import { Button } from '@/components/ui/Button';
 
 const CardCollection = () => {
     const items = ['Dunder method', 'Linter', 'Framework'];
@@ -9,7 +9,7 @@ const CardCollection = () => {
         <div className={styles.card}>
             <div className={styles.header}>
                 <h3>Базовые</h3>
-                <Tag>49</Tag>
+                <Button className={styles.button}>49</Button>
             </div>
             <div className={styles.description}>
                 {items.map((item, id) => (

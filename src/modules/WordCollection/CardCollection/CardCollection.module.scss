@@ -2,18 +2,21 @@
 @import '@styles/mixins';
 
 .card {
-	border: 1px solid red;
 	min-width: 230px;
 	height: 203px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	background: url('@assets/card_collection.svg') center/230px 203px no-repeat;
+	padding: 38px;
 }
 
 .header {
 	display: flex;
+	width: 149px;
+	align-items: center;
+	justify-content: space-between;
 
 	h3 {
 		@include font-source-sans(16px, $neutral-text-main-color, 500, 19px);
@@ -24,4 +27,13 @@
 	p {
 		@include font-source-sans(12px, $neutral-text-main-color, 400, 14px);
 	}
+}
+
+.button {
+	background-color: $primary-brand-color;
+	color: $neutral-text-contrast-color;
+	padding: 7.5px 6.5px;
+	width: 16px;
+	height: 15px;
+	box-sizing: content-box;
 }
