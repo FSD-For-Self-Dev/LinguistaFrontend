@@ -1,5 +1,5 @@
-import cx from 'classnames';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import cx from 'classnames';
 import styles from './ButtonIcon.module.scss';
 
 type ColorTheme = 'light' | 'dark';
@@ -9,8 +9,8 @@ interface Props {
 	colorTheme?: ColorTheme;
 	className?: string;
 	title?: string;
-	trigger?: boolean;
 	type?: 'submit' | 'reset' | 'button';
+	trigger?: 'dropdown';
 	disabled?: boolean;
 	active?: boolean;
 	onClick?: () => void;
@@ -26,7 +26,7 @@ export const ButtonIcon = ({
 	disabled = false,
 	onClick,
 }: Props) => {
-	return trigger ? (
+	return trigger === 'dropdown' ? (
 		<DropdownMenu.Trigger
 			className={cx(styles.button, styles[`button_${colorTheme}`], className)}
 			onClick={onClick}

@@ -1,5 +1,5 @@
 import styles from './WordsList.module.scss';
-import { WordCard } from './elements/WordCard';
+import { WordCard } from './WordCard';
 import { data } from '@/utils/mocks';
 import SvgIconHistory from '@assets/icons/icon_history.svg?react';
 import SvgIconView from '@assets/icons/icon_view.svg?react';

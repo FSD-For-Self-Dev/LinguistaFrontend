@@ -2,17 +2,17 @@ import { useState } from 'react';
 import styles from './Header.module.scss';
 
 import { Button } from '@ui/Button';
-import CustomLink from '../CustomLink';
+import CustomLink from '../ui/CustomLink';
 import Input from '@ui/Input';
 import ThemeSwitcher from '../ThemeSwitcher';
 import SelectLang from '../SelectLang';
-
+import { ButtonIcon } from '@ui/ButtonIcon';
+import { MAIN_ROUTE } from '@/router/routes';
 import iconFilter from '@assets/icons/icon_filter.svg';
 import iconTags from '@assets/icons/icon_tags.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
-import { ButtonIcon } from '../ui/ButtonIcon';
 
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
@@ -31,7 +31,7 @@ const Header = () => {
 			</CustomLink>
 			<div className={styles.contetnt}>
 				<CustomLink
-					href="/"
+					href={MAIN_ROUTE}
 					target="_self"
 					className={styles.logoText}
 					onClick={() => console.log('click')}

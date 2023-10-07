@@ -17,7 +17,7 @@
 			gap: 10px;
 
 			.itemRed {
-				@include font-source-sans(16px, $danger-color, 400, 19px);
+				color: $danger-color;
 			}
 
 			.itemGrey {

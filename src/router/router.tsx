@@ -7,6 +7,7 @@ import {
 	EXERCISES_ROUTE,
 	FAVOR_ROUTE,
 	LANGS_ROUTE,
+	MAIN_ROUTE,
 	VOCAB_ACTIVE_ROUTE,
 	VOCAB_DANGER_ROUTE,
 	VOCAB_INACTIVE_ROUTE,
@@ -24,7 +25,7 @@ export function Router() {
 	return (
 		<Routes>
 			<Route element={<LayoutWhithNavbar />}>
-				<Route path="/" />
+				<Route path={MAIN_ROUTE} />
 				<Route path={LANGS_ROUTE} />
 				<Route path={VOCAB_ROUTE} element={<Vocabulary />}>
 					<Route path={VOCAB_ACTIVE_ROUTE} element={<DangerZone />} />
