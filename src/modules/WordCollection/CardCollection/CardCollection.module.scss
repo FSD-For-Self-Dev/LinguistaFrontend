@@ -1,0 +1,27 @@
+@import '@styles/colors';
+@import '@styles/mixins';
+
+.card {
+	border: 1px solid red;
+	min-width: 230px;
+	height: 203px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: url('@assets/card_collection.svg') center/230px 203px no-repeat;
+}
+
+.header {
+	display: flex;
+
+	h3 {
+		@include font-source-sans(16px, $neutral-text-main-color, 500, 19px);
+	}
+}
+
+.description {
+	p {
+		@include font-source-sans(12px, $neutral-text-main-color, 400, 14px);
+	}
+}
