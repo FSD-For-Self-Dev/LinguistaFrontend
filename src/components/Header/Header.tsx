@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { MAIN_ROUTE } from '@/router/routes';
 import { Button } from '@ui/Button';
 import { ButtonIcon } from '@ui/ButtonIcon';
-import Input from '@ui/Input';
-import CustomLink from '../CustomLink';
-import ThemeSwitcher from '../ThemeSwitcher';
 import { SelectLang } from '../SelectLang';
+import Input from '@ui/Input';
+import CustomLink from '@ui/CustomLink';
+import ThemeSwitcher from '../ThemeSwitcher';
 
-import iconFilter from '@assets/icons/icon_filter.svg';
 import iconTags from '@assets/icons/icon_tags.svg';
+import iconFilter from '@assets/icons/icon_filter.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
@@ -23,7 +24,7 @@ const Header = () => {
 	return (
 		<header>
 			<CustomLink
-				href="#"
+				href="/"
 				target="_self"
 				className={styles.logoBlock}
 				onClick={() => console.log('click')}
@@ -34,7 +35,7 @@ const Header = () => {
 			</CustomLink>
 			<div className={styles.contetnt}>
 				<CustomLink
-					href="#"
+					href={MAIN_ROUTE}
 					target="_self"
 					className={styles.logoText}
 					onClick={() => console.log('click')}

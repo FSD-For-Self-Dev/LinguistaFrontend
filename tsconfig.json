@@ -23,7 +23,7 @@
 			"@styles/*": ["src/styles/*"],
 			"@components/*": ["src/components/*"],
 			"@ui/*": ["src/components/ui/*"],
-			"@pages/*": ["src/components/pages/*"],
+			"@pages/*": ["src/pages/*"],
 			"@shared/*": ["src/shared/*"],
 			"@utils/*": ["src/utils/*"],
 			"@api/*": ["src/api/*"]

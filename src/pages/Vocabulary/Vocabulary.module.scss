@@ -1,9 +1,11 @@
+@import '@styles/colors.scss';
 @import '@styles/mixins.scss';
 
 .inner {
 	// padding-left: 140px;
 	// padding-right: 40px;
 	margin: 0 auto;
+	background-color: $neutral-background-second-color;
 
 	@include media($min-width: 1750px) {
 		max-width: 2190px;

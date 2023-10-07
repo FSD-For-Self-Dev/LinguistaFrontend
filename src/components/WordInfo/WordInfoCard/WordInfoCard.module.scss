@@ -1,4 +1,5 @@
-@import '~/src/styles';
+@import '@styles/colors.scss';
+@import '@styles/mixins.scss';
 
 .cardWord {
 	background-color: $neutral-background-main-color;
@@ -120,7 +121,7 @@
 	display: block;
 	margin-left: auto;
 	padding: 12px 24px;
-	border: 1px solid $gray_light;
+	border: 1px solid $neutral-line-color;
 	background-color: transparent;
 	border-radius: 5px;
 	cursor: pointer;
@@ -139,7 +140,7 @@
 }
 
 .colorGray {
-	color: $white_aluminum;
+	color: $neutral-text-contrast-color;
 }
 
 .wordWrapper {

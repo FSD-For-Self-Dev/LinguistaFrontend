@@ -1,12 +1,16 @@
-import { Button } from '@ui/Button';
+import { Link, useLocation } from 'react-router-dom';
+import cx from 'classnames';
+
+import { VOCAB_ACTIVE_ROUTE, VOCAB_INACTIVE_ROUTE, VOCAB_LEARNED_ROUTE } from '@/router/routes';
 import styles from './LangAndStatusFilter.module.scss';
 import iconLanguages from '@assets/icons/icon_languages.svg';
-import IconDumbbell from '@assets/icons/icon_dumbbell.svg?react';
 import iconNotActive from '@assets/icons/icon_not_active.svg';
 import iconActive from '@assets/icons/icon_active.svg';
 import iconCompleted from '@assets/icons/icon_completed.svg';
+import { ActivityBanner } from '../ActivityBanner';
 
 const LangAndStatusFilter = () => {
+	const location = useLocation();
 	return (
 		<div className={styles.container}>
 			<div className={styles.currentLanguageBlock}>
@@ -18,37 +22,47 @@ const LangAndStatusFilter = () => {
 					<span>335 слов и фраз</span>
 				</div>
 			</div>
-			<div className={styles.filtersBlock}>
-				<div className={styles.notActive}>
-					<img src={iconNotActive} alt="" />
-					<span>Неактивные</span>
-				</div>
-				<div className={styles.active}>
-					<img src={iconActive} alt="" />
-					<span>Активные</span>
-				</div>
-				<div className={styles.completed}>
-					<img src={iconCompleted} alt="" />
-					<span>Усвоенные</span>
-				</div>
-			</div>
-			<div className={styles.trainingAdviceBlock}>
-				<span className={styles.left}>
-					Вы активно используете <b>146 слов и фраз</b>
-					<br />
-					Так держать!
-				</span>
-				<div className={styles.splitter}></div>
-				<span className={styles.right}>
-					Чтобы поддерживать эти слова активными,
-					<br />
-					тренируйте их в упражнениях
-				</span>
-				<Button className={styles.button} size="tall">
-					<IconDumbbell className={styles.icon} />
-					Тренировать
-				</Button>
-			</div>
+			<ul className={styles.filtersBlock}>
+				<li>
+					<Link
+						to={VOCAB_INACTIVE_ROUTE}
+						className={cx(
+							styles.link,
+							location.pathname === VOCAB_INACTIVE_ROUTE && styles.link_active
+						)}
+					>
+						<img src={iconNotActive} alt="" />
+						<span>Неактивные</span>
+					</Link>
+				</li>
+				<li>
+					<Link
+						to={VOCAB_ACTIVE_ROUTE}
+						className={cx(
+							styles.link,
+							location.pathname === VOCAB_ACTIVE_ROUTE && styles.link_active
+						)}
+					>
+						<img src={iconActive} alt="" />
+						<span>Активные</span>
+					</Link>
+				</li>
+				<li>
+					<Link
+						to={VOCAB_LEARNED_ROUTE}
+						className={cx(
+							styles.link,
+							location.pathname === VOCAB_LEARNED_ROUTE && styles.link_active
+						)}
+					>
+						<img src={iconCompleted} alt="" />
+						<span>Усвоенные</span>
+					</Link>
+				</li>
+			</ul>
+			{(location.pathname === VOCAB_ACTIVE_ROUTE ||
+				location.pathname === VOCAB_INACTIVE_ROUTE ||
+				location.pathname === VOCAB_LEARNED_ROUTE) && <ActivityBanner />}
 		</div>
 	);
 };
