@@ -9,7 +9,7 @@ export default i18n
 	.init({
 		debug: true,
 		lng: LANGUAGES[0],
-		fallbackLng: LANGUAGES,
+		fallbackLng: LANGUAGES[0],
 		ns: [], // files to load  ns: ['app', 'common'],
 		interpolation: { escapeValue: false },
 	});
