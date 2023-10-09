@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { MAIN_ROUTE } from '@/router/routes';
 import { Button } from '@ui/Button';
 import { ButtonIcon } from '@ui/ButtonIcon';
-import { SelectLang } from '../SelectLang';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import Input from '@ui/Input';
 import CustomLink from '@ui/CustomLink';
-import ThemeSwitcher from '../ThemeSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 
 import iconTags from '@assets/icons/icon_tags.svg';
 import iconFilter from '@assets/icons/icon_filter.svg';
@@ -81,7 +81,8 @@ const Header = () => {
 							<SvgIconUserCabinet />
 						</ButtonIcon>
 					</div>
-					<SelectLang />
+
+					<LanguageSwitcher />
 				</div>
 			</div>
 		</header>
