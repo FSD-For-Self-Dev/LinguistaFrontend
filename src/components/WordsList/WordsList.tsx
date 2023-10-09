@@ -6,7 +6,7 @@ import SvgIconView from '@assets/icons/icon_view.svg?react';
 import { data } from '@/utils/mocks';
 import styles from './WordsList.module.scss';
 
-export const WordsList = () => {
+const WordsList = () => {
 	const { t } = useTranslation('vocabulary');
 
 	const wordsList = data.map((wordItem, idx) => {
@@ -40,3 +40,5 @@ export const WordsList = () => {
 		</section>
 	);
 };
+
+export default WordsList;

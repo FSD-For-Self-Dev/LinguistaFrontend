@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import LayoutWhithNavbar from '@/layouts/LayoutWhithNavbar';
@@ -16,10 +17,11 @@ import {
 	VOCAB_ROUTE,
 	VOCAB_WORD_ROUTE,
 } from '@/router/routes';
-import { Vocabulary } from '@pages/Vocabulary';
-import WordInfo from '@/components/WordInfo';
-import DangerZoneCards from '@/components/DangerZone/DangerZoneCards';
-import DangerZone from '@/components/DangerZone';
+
+const Vocabulary = lazy(() => import('@pages/Vocabulary'));
+const DangerZone = lazy(() => import('@/components/DangerZone'));
+const DangerZoneCards = lazy(() => import('@/components/DangerZone/DangerZoneCards'));
+const WordInfo = lazy(() => import('@/components/WordInfo'));
 
 export function Router() {
 	return (

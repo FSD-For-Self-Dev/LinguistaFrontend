@@ -61,8 +61,9 @@
 	min-width: 64px;
 
 	&[data-state='checked'] {
-		color: $neutral-text-contrast-color;
-		background-color: $primary-background-color;
+		font-weight: 500;
+		color: $neutral-text-main-color;
+		background-color: $neutral-line-color;
 	}
 
 	&[data-disabled] {
@@ -71,7 +72,7 @@
 	}
 
 	&[data-highlighted] {
-		background-color: $primary-background-color;
+		background-color: $neutral-line-color;
 
 		&:not([data-state='checked']) {
 			cursor: pointer;
