@@ -1,12 +1,13 @@
 import { useLocation } from 'react-router';
 import cx from 'classnames';
-import CustomLink from '@components/CustomLink';
+import CustomLink from '@ui/CustomLink';
 import {
 	ABOUT_ROUTE,
 	COLLECT_ROUTE,
 	EXERCISES_ROUTE,
 	FAVOR_ROUTE,
 	LANGS_ROUTE,
+	MAIN_ROUTE,
 	VOCAB_ROUTE,
 } from '@/router/routes';
 import SvgIconHome from '@assets/icons/icon_home.svg?react';
@@ -33,9 +34,9 @@ function Navbar() {
 						<CustomLink
 							className={cx(
 								styles.link,
-								location.pathname === '/' && styles.link_active
+								location.pathname === MAIN_ROUTE && styles.link_active
 							)}
-							href="/"
+							href={MAIN_ROUTE}
 							target="_self"
 							onClick={() => console.log('click')}
 						>

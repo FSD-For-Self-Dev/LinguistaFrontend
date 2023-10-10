@@ -36,9 +36,9 @@
 .DropdownMenuItem {
 	letter-spacing: 0.02em;
 	padding: 19px 29px;
-
 	user-select: none;
 	outline: none;
+	transition: color 0.2s ease-in-out;
 
 	&.item {
 		@include font-source-sans(14px, $neutral-text-main-color, 500, 17px);
@@ -49,6 +49,7 @@
 	}
 
 	&.red {
+		font-size: 14px;
 		color: $danger-color;
 	}
 
@@ -63,7 +64,7 @@
 }
 
 .DropdownMenuItem[data-highlighted] {
-	background-color: darken($neutral-background-main-color, 4);
+	color: $primary-brand-color;
 	cursor: pointer;
 }
 

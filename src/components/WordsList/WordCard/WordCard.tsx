@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { WordStatus, WordSubMenu } from '@ui/index';
-import { AddToFavorite, CopyText } from './elements';
 import { VOCAB_WORD_ROUTE } from '@/router/routes';
+import { WordStatus, WordSubMenu } from '@ui/index';
+import { CopyText } from '@ui/CopyText';
+import { AddToFavorite } from '@ui/AddToFavorite';
 import { Badge } from '@ui/Badge';
 import { IWordCard } from '@/shared/interfaces/IWordCard';
 import { Carousel } from '@ui/Carousel/Carousel';
@@ -45,7 +46,6 @@ export const WordCard = ({ item }: Props) => {
 					<WordSubMenu colorTheme={img ? 'light' : 'dark'} />
 				</span>
 			</div>
-
 			<div className={styles.cardBody}>
 				<p className={styles.type}>{type}</p>
 				<p className={styles.word}>

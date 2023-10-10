@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import CustomLink from '../ui/CustomLink';
 import {
 	ABOUT_ROUTE,
 	CONTACTS_ROUTE,
@@ -29,9 +29,14 @@ const links = [
 export default function Footer() {
 	const footerLinks = links.map((link, idx) => (
 		<li key={idx}>
-			<Link to={link.href} className={styles.link}>
+			<CustomLink
+				apperance="underline"
+				target="_blank"
+				href={link.href}
+				className={styles.link}
+			>
 				{link.title}
-			</Link>
+			</CustomLink>
 		</li>
 	));
 
