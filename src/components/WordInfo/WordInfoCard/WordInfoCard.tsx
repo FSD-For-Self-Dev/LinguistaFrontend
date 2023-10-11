@@ -1,55 +1,44 @@
-import classNames from 'classnames/bind';
+import cx from 'classnames';
 
 import styles from './WordInfoCard.module.scss';
 
-const cx = classNames.bind(styles);
-
 export default function WordInfoCard({ type = 'default' }) {
-	const constructControlDots = () => {
-		const controlDots = new Array(5).fill(<></>).map((_ratingElement, i) => {
-			return (
-				<button className={cx('dotButton')} key={i}>
-					<span className={cx('dotIcon', { active: i === 1 })} />
-				</button>
-			);
-		});
-		return controlDots;
-	};
-
 	return (
 		<article
-			className={cx('cardWord', { cardWordPadding: type === 'translations' })}
+			className={cx(styles.cardWord, {
+				cardWordPadding: type === styles.translations,
+			})}
 		>
 			{type === 'default' && (
-				<div className={cx('wrapper')}>
-					<div className={cx('wordStatus')}>
-						<span className={cx('fireIcon')}></span>
-						<p className={cx('wordStatusText')}>Активное</p>
-						<button className={cx('buttonQuestion')}>
-							<span className={cx('questionIcon')}></span>
+				<div className={cx(styles.wrapper)}>
+					<div className={cx(styles.wordStatus)}>
+						<span className={cx(styles.fireIcon)}></span>
+						<p className={cx(styles.wordStatusText)}>Активное</p>
+						<button className={cx(styles.buttonQuestion)}>
+							<span className={cx(styles.questionIcon)}></span>
 						</button>
 					</div>
 
-					<div className={cx('control')}>
-						<ul className={cx('controlList')}>
-							<li className={cx('controlItem')}>
-								<button className={cx('buttonControl')}>
-									<span className={cx('commentIcon')}></span>
+					<div className={cx(styles.control)}>
+						<ul className={cx(styles.controlList)}>
+							<li className={cx(styles.controlItem)}>
+								<button className={cx(styles.buttonControl)}>
+									<span className={cx(styles.commentIcon)}></span>
 								</button>
 							</li>
-							<li className={cx('controlItem')}>
-								<button className={cx('buttonControl')}>
-									<span className={cx('collectionIcon')}></span>
+							<li className={cx(styles.controlItem)}>
+								<button className={cx(styles.buttonControl)}>
+									<span className={cx(styles.collectionIcon)}></span>
 								</button>
 							</li>
-							<li className={cx('controlItem')}>
-								<button className={cx('buttonControl')}>
-									<span className={cx('arrowIcon')}></span>
+							<li className={cx(styles.controlItem)}>
+								<button className={cx(styles.buttonControl)}>
+									<span className={cx(styles.arrowIcon)}></span>
 								</button>
 							</li>
-							<li className={cx('controlItem')}>
-								<button className={cx('buttonControl')}>
-									<span className={cx('menuDotsIcon')}></span>
+							<li className={cx(styles.controlItem)}>
+								<button className={cx(styles.buttonControl)}>
+									<span className={cx(styles.menuDotsIcon)}></span>
 								</button>
 							</li>
 						</ul>
@@ -88,10 +77,6 @@ export default function WordInfoCard({ type = 'default' }) {
 					)}
 				</div>
 			</div>
-
-			{type === 'translations' && (
-				<div className={cx('controlDotsList')}>{constructControlDots()}</div>
-			)}
 		</article>
 	);
 }
