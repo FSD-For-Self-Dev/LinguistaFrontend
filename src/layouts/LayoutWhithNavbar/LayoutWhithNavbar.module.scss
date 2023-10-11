@@ -1,5 +1,6 @@
-@import '@styles/colors.scss';
-@import '@styles/mixins.scss';
+@import '@styles/colors';
+@import '@styles/mixins/font';
+@import '@styles/mixins/media';
 
 .content {
 	display: grid;

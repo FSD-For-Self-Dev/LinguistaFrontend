@@ -1,0 +1,27 @@
+@mixin font-source-sans(
+	$size: false,
+	$colour: false,
+	$weight: false,
+	$lh: false,
+	$ff: false
+) {
+	@if $size {
+		font-size: $size;
+	}
+	@if $colour {
+		color: $colour;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+	@if $ff {
+		font-family: $ff, sans-serif;
+	}
+}
+
+@mixin sub-title {
+	@include font-source-sans(12px, $neutral-text-middle-color, 400);
+}

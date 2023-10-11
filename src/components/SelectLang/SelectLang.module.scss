@@ -1,5 +1,5 @@
 @import '@styles/colors';
-@import '@styles/mixins';
+@import '@styles/mixins/font';
 
 .lang {
 	display: flex;
@@ -16,6 +16,7 @@
 	margin-left: 10px;
 	border: none;
 	cursor: pointer;
+
 	@include font-source-sans(
 		15px,
 		$neutral-text-dark-color,

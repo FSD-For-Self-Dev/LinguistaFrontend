@@ -1,8 +1,9 @@
 @import '@styles/colors';
-@import '@styles/mixins';
+@import '@styles/mixins/font';
 
 .input {
 	border: 1px solid $neutral-line-color;
+
 	@include font-source-sans(
 		12px,
 		$neutral-text-dark-color,
@@ -10,6 +11,7 @@
 		14.5px,
 		'Inter'
 	);
+
 	&:hover,
 	&:focus {
 		outline: none;
