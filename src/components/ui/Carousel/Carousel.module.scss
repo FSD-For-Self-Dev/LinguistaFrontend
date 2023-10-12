@@ -48,7 +48,9 @@
 }
 .dots li button::before {
 	content: '';
+	max-width: 9px;
 	width: 9px;
+	max-height: 9px;
 	height: 9px;
 	box-sizing: border-box;
 	background-color: $neutral-text-middle-color;
@@ -71,7 +73,8 @@
 }
 
 .slider {
-	& :global(:focus) {
-		outline: none;
+	& :global(.slick-disabled::before) {
+		cursor: auto;
+		opacity: 0.25;
 	}
 }

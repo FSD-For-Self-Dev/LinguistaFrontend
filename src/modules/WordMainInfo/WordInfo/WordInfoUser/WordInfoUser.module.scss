@@ -7,13 +7,15 @@
 	justify-content: space-between;
 }
 
-.userInfo {
+.flex {
 	display: flex;
 	align-items: center;
+	gap: 10px;
 }
 
-.userIcon {
-	display: inline-block;
+.icon {
+	width: 34px;
+	height: 34px;
 }
 
 .name {
@@ -25,37 +27,23 @@
 		'Fredoka'
 	);
 
-	display: inline-block;
-	margin: 0 10px 0 0;
+	margin-left: 10px;
 }
 
-.username {
+.nick {
 	@include font-source-sans(
 		16px,
-		$neutral-text-contrast-color,
+		$neutral-text-light-color,
 		400,
 		20px,
 		'Fredoka'
 	);
-
-	margin: 0;
-}
-
-.dateAdded {
-	display: flex;
-	align-items: center;
 }
 
 .added {
 	@include font-source-sans(14px, $neutral-text-main-color, 400, 17px);
-
-	display: inline-block;
-	margin: 0;
 }
 
 .ago {
-	@include font-source-sans(10px, $neutral-text-contrast-color, 400, 12px);
-
-	display: inline-block;
-	margin: 0 10px 0;
+	@include font-source-sans(10px, $neutral-text-dark-color, 400, 12px);
 }

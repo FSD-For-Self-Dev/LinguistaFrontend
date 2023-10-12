@@ -17,7 +17,7 @@ import {
 	VOCAB_WORD_ROUTE,
 } from '@/router/routes';
 import { Vocabulary } from '@pages/Vocabulary';
-import WordInfo from '@/components/WordInfo';
+import WordInfo from '@pages/WordProfile';
 import DangerZoneCards from '@/components/DangerZone/DangerZoneCards';
 import DangerZone from '@/components/DangerZone';
 

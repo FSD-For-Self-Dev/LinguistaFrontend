@@ -1,4 +1,4 @@
-import WordInfo from '@components/WordInfo';
+import WordInfo from '@modules/WordMainInfo/WordInfo';
 
 export default function WordProfile() {
 	return <WordInfo />;
