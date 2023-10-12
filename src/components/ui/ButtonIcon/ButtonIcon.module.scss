@@ -1,11 +1,10 @@
-@import '@styles/colors.scss';
-@import '@styles/mixins';
+@import '@styles/colors';
 
 .button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-color: transparent;
+	border: none;
 	background-color: transparent;
 	outline: none;
 	transition: opacity 0.2s ease-in-out;

@@ -1,6 +1,5 @@
 import cx from 'classnames';
 import styles from './Button.module.scss';
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 type ButtonTheme = 'primary' | 'transparent' | 'secondary' | 'no-border';
 type ButtonSize = 'normal' | 'tall';
@@ -14,7 +13,6 @@ interface Props {
 	disabled?: boolean;
 	active?: boolean;
 	onClick?: () => void;
-	trigger?: boolean;
 }
 
 export const Button = ({
@@ -26,29 +24,13 @@ export const Button = ({
 	disabled = false,
 	active,
 	onClick,
-	trigger,
 }: Props) => {
-	return trigger ? (
-		<DropdownMenu.Trigger
-			className={cx(
-				styles.button,
-				styles[`button_${theme}`],
-				styles[`button_${size}`],
-				active && styles[`button_${theme}_active`],
-				className
-			)}
-			type={type}
-			disabled={disabled}
-		>
-			{children}
-		</DropdownMenu.Trigger>
-	) : (
+	return (
 		<button
 			className={cx(
-				styles.button,
-				styles[`button_${theme}`],
-				styles[`button_${size}`],
-				active && styles[`button_${theme}_active`],
+				styles[`${theme}`],
+				styles[`${size}`],
+				active && styles[`${theme}_active`],
 				className
 			)}
 			onClick={onClick}
