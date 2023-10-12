@@ -27,6 +27,7 @@ export default function WordInfo() {
 		<section className={styles.wrapper}>
 			{info.img && (
 				<Carousel
+					fade
 					dots
 					autoplay
 					className={styles.slider}

@@ -11,6 +11,7 @@ import styles from './Carousel.module.scss';
 interface CarouselProps {
 	children: Iterable<React.ReactNode> | React.ReactElement;
 	autoplay?: boolean;
+	fade?: boolean;
 	arrows?: boolean;
 	dots?: boolean;
 	slides?: number;
@@ -23,6 +24,7 @@ interface CarouselProps {
 export const Carousel: FC<CarouselProps> = ({
 	children,
 	autoplay,
+	fade = false,
 	arrows,
 	dots,
 	slides = 1,
@@ -44,7 +46,7 @@ export const Carousel: FC<CarouselProps> = ({
 		infinite: true,
 		cssEase: 'linear',
 		arrows: false,
-		fade: autoplay,
+		fade: fade,
 		autoplay: autoplay,
 		autoplaySpeed: 8000,
 		speed: 600,
