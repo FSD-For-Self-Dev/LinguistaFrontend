@@ -20,6 +20,7 @@ import { Vocabulary } from '@pages/Vocabulary';
 import WordInfo from '@/components/WordInfo';
 import DangerZoneCards from '@/components/DangerZone/DangerZoneCards';
 import DangerZone from '@/components/DangerZone';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 export function Router() {
 	return (
@@ -40,6 +41,7 @@ export function Router() {
 				<Route path={FAVOR_ROUTE} />
 				<Route path={EXERCISES_ROUTE} />
 				<Route path={ABOUT_ROUTE} />
+				<Route path="*" element={<NotFoundPage />} />
 			</Route>
 		</Routes>
 	);
