@@ -7,13 +7,13 @@ import ThemeSwitcher from '../ThemeSwitcher';
 import { ButtonIcon } from '@ui/ButtonIcon';
 import { MAIN_ROUTE } from '@/router/routes';
 
-import iconTags from '@assets/icons/icon_tags.svg';
 import iconFilter from '@assets/icons/icon_filter.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
 import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import styles from './Header.module.scss';
 import AddBtnMenu from './AddBtnMenu';
+import SortPanel from './SortPanel';
 
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
@@ -55,9 +55,7 @@ const Header = () => {
 						<img className={styles.filter} src={iconFilter} />
 					</div>
 
-					<div className={styles.sortingBlock}>
-						<img className={styles.sorting} src={iconTags} />
-					</div>
+					<SortPanel />
 				</div>
 
 				<AddBtnMenu />
