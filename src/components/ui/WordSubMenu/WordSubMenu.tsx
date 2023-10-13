@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import cx from 'classnames';
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuButton,
+} from '@/components/ui/DropdownMenu';
 
+import { WORD_SUBMENU } from '@/static/wordSubMenu';
 import SvgIconDots from '@assets/icons/icon_dots.svg?react';
 import styles from './WordSubMenu.module.scss';
-import { ButtonIcon } from '@ui/ButtonIcon';
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 type ColorTheme = 'light' | 'dark';
 
@@ -12,52 +18,32 @@ interface Props {
 }
 
 export const WordSubMenu = ({ colorTheme }: Props) => {
-	const [isOpen, setIsOpen] = useState(false);
+	const navigate = useNavigate();
+	const queryParams = new URLSearchParams(location.search);
 
-	const closeMenu = () => {
-		setIsOpen(false);
+	const selectHandler = (link: string, text: string) => {
+		queryParams.set('title', text);
+
+		navigate({ pathname: link, search: queryParams.toString() });
 	};
 
 	return (
-		<DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
-			<ButtonIcon trigger="dropdown" colorTheme={colorTheme}>
+		<DropdownMenu>
+			<DropdownMenuButton className={cx(styles.btnIcon, styles[colorTheme])}>
 				<SvgIconDots />
-			</ButtonIcon>
-			<DropdownMenu.Portal>
-				<DropdownMenu.Content
-					className={styles.DropdownMenuContent}
-					side="right"
-					sideOffset={15}
-					onPointerLeave={closeMenu}
-				>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.item}`}
+			</DropdownMenuButton>
+			<DropdownMenuContent side="right" sideOffset={10} arrow={false}>
+				{WORD_SUBMENU.map(({ item, link, classes, disabled }, idx) => (
+					<DropdownMenuItem
+						key={`wsm${idx}`}
+						disabled={disabled}
+						className={classes}
+						action={link ? () => selectHandler(link, item) : undefined}
 					>
-						Тренировать
-					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.item}`}
-					>
-						Добавить в коллекцию
-					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.item}`}
-					>
-						Редактировать
-					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.red}`}
-					>
-						Удалить
-					</DropdownMenu.Item>
-					<DropdownMenu.Item
-						className={`${styles.DropdownMenuItem} ${styles.small}`}
-						disabled
-					>
-						Редактировано пользователем user Вчера 14.09 в 13:00
-					</DropdownMenu.Item>
-				</DropdownMenu.Content>
-			</DropdownMenu.Portal>
-		</DropdownMenu.Root>
+						{item}
+					</DropdownMenuItem>
+				))}
+			</DropdownMenuContent>
+		</DropdownMenu>
 	);
 };
