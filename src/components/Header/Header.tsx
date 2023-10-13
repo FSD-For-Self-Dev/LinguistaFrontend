@@ -1,19 +1,19 @@
 import { useState } from 'react';
-import styles from './Header.module.scss';
 
-import { Button } from '@ui/Button';
-import CustomLink from '../ui/CustomLink';
 import Input from '@ui/Input';
-import ThemeSwitcher from '../ThemeSwitcher';
+import CustomLink from '@ui/CustomLink';
 import SelectLang from '../SelectLang';
+import ThemeSwitcher from '../ThemeSwitcher';
 import { ButtonIcon } from '@ui/ButtonIcon';
 import { MAIN_ROUTE } from '@/router/routes';
-import iconFilter from '@assets/icons/icon_filter.svg';
+
 import iconTags from '@assets/icons/icon_tags.svg';
+import iconFilter from '@assets/icons/icon_filter.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
-import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
-import { CustomDropdownMenu } from '../ui/CustomDropdownMenu';
+import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
+import styles from './Header.module.scss';
+import AddBtnMenu from './AddBtnMenu';
 
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
@@ -60,22 +60,7 @@ const Header = () => {
 					</div>
 				</div>
 
-				<CustomDropdownMenu
-					items={[
-						'Слово или фраза',
-						'Несколько подряд',
-						'Перевод',
-						'Пример использования',
-						'Ассоциация',
-						'Коллекция',
-					]}
-					side="bottom"
-					sideOffset={15}
-				>
-					<Button trigger className={styles.button}>
-						+&nbsp;Добавить
-					</Button>
-				</CustomDropdownMenu>
+				<AddBtnMenu />
 
 				<div className={styles.rightPanel}>
 					<div className={styles.userInterface}>
