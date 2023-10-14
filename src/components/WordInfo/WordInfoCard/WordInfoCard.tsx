@@ -17,9 +17,7 @@ export default function WordInfoCard({ type = 'default' }) {
 	};
 
 	return (
-		<article
-			className={cx('cardWord', { cardWordPadding: type === 'translations' })}
-		>
+		<article className={cx('cardWord', { cardWordPadding: type === 'translations' })}>
 			{type === 'default' && (
 				<div className={cx('wrapper')}>
 					<div className={cx('wordStatus')}>
@@ -59,9 +57,7 @@ export default function WordInfoCard({ type = 'default' }) {
 
 			{type === 'translations' && (
 				<button className={cx('buttonTranslate')}>
-					<p className={cx('buttonTranslateText', 'marginRight')}>
-						Все переводы
-					</p>
+					<p className={cx('buttonTranslateText', 'marginRight')}>Все переводы</p>
 					<p className={cx('buttonTranslateText', 'colorGray')}>4</p>
 				</button>
 			)}
