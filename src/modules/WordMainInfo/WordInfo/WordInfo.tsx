@@ -15,39 +15,19 @@ const info: IWordCard = {
 	level: 'A1',
 	type: 'глагол',
 	favorite: true,
-	translate: [
-		'Прыгнуть в гущу событий',
-		'Прыгнуть в гущу событий',
-		'Прыгнуть в гущу событий',
-	],
+	translate: ['Прыгнуть в гущу событий', 'Прыгнуть в гущу событий', 'Прыгнуть в гущу событий'],
 };
 
 export default function WordInfo() {
 	return (
 		<section className={styles.wrapper}>
 			{info.img && (
-				<Carousel
-					fade
-					dots
-					autoplay
-					className={styles.slider}
-					dotsClass={styles.dots}
-				>
+				<Carousel fade dots autoplay className={styles.slider} dotsClass={styles.dots}>
 					{info.img.map((image) => (
 						<div className={styles.images} key={image}>
-							<div
-								className={styles.image}
-								style={{ backgroundImage: `url(${image})` }}
-							/>
-							<img
-								src={image}
-								className={styles.image}
-								alt="Ассоциативное изображение"
-							/>
-							<div
-								className={styles.image}
-								style={{ backgroundImage: `url(${image})` }}
-							/>
+							<div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+							<img src={image} className={styles.image} alt="Ассоциативное изображение" />
+							<div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
 						</div>
 					))}
 				</Carousel>

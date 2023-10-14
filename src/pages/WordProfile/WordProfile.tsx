@@ -8,7 +8,7 @@ export default function WordProfile() {
 		<div className={styles.container}>
 			<WordInfo />
 			<WordCollection />
-      <Associations />
+			<Associations />
 		</div>
 	);
 }
