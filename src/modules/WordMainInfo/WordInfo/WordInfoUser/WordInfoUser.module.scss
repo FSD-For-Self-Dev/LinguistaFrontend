@@ -19,25 +19,13 @@
 }
 
 .name {
-	@include font-source-sans(
-		20px,
-		$neutral-text-main-color,
-		400,
-		24px,
-		'Fredoka'
-	);
+	@include font-source-sans(20px, $neutral-text-main-color, 400, 24px, 'Fredoka');
 
 	margin-left: 10px;
 }
 
 .nick {
-	@include font-source-sans(
-		16px,
-		$neutral-text-light-color,
-		400,
-		20px,
-		'Fredoka'
-	);
+	@include font-source-sans(16px, $neutral-text-light-color, 400, 20px, 'Fredoka');
 }
 
 .added {

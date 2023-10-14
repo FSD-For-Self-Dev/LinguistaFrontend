@@ -68,9 +68,7 @@ export const Carousel: FC<CarouselProps> = ({
 				<button
 					onClick={() => prevSlide()}
 					className={cx(styles.button, buttonClass)}
-					style={
-						React.Children.count(children) > slides ? {} : { display: 'none' }
-					}
+					style={React.Children.count(children) > slides ? {} : { display: 'none' }}
 				>
 					<SvgArrow className={styles.prev_arrow} />
 				</button>
@@ -88,9 +86,7 @@ export const Carousel: FC<CarouselProps> = ({
 				<button
 					onClick={() => nextSlide()}
 					className={cx(styles.button, buttonClass)}
-					style={
-						React.Children.count(children) > slides ? {} : { display: 'none' }
-					}
+					style={React.Children.count(children) > slides ? {} : { display: 'none' }}
 				>
 					<SvgArrow className={styles.next_arrow} />
 				</button>

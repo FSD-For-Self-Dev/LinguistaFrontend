@@ -18,11 +18,7 @@ export const WordCard = ({ item }: Props) => {
 	return (
 		<div className={img ? `${styles.card} ${styles.withBg}` : styles.card}>
 			{img && (
-				<Carousel
-					dots
-					className={styles.image_slider}
-					sliderClass={styles.image_slider}
-				>
+				<Carousel dots className={styles.image_slider} sliderClass={styles.image_slider}>
 					{img?.map((image) => (
 						<img
 							key={image}
@@ -38,11 +34,7 @@ export const WordCard = ({ item }: Props) => {
 				<WordStatus status={status} colorTheme={img ? 'light' : 'dark'} />
 
 				<span className={styles.cardActions}>
-					<AddToFavorite
-						colorTheme={img ? 'light' : 'dark'}
-						isFavorite={favorite}
-						id={word}
-					/>
+					<AddToFavorite colorTheme={img ? 'light' : 'dark'} isFavorite={favorite} id={word} />
 					<WordSubMenu colorTheme={img ? 'light' : 'dark'} />
 				</span>
 			</div>
@@ -65,14 +57,8 @@ export const WordCard = ({ item }: Props) => {
 			</div>
 
 			{translate ? (
-				<Carousel
-					arrows
-					className={styles.cardFooter}
-					sliderClass={styles.slider}
-				>
-					{translate?.map((translation) => (
-						<span key={translation}>{translation}</span>
-					))}
+				<Carousel arrows className={styles.cardFooter} sliderClass={styles.slider}>
+					{translate?.map((translation) => <span key={translation}>{translation}</span>)}
 				</Carousel>
 			) : (
 				<div />

@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router';
 import { useWindowResize } from '@shared/hooks/useResize';
 import Navbar from '@components/Navbar';
-import Header from '@components/Header';
+import Header from '@/modules/Header';
 import Footer from '@components/Footer';
 import styles from './LayoutWhithNavbar.module.scss';
 

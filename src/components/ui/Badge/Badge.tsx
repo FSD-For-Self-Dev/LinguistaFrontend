@@ -10,9 +10,5 @@ interface Props {
 }
 
 export const Badge = ({ children, className, type = 'tag' }: Props) => {
-	return (
-		<div className={cx(styles.badge, styles[`badge_${type}`], className)}>
-			{children}
-		</div>
-	);
+	return <div className={cx(styles.badge, styles[`badge_${type}`], className)}>{children}</div>;
 };

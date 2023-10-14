@@ -10,17 +10,10 @@ type Props = {
 	colorTheme: 'dark' | 'light';
 };
 
-export const WordStatus = ({
-	status = 'Активное',
-	colorTheme = 'dark',
-}: Props) => {
+export const WordStatus = ({ status = 'Активное', colorTheme = 'dark' }: Props) => {
 	return (
 		<span className={`${styles.status} ${styles[colorTheme]}`}>
-			{status === 'Активное' ? (
-				<SvgStatusActive />
-			) : (
-				<SvgStatusNotActive color="#B3C3FD" />
-			)}
+			{status === 'Активное' ? <SvgStatusActive /> : <SvgStatusNotActive color="#B3C3FD" />}
 			{status}
 			<SvgIconQuestion />
 		</span>

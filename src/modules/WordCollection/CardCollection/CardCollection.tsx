@@ -1,5 +1,5 @@
-import styles from './CardCollection.module.scss';
 import { Button } from '@/components/ui/Button';
+import styles from './CardCollection.module.scss';
 
 const CardCollection = () => {
 	const items = ['Dunder method', 'Linter', 'Framework'];
