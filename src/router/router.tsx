@@ -17,11 +17,10 @@ import {
 	VOCAB_ROUTE,
 	VOCAB_WORD_ROUTE,
 } from '@/router/routes';
-
 const Vocabulary = lazy(() => import('@pages/Vocabulary'));
 const DangerZone = lazy(() => import('@/components/DangerZone'));
 const DangerZoneCards = lazy(() => import('@/components/DangerZone/DangerZoneCards'));
-const WordInfo = lazy(() => import('@/components/WordInfo'));
+const WordProfile = lazy(() => import('@/pages/WordProfile'));
 
 export function Router() {
 	return (
@@ -37,7 +36,7 @@ export function Router() {
 				<Route path={VOCAB_DANGER_ROUTE} element={<DangerZoneCards />} />
 				<Route path={VOCAB_POTENTIAL_ROUTE} />
 				<Route path={VOCAB_LEARNED_ROUTE} />
-				<Route path={VOCAB_WORD_ROUTE} element={<WordInfo />} />
+				<Route path={VOCAB_WORD_ROUTE} element={<WordProfile />} />
 				<Route path={COLLECT_ROUTE} />
 				<Route path={FAVOR_ROUTE} />
 				<Route path={EXERCISES_ROUTE} />

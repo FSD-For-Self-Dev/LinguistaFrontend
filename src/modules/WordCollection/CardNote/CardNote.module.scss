@@ -1,0 +1,9 @@
+@import '@styles/colors';
+@import '@styles/mixins';
+
+.note {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	@include font-source-sans(14px, $neutral-text-main-color, 400, 17px);
+}
