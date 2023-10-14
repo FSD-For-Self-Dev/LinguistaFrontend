@@ -14,11 +14,6 @@
 	border-radius: 5px;
 }
 
-.date {
-	@include font-source-sans(12px, $neutral-text-middle-color, 400, 14px);
-	margin-bottom: 16px;
-}
-
 .carousel {
 	width: 100%;
 	position: relative;
@@ -37,10 +32,12 @@
 
 		&:first-child {
 			left: 47px;
+			bottom: 0;
 		}
 
 		&:last-child {
 			right: 47px;
+			bottom: 0;
 		}
 	}
 }

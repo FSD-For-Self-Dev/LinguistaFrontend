@@ -5,7 +5,6 @@ import styles from './NoteCollection.module.scss';
 const NoteCollection = () => {
 	return (
 		<div className={styles.notebook}>
-			<span className={styles.date}>10 августа 2023</span>
 			<Carousel
 				arrows
 				slides={1}
