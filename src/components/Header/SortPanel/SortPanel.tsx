@@ -1,33 +1,71 @@
+import { useState } from 'react';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuButton,
-	DropdownMenuItem,
+	DropdownMenuRadioItem,
+	DropdownMenuRadioGroup,
 } from '@/components/ui/DropdownMenu';
-
-import { SORT_PANEL } from '@/static/sortPanel';
+import {
+	ESortDirection,
+	ESortDirectionSymbol,
+	TSortItem,
+} from '@/shared/interfaces/sortPanel';
+import { DEFAULT_SORT_PARAMS, SORT_PANEL } from '@/static/sortPanel';
 import SvgIconSort from '@assets/icons/icon_sort.svg?react';
 import styles from './SortPanel.module.scss';
-import { TSortItem } from '@/shared/interfaces/sortPanel';
 
 const SortPanel = () => {
-	const selectHandler = () => {};
+	const [currentSort, setCurrentSort] = useState(DEFAULT_SORT_PARAMS);
 
 	const sortItems = SORT_PANEL.map((sortItem: TSortItem) => {
-		const { label, field } = sortItem;
+		const { label, field, options } = sortItem;
+
+		const arrowSymbol =
+			currentSort.sortBy === field ? ESortDirectionSymbol[currentSort.dir] : '';
+
+		const sortTitle = options[currentSort.dir] || `Сортировать ${label}`;
+
 		return (
-			<DropdownMenuItem action={selectHandler} key={field}>
+			<DropdownMenuRadioItem
+				key={field}
+				value={field}
+				textValue={sortTitle}
+				className={styles.radioItem}
+			>
+				<span className={styles.arrow}>{arrowSymbol}</span>
 				{label}
-			</DropdownMenuItem>
+			</DropdownMenuRadioItem>
 		);
 	});
+
+	const valueChangeHandler = (value: string) => {
+		console.log(value);
+		if (currentSort.sortBy === value)
+			return setCurrentSort({
+				...currentSort,
+				dir:
+					currentSort.dir === ESortDirection.ASC
+						? ESortDirection.DESC
+						: ESortDirection.ASC,
+			});
+
+		return setCurrentSort({ ...currentSort, sortBy: value });
+	};
 
 	return (
 		<DropdownMenu>
 			<DropdownMenuButton className={styles.btn}>
 				<SvgIconSort />
 			</DropdownMenuButton>
-			<DropdownMenuContent>{sortItems}</DropdownMenuContent>
+			<DropdownMenuContent>
+				<DropdownMenuRadioGroup
+					value={currentSort.sortBy}
+					onValueChange={valueChangeHandler}
+				>
+					{sortItems}
+				</DropdownMenuRadioGroup>
+			</DropdownMenuContent>
 		</DropdownMenu>
 	);
 };

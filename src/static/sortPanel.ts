@@ -1,60 +1,41 @@
-import { TSortItem } from '@/shared/interfaces/sortPanel';
+import { ESortDirection, TSortItem } from '@/shared/interfaces/sortPanel';
+
+export const DEFAULT_SORT_PARAMS = {
+	sortBy: 'byDateAdded',
+	dir: ESortDirection.ASC,
+};
 
 export const SORT_PANEL: Array<TSortItem> = [
 	{
-		label: '↑ По дате добавления',
+		label: 'По дате добавления',
 		field: 'byDateAdded',
-		options: [
-			{
-				option: 'сначала новые',
-				sort: 'ASC',
-			},
-			{
-				option: 'сначала старые',
-				sort: 'DESC',
-			},
-		],
+		options: {
+			ASC: 'сначала новые',
+			DESC: 'сначала старые',
+		},
 	},
 	{
-		label: '↓ По дате последней тренировки',
+		label: 'По дате последней тренировки',
 		field: 'byLastDate',
-		options: [
-			{
-				option: 'сначала недавние',
-				sort: 'ASC',
-			},
-			{
-				option: 'сначала давние',
-				sort: 'DESC',
-			},
-		],
+		options: {
+			ASC: 'сначала недавние',
+			DESC: 'сначала давние',
+		},
 	},
 	{
-		label: '↑ В алфавитном порядке',
+		label: 'В алфавитном порядке',
 		field: 'byAlphabet',
-		options: [
-			{
-				option: 'от A до Z',
-				sort: 'ASC',
-			},
-			{
-				option: 'от Z до A',
-				sort: 'DESC',
-			},
-		],
+		options: {
+			ASC: 'от A до Z',
+			DESC: 'от Z до A',
+		},
 	},
 	{
-		label: '↓ По кол-ву переводов',
+		label: 'По кол-ву переводов',
 		field: 'byTranslateNumber',
-		options: [
-			{
-				option: 'от большего',
-				sort: 'ASC',
-			},
-			{
-				option: 'от меньшего',
-				sort: 'DESC',
-			},
-		],
+		options: {
+			ASC: 'от меньшего',
+			DESC: 'от большего',
+		},
 	},
 ];
