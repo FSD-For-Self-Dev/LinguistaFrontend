@@ -17,7 +17,7 @@ import {
 	VOCAB_WORD_ROUTE,
 } from '@/router/routes';
 import { Vocabulary } from '@pages/Vocabulary';
-import WordInfo from '@pages/WordProfile';
+import WordProfile from '@pages/WordProfile';
 import DangerZoneCards from '@/components/DangerZone/DangerZoneCards';
 import DangerZone from '@/components/DangerZone';
 
@@ -35,7 +35,7 @@ export function Router() {
 				<Route path={VOCAB_DANGER_ROUTE} element={<DangerZoneCards />} />
 				<Route path={VOCAB_POTENTIAL_ROUTE} />
 				<Route path={VOCAB_LEARNED_ROUTE} />
-				<Route path={VOCAB_WORD_ROUTE} element={<WordInfo />} />
+				<Route path={VOCAB_WORD_ROUTE} element={<WordProfile />} />
 				<Route path={COLLECT_ROUTE} />
 				<Route path={FAVOR_ROUTE} />
 				<Route path={EXERCISES_ROUTE} />
