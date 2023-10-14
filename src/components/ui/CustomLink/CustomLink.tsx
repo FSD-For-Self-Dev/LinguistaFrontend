@@ -11,14 +11,7 @@ interface Props {
 	className?: string;
 }
 
-function CustomLink({
-	apperance = 'regular',
-	href,
-	onClick,
-	children,
-	target,
-	className,
-}: Props) {
+function CustomLink({ apperance = 'regular', href, onClick, children, target, className }: Props) {
 	return (
 		<Link
 			to={href}

@@ -1,15 +1,20 @@
+import { Suspense, lazy } from 'react';
 import { Outlet } from 'react-router-dom';
-import { WordsList } from '@components/WordsList';
+import { Loader } from '@/components/Loader';
 import LangAndStatusFilter from '@components/LangAndStatusFilter';
 
-//import styles from './Vocabulary.module.scss';
+const WordsList = lazy(() => import('@components/WordsList'));
 
-export function Vocabulary() {
+function Vocabulary() {
 	return (
 		<>
 			<LangAndStatusFilter />
 			<Outlet />
-			<WordsList />
+			<Suspense fallback={<Loader />}>
+				<WordsList />
+			</Suspense>
 		</>
 	);
 }
+
+export default Vocabulary;

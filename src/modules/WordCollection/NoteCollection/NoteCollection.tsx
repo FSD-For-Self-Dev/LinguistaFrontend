@@ -1,6 +1,6 @@
 import { Carousel } from '@/components/ui/Carousel/Carousel';
-import styles from './NoteCollection.module.scss';
 import CardNote from '../CardNote';
+import styles from './NoteCollection.module.scss';
 
 const NoteCollection = () => {
 	return (

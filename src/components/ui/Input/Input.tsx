@@ -12,15 +12,7 @@ interface Props {
 	className?: string;
 }
 
-function Input({
-	type,
-	name,
-	id,
-	placeholder,
-	onChange,
-	value,
-	className,
-}: Props) {
+function Input({ type, name, id, placeholder, onChange, value, className }: Props) {
 	return (
 		<input
 			type={type}

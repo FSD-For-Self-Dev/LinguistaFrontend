@@ -1,1 +1,1 @@
-export { Vocabulary } from './Vocabulary';
+export { default } from './Vocabulary';

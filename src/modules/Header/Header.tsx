@@ -1,21 +1,25 @@
 import { useState } from 'react';
-import styles from './Header.module.scss';
+import { useTranslation } from 'react-i18next';
 
-import { Button } from '@ui/Button';
-import CustomLink from '../ui/CustomLink';
-import Input from '@ui/Input';
-import ThemeSwitcher from '../ThemeSwitcher';
-import SelectLang from '../SelectLang';
-import { ButtonIcon } from '@ui/ButtonIcon';
 import { MAIN_ROUTE } from '@/router/routes';
-import iconFilter from '@assets/icons/icon_filter.svg';
+import { Button } from '@ui/Button';
+import { ButtonIcon } from '@ui/ButtonIcon';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import Input from '@ui/Input';
+import CustomLink from '@ui/CustomLink';
+import ThemeSwitcher from './ThemeSwitcher';
+
 import iconTags from '@assets/icons/icon_tags.svg';
+import iconFilter from '@assets/icons/icon_filter.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
 
+import styles from './Header.module.scss';
+
 const Header = () => {
 	const [searchText, changeSearchText] = useState('');
+	const { t } = useTranslation('header');
 
 	return (
 		<header>
@@ -36,13 +40,13 @@ const Header = () => {
 					className={styles.logoText}
 					onClick={() => console.log('click')}
 				>
-					Linguista <span>Control & Repeat</span>
+					{t('projectName')} <span>{t('projectSlogan')}</span>
 				</CustomLink>
 				<div className={styles.searching}>
 					<div className={styles.inputBlock}>
 						<Input
 							type="text"
-							placeholder="Найти слово или фразу.."
+							placeholder={t('searchPlaceholder')}
 							className={styles.searchInput}
 							onChange={(evt) => changeSearchText(evt.target.value)}
 							value={searchText}
@@ -61,7 +65,7 @@ const Header = () => {
 
 				{/* TODO вынести в отдельный кабинет с модальным окном */}
 				<Button className={styles.button} onClick={() => console.log('click')}>
-					+&nbsp;Добавить
+					{t('add')}
 				</Button>
 
 				<div className={styles.rightPanel}>
@@ -77,7 +81,8 @@ const Header = () => {
 							<SvgIconUserCabinet />
 						</ButtonIcon>
 					</div>
-					<SelectLang />
+
+					<LanguageSwitcher />
 				</div>
 			</div>
 		</header>

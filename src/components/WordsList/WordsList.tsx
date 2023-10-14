@@ -1,11 +1,14 @@
-import styles from './WordsList.module.scss';
+import { useTranslation } from 'react-i18next';
+import { Button } from '@ui/Button';
 import { WordCard } from './WordCard';
-import { data } from '@/utils/mocks';
 import SvgIconHistory from '@assets/icons/icon_history.svg?react';
 import SvgIconView from '@assets/icons/icon_view.svg?react';
-import { Button } from '../ui/Button';
+import { data } from '@/utils/mocks';
+import styles from './WordsList.module.scss';
 
-export const WordsList = () => {
+const WordsList = () => {
+	const { t } = useTranslation('vocabulary');
+
 	const wordsList = data.map((wordItem, idx) => {
 		return <WordCard item={wordItem} key={idx} />;
 	});
@@ -14,14 +17,14 @@ export const WordsList = () => {
 		<section>
 			<div className={styles.header}>
 				<div className={styles.headerStats}>
-					<span className={styles.subTitle}>146 слов и&nbsp;фраз</span>
+					<span className={styles.subTitle}>{t('totalWords', { count: 142 })}</span>
 				</div>
 				<div className={styles.headerActions}>
 					<Button className={styles.btn} size="tall">
-						Добавить в&nbsp;словарь
+						{t('addToVocabulary')}
 					</Button>
 					<Button className={styles.btn} theme="transparent" size="tall">
-						Добавить в&nbsp;коллекцию
+						{t('addToCollection')}
 					</Button>
 				</div>
 				<div className={styles.headerLinks}>
@@ -37,3 +40,5 @@ export const WordsList = () => {
 		</section>
 	);
 };
+
+export default WordsList;

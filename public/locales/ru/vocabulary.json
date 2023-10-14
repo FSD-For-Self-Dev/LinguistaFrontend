@@ -1,0 +1,8 @@
+{
+	"addToVocabulary": "Добавить в\u00A0словарь",
+	"addToCollection": "Добавить в\u00A0коллекцию",
+	"totalWords_one": "{{count}} слово или\u00A0фраза",
+	"totalWords_few": "{{count}} слова и\u00A0фразы",
+	"totalWords_many": "{{count}} слов и\u00A0фраз",
+	"totalWords_other": "{{count}} слов и\u00A0фраз"
+}

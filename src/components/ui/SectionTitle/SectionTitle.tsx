@@ -8,14 +8,6 @@ interface Props {
 	svg?: string;
 }
 
-export const SectionTitle = ({
-	children,
-	className,
-	theme = 'regular',
-}: Props) => {
-	return (
-		<h2 className={cx(styles.title, styles[`title_${theme}`], className)}>
-			{children}
-		</h2>
-	);
+export const SectionTitle = ({ children, className, theme = 'regular' }: Props) => {
+	return <h2 className={cx(styles.title, styles[`title_${theme}`], className)}>{children}</h2>;
 };

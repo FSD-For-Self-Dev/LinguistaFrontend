@@ -1,11 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import cx from 'classnames';
 
-import {
-	VOCAB_ACTIVE_ROUTE,
-	VOCAB_INACTIVE_ROUTE,
-	VOCAB_LEARNED_ROUTE,
-} from '@/router/routes';
+import { VOCAB_ACTIVE_ROUTE, VOCAB_INACTIVE_ROUTE, VOCAB_LEARNED_ROUTE } from '@/router/routes';
 import styles from './LangAndStatusFilter.module.scss';
 import iconLanguages from '@assets/icons/icon_languages.svg';
 import iconNotActive from '@assets/icons/icon_not_active.svg';
