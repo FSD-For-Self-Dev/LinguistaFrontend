@@ -1,21 +1,24 @@
-import CustomLink from '@/components/ui/CustomLink';
-import { SectionTitle } from '@/components/ui/SectionTitle';
+import { useTranslation } from 'react-i18next';
+import CustomLink from '@ui/CustomLink';
+import AssociationsList from './AssociationsList';
+import { SectionTitle } from '@ui/SectionTitle';
 import SvgIconAssociations from '@assets/icons/icon_associations.svg?react';
 import styles from './Associations.module.scss';
-import AssociationsList from './AssociationsList';
+
 import { dataAssociation } from './mocks';
 
 const Associations = () => {
+	const { t } = useTranslation('word-profile');
 	const count = dataAssociation.length;
 	return (
 		<section className={styles.content}>
 			<div className={styles.header}>
 				<SectionTitle theme="bold">
 					<SvgIconAssociations />
-					Ассоциации
+					{t('associations')}
 				</SectionTitle>
 				<CustomLink href="#" target="_blank" apperance="button">
-					Все ассоциации&nbsp;
+					{t('allAssociations')}&nbsp;
 					<span className={styles.count}>{count}</span>
 				</CustomLink>
 			</div>
