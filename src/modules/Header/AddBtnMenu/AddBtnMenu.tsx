@@ -20,9 +20,7 @@ const AddBtnMenu = () => {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuButton className={styles.btn}>
-				+&nbsp;&nbsp;Добавить
-			</DropdownMenuButton>
+			<DropdownMenuButton className={styles.btn}>+&nbsp;&nbsp;Добавить</DropdownMenuButton>
 			<DropdownMenuContent>
 				{ADD_BTN_SUBMENU.map(({ id, text, link }) => (
 					<DropdownMenuItem action={() => onSelectHandler(link, text)} key={id}>

@@ -11,11 +11,7 @@ interface Props {
 	id: string;
 }
 
-export const AddToFavorite = ({
-	isFavorite = false,
-	colorTheme = 'dark',
-	id,
-}: Props) => {
+export const AddToFavorite = ({ isFavorite = false, colorTheme = 'dark', id }: Props) => {
 	const [isActive, setIsActive] = useState(isFavorite);
 
 	const toggleClick = () => {

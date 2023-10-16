@@ -1,0 +1,5 @@
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 272px));
+	gap: 28px;
+}

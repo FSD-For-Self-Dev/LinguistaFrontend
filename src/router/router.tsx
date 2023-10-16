@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import LayoutWhithNavbar from '@/layouts/LayoutWhithNavbar';
@@ -16,11 +17,11 @@ import {
 	VOCAB_ROUTE,
 	VOCAB_WORD_ROUTE,
 } from '@/router/routes';
-import { Vocabulary } from '@pages/Vocabulary';
-import WordInfo from '@/components/WordInfo';
-import DangerZoneCards from '@/components/DangerZone/DangerZoneCards';
-import DangerZone from '@/components/DangerZone';
-import NotFoundPage from '@/pages/NotFoundPage';
+const Vocabulary = lazy(() => import('@pages/Vocabulary'));
+const DangerZone = lazy(() => import('@/components/DangerZone'));
+const DangerZoneCards = lazy(() => import('@/components/DangerZone/DangerZoneCards'));
+const WordProfile = lazy(() => import('@/pages/WordProfile'));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 export function Router() {
 	return (
@@ -36,7 +37,7 @@ export function Router() {
 				<Route path={VOCAB_DANGER_ROUTE} element={<DangerZoneCards />} />
 				<Route path={VOCAB_POTENTIAL_ROUTE} />
 				<Route path={VOCAB_LEARNED_ROUTE} />
-				<Route path={VOCAB_WORD_ROUTE} element={<WordInfo />} />
+				<Route path={VOCAB_WORD_ROUTE} element={<WordProfile />} />
 				<Route path={COLLECT_ROUTE} />
 				<Route path={FAVOR_ROUTE} />
 				<Route path={EXERCISES_ROUTE} />

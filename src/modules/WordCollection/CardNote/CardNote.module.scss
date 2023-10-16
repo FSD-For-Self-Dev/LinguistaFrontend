@@ -1,0 +1,21 @@
+@import '@styles/colors';
+@import '@styles/mixins';
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.date {
+	margin: 0 auto;
+	text-align: center;
+	@include font-source-sans(12px, $neutral-text-middle-color, 400, 14px);
+	margin-bottom: 16px;
+}
+
+.note {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	@include font-source-sans(14px, $neutral-text-main-color, 400, 17px);
+}

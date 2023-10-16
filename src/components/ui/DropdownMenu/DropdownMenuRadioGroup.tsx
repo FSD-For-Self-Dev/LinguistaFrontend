@@ -8,9 +8,5 @@ type TProps = {
 };
 
 export const DropdownMenuRadioGroup = ({ children, ...props }: TProps) => {
-	return (
-		<RadixDropdownMenu.RadioGroup {...props}>
-			{children}
-		</RadixDropdownMenu.RadioGroup>
-	);
+	return <RadixDropdownMenu.RadioGroup {...props}>{children}</RadixDropdownMenu.RadioGroup>;
 };

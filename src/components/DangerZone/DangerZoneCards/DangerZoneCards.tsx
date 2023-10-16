@@ -1,4 +1,4 @@
-import { WordsList } from '@/components/WordsList';
+import WordsList from '@/components/WordsList';
 
 function DangerZoneCards() {
 	return (

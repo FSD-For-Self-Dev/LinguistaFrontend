@@ -1,10 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { Button } from '@ui/Button';
-import {
-	VOCAB_ACTIVE_ROUTE,
-	VOCAB_INACTIVE_ROUTE,
-	VOCAB_LEARNED_ROUTE,
-} from '@/router/routes';
+import { VOCAB_ACTIVE_ROUTE, VOCAB_INACTIVE_ROUTE, VOCAB_LEARNED_ROUTE } from '@/router/routes';
 import styles from './ActivityBanner.module.scss';
 import IconDumbbell from '@assets/icons/icon_dumbbell.svg?react';
 import { activityBanner } from '@/static/vocabulary';

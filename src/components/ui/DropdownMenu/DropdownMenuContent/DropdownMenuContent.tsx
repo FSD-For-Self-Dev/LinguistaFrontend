@@ -28,15 +28,7 @@ export const DropdownMenuContent = ({
 				onPointerLeave={closeMenu}
 			>
 				{children}
-				{arrow ? (
-					<RadixDropdownMenu.Arrow
-						width={31}
-						height={13}
-						className={styles.arrow}
-					/>
-				) : (
-					''
-				)}
+				{arrow ? <RadixDropdownMenu.Arrow width={31} height={13} className={styles.arrow} /> : ''}
 			</RadixDropdownMenu.Content>
 		</RadixDropdownMenu.Portal>
 	);

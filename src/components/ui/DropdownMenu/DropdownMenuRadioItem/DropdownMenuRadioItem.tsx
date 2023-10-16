@@ -11,16 +11,9 @@ type TProps = {
 	className: string;
 };
 
-export const DropdownMenuRadioItem = ({
-	children,
-	value,
-	className,
-}: TProps) => {
+export const DropdownMenuRadioItem = ({ children, value, className }: TProps) => {
 	return (
-		<RadixDropdownMenu.RadioItem
-			value={value}
-			className={cx(styles.item, className)}
-		>
+		<RadixDropdownMenu.RadioItem value={value} className={cx(styles.item, className)}>
 			{children}
 		</RadixDropdownMenu.RadioItem>
 	);

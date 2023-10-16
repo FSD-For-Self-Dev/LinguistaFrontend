@@ -6,14 +6,7 @@ type TDropdownMenuButtonProps = {
 	className?: string;
 };
 
-export const DropdownMenuButton = ({
-	children,
-	className,
-}: TDropdownMenuButtonProps) => {
+export const DropdownMenuButton = ({ children, className }: TDropdownMenuButtonProps) => {
 	console.log(className);
-	return (
-		<RadixDropdownMenu.Trigger className={className}>
-			{children}
-		</RadixDropdownMenu.Trigger>
-	);
+	return <RadixDropdownMenu.Trigger className={className}>{children}</RadixDropdownMenu.Trigger>;
 };

@@ -1,10 +1,5 @@
 import CustomLink from '../ui/CustomLink';
-import {
-	ABOUT_ROUTE,
-	CONTACTS_ROUTE,
-	POLICY_ROUTE,
-	TERMS_ROUTE,
-} from '@/router/routes';
+import { ABOUT_ROUTE, CONTACTS_ROUTE, POLICY_ROUTE, TERMS_ROUTE } from '@/router/routes';
 import styles from './Footer.module.scss';
 
 const links = [
@@ -29,12 +24,7 @@ const links = [
 export default function Footer() {
 	const footerLinks = links.map((link, idx) => (
 		<li key={idx}>
-			<CustomLink
-				apperance="underline"
-				target="_blank"
-				href={link.href}
-				className={styles.link}
-			>
+			<CustomLink apperance="underline" target="_blank" href={link.href} className={styles.link}>
 				{link.title}
 			</CustomLink>
 		</li>
