@@ -1,4 +1,4 @@
-import { Carousel } from '@/components/ui/Carousel/Carousel';
+import { Carousel } from '@ui/Carousel/Carousel';
 import CardNote from '../CardNote';
 import styles from './NoteCollection.module.scss';
 
