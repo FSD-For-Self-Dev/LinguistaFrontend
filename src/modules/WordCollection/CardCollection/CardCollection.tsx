@@ -1,4 +1,3 @@
-
 import CustomLink from '@/components/ui/CustomLink';
 
 import styles from './CardCollection.module.scss';

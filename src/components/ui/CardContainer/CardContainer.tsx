@@ -7,7 +7,5 @@ interface Props {
 }
 
 export const CardContainer = ({ children, className }: Props) => {
-	return (
-		<article className={cn(styles.container, className)}>{children}</article>
-	);
+	return <article className={cn(styles.container, className)}>{children}</article>;
 };

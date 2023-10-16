@@ -28,11 +28,7 @@ export default function WordOriginal({ info }: Props) {
 						</ButtonIcon>
 					</li>
 					<li>
-						<AddToFavorite
-							colorTheme="dark"
-							isFavorite={info.favorite}
-							id={''}
-						/>
+						<AddToFavorite colorTheme="dark" isFavorite={info.favorite} id={''} />
 					</li>
 					<li>
 						<ButtonIcon>

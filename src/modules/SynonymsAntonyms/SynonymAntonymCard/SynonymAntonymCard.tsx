@@ -14,7 +14,7 @@ export default function SynonymAntonymCard({ type = 'synonym' }: Props) {
 			<span className={styles.word}>Study</span>
 			<Carousel
 				className={styles.carousel}
-				buttonClass={type === 'antonym' && styles.arrows}
+				buttonClass={type === 'antonym' ? styles.arrows : ''}
 				arrows
 			>
 				<span className={styles.translation}>Изучать</span>
