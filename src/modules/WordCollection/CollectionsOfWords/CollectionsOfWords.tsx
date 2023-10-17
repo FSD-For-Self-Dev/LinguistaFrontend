@@ -1,19 +1,21 @@
+import { useTranslation } from 'react-i18next';
 import styles from './CollectionsOfWords.module.scss';
-import { SectionTitle } from '@/components/ui/SectionTitle';
+import { SectionTitle } from '@ui/SectionTitle';
+import CustomLink from '@ui/CustomLink';
 import SvgIconCollections from '@assets/icons/icon_collections.svg?react';
 import ListCardCollection from '../ListCardCollection';
-import CustomLink from '@/components/ui/CustomLink';
 
 const CollectionsOfWords = () => {
+	const { t } = useTranslation('word-profile');
 	return (
 		<div className={styles.collection}>
 			<div className={styles.header}>
 				<SectionTitle theme="bold" className={styles.title}>
 					<SvgIconCollections />
-					Коллекции с этим словом
+					{t('collections')}
 				</SectionTitle>
 				<CustomLink href="#" target="_blank" apperance="button">
-					Все коллекции&nbsp;
+					{t('allCollections')}&nbsp;
 					<span className={styles.count}>15</span>
 				</CustomLink>
 			</div>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { CardContainer } from '@ui/CardContainer';
 import CustomLink from '@ui/CustomLink';
 import { SectionTitle } from '@ui/SectionTitle';
@@ -11,15 +12,11 @@ interface Props {
 }
 
 export default function WordTranslation({ translations }: Props) {
+	const { t } = useTranslation('word-profile');
 	return (
 		<CardContainer className={styles.container}>
-			<CustomLink
-				href="#"
-				target="_self"
-				apperance="button"
-				className={styles.button}
-			>
-				Все переводы (4)
+			<CustomLink href="#" target="_self" apperance="button" className={styles.button}>
+				{t('allTranslations')} 4
 			</CustomLink>
 			<SectionTitle>
 				<SvgLang />
