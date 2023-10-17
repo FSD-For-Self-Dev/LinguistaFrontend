@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
 import { LanguageSwitcher } from '../../features/changeLanguage';
+import { ThemeSwitcher } from '../../features/switchTheme/index.';
 import { Button, Input, CustomLink, ButtonIcon } from '../../shared/ui';
 import { MAIN_ROUTE } from '../../shared/lib/routes';
 
@@ -66,7 +67,7 @@ const HeaderLayout = () => {
 
 				<div className={styles.rightPanel}>
 					<div className={styles.userInterface}>
-						{/* <ThemeSwitcher /> */}
+						<ThemeSwitcher />
 						{/* TODO вынести в отдельный компонент с модальным окном*/}
 						<ButtonIcon>
 							<SvgIconNotification />
