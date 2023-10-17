@@ -1,0 +1,85 @@
+@import '/src-new/5_shared/styles/index';
+
+.trigger {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	margin-left: 10px;
+	border: none;
+
+	@include font-source-sans(15px, $neutral-text-dark-color, 400, 18px, 'Fredoka');
+	text-transform: uppercase;
+
+	transition: opacity 0.2s ease-in-out;
+
+	&:hover {
+		opacity: 0.7;
+		cursor: pointer;
+		outline: none;
+	}
+
+	&:focus {
+		box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.1);
+		border-radius: 4px;
+		outline: none;
+	}
+
+	&[data-placeholder] {
+		color: $primary-button-color;
+	}
+}
+
+.icon {
+	display: inline-block;
+	& svg {
+		display: block;
+	}
+}
+
+.content {
+	overflow: hidden;
+	background-color: $neutral-text-contrast-color;
+	border-radius: 6px;
+	box-shadow:
+		0px 0px 8px 0px rgba(17, 17, 26, 0.1),
+		0px 1px 0px 0px rgba(17, 17, 26, 0.05);
+}
+
+.viewport {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.item {
+	text-transform: uppercase;
+	color: $neutral-text-dark-color;
+	padding: 8px 20px;
+	outline: none;
+	border: 0;
+	min-width: 64px;
+
+	&[data-state='checked'] {
+		font-weight: 500;
+		color: $neutral-text-main-color;
+		background-color: $neutral-line-color;
+	}
+
+	&[data-disabled] {
+		color: $neutral-text-light-color;
+		pointer-events: none;
+	}
+
+	&[data-highlighted] {
+		background-color: $neutral-line-color;
+
+		&:not([data-state='checked']) {
+			cursor: pointer;
+		}
+	}
+}
+
+.arrow {
+	fill: $neutral-text-contrast-color;
+	stroke: rgba(17, 17, 26, 0.03);
+}
