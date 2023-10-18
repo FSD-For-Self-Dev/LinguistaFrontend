@@ -1,0 +1,123 @@
+@import '/src-new/5_shared/styles/index';
+
+.card {
+	position: relative;
+	box-sizing: border-box;
+	height: 370px;
+	max-width: 358px;
+	padding: 20px 33px 33px;
+	border-radius: 10px;
+	border: solid 1px $neutral-line-color;
+	background-color: $neutral-background-main-color;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+
+	&.withBg {
+		background-color: $primary-background-color;
+		.cardBody {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	&:not(.withBg) {
+		.cardBody {
+			background-color: #f4f4f4;
+		}
+	}
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	height: 370px;
+	max-width: 358px;
+
+	&_slider {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		max-height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+.cardHeader {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 26px;
+	z-index: 2;
+}
+
+.cardActions {
+	display: flex;
+	gap: 12px;
+}
+
+.cardBody {
+	background-color: #f4f4f4;
+	box-sizing: border-box;
+	padding: 25px 30px;
+	border: solid 1px $neutral-line-color;
+	border-radius: 10px;
+	margin-bottom: 16px;
+	position: relative;
+	z-index: 2;
+}
+
+.type {
+	@include font-source-sans(12px, $neutral-text-dark-color, 400, 'auto', 'Fredoka');
+	text-transform: uppercase;
+	margin-top: 0;
+	text-align: center;
+}
+
+.word {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 23px 0 21px;
+}
+
+.wordText {
+	@include font-source-sans(24px, $neutral-text-main-color, 500);
+	text-align: center;
+	text-decoration: none;
+}
+
+.levelWrapper {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.level {
+	padding: 6px 12px;
+	border-radius: 5px;
+	@include font-source-sans(10px, $neutral-text-dark-color, 400, 'normal', 'Fredoka');
+	text-transform: uppercase;
+	background-color: $secondary-button-color;
+}
+
+.cardFooter {
+	position: relative;
+	z-index: 2;
+	max-width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	padding: 26px 7px 24px;
+	text-align: center;
+
+	.slider {
+		width: 80%;
+	}
+}

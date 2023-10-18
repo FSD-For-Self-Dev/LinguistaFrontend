@@ -1,9 +1,13 @@
-import { useTranslation } from 'react-i18next';
+import { ActivityFilterWords } from '../../3_features/filteringWords';
+import { WordsList } from '../../3_features/renderWords';
 
 const Vocabulary = () => {
-	const { t } = useTranslation('vocabulary');
-
-	return <div>{t('addToVocabulary')}</div>;
+	return (
+		<div>
+			<ActivityFilterWords />
+			<WordsList />
+		</div>
+	);
 };
 
 export default Vocabulary;
