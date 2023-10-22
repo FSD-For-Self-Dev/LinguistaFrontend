@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
+import { ActivityFilterLayout } from '../../2_widgets/ActivityFilterLayout/ActivityFilterLayout';
 import { WordsLayout } from '../../2_widgets/WordsLayout/WordsLayout';
 import { WordLayout } from '../../2_widgets/WordLayout/WordLayout';
-import { ActivityFilterWords } from '../../3_features/filteringWords';
 import { wordsSelector, getWords, Word } from '../../4_entities/words';
 import { useAppSelector, useAppDispatch } from '../../5_shared/model';
 
@@ -19,7 +19,7 @@ const Vocabulary = () => {
 
 	return (
 		<div>
-			<ActivityFilterWords />
+			<ActivityFilterLayout />
 			<WordsLayout>
 				{filteringWords.map((word: Word) => {
 					return <WordLayout key={word.id} item={word} />;
