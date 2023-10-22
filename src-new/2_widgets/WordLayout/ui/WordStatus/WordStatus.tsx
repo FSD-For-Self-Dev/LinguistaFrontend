@@ -14,7 +14,9 @@ export const WordStatus = ({ activity = 'ACTIVE', colorTheme = 'light' }: Props)
 	return (
 		<span className={`${styles.status} ${styles[colorTheme]}`}>
 			{activity === 'ACTIVE' ? <SvgStatusActive /> : <SvgStatusNotActive color="#B3C3FD" />}
-			{activity}
+			{activity === 'ACTIVE' && 'Активный'}
+			{activity === 'INACTIVE' && 'Неактивный'}
+			{activity === 'MASTERED' && 'Усвоен'}
 			<SvgIconQuestion />
 		</span>
 	);
