@@ -1,0 +1,79 @@
+@import '/src/5_shared/styles/index';
+
+.carousel {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $neutral-text-dark-color;
+	cursor: pointer;
+}
+
+.prev_arrow {
+	transform: rotate(270deg);
+}
+
+.next_arrow {
+	transform: rotate(90deg);
+}
+.next_arrow,
+.prev_arrow {
+	height: 10px;
+	width: 17px;
+	transition: opacity 0.3s ease-in-out;
+	z-index: 2;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.dots {
+	bottom: 2px;
+}
+
+.dots li {
+	width: 10px;
+	margin: 0 6px;
+}
+.dots li button::before {
+	content: '';
+	max-width: 9px;
+	width: 9px;
+	max-height: 9px;
+	height: 9px;
+	box-sizing: border-box;
+	background-color: $neutral-text-middle-color;
+	border-radius: 50%;
+	opacity: 1;
+}
+.dots :global(li.slick-active) button::before {
+	background-color: $primary-brand-color;
+	opacity: 1;
+}
+
+.slider {
+	max-width: 200px;
+	max-width: 100%;
+
+	& :global(.slick-disabled::before) {
+		cursor: auto;
+		opacity: 0.25;
+	}
+}
+
+.slider {
+	& :global(.slick-disabled::before) {
+		cursor: auto;
+		opacity: 0.25;
+	}
+}

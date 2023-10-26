@@ -1,0 +1,137 @@
+@import '/src/5_shared/styles/index';
+
+header {
+	color: #202020;
+	border-bottom: 1px solid $neutral-line-color;
+	height: 100px;
+	padding: 0 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contetnt {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.logoBlock {
+	text-decoration: none;
+	color: #202020;
+	display: flex;
+	align-items: center;
+}
+.logoImg {
+	width: 75px;
+	border-right: 1px solid $neutral-line-color;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logoText {
+	@include font-source-sans(24px, $neutral-text-main-color, 500, 29px, 'Fredoka');
+	padding: 0 29px;
+	text-decoration: none;
+
+	span {
+		@include font-source-sans(16px, $neutral-text-dark-color, 400, 19px, 'Fredoka');
+	}
+}
+
+.searching {
+	gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	align-items: center;
+}
+
+.searchInput {
+	width: 100%;
+	position: relative;
+	border-radius: 10px;
+	padding: 11px 20px;
+}
+
+.inputBlock {
+	position: relative;
+	min-width: 520px;
+}
+
+.searchBtn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 61px;
+	height: 100%;
+	border: 1px solid $neutral-line-color;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+	background: $neutral-background-second-color url('@assets/icons/icon_search.svg') center/20px 20px
+		no-repeat;
+}
+
+.filter {
+	width: 25px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.sorting {
+	width: 24px;
+	height: 24px;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.button {
+	max-width: 123px;
+	padding: 11px 23px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	text-wrap: nowrap;
+}
+
+.themeSelect {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.userCabinet {
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	border: none;
+	background: transparent url('@assets/icons/icon_user_cabinet.svg') center/28px 28px no-repeat;
+}
+
+.userInterface {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 23px;
+	align-items: center;
+	margin-left: 24px;
+}
+
+.rightPanel {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}
+
+@media screen and (max-width: 1280px) {
+	.inputBlock {
+		min-width: 420px;
+	}
+
+	.rightPanel {
+		flex-direction: column;
+	}
+}
