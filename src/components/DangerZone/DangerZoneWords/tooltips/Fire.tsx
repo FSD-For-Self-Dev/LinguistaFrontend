@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Tooltips.module.scss';
-import fire from '@assets/icons/fire-icon.svg';
+import fire from '@assets/icons/fire-red.svg';
 
 function Fire() {
 	const [showTooltip, setShowTooltip] = useState(false);
@@ -19,7 +19,7 @@ function Fire() {
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
-			<img src={fire} alt="fire icon" />
+			<img src={fire} alt="red-fire icon" />
 			{/* TODO счетчик дней неактивности */}
 			{showTooltip && (
 				<div className={styles.tooltip}>

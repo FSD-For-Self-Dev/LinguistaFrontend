@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import SvgIconDots from '@assets/icons/icon_dots.svg?react';
+// import SvgIconDots from '@assets/icons/icon_dots.svg?react';
+import SvgIconDots from '@assets/icons/dots-icon.svg?react';
 import styles from './WordSubMenu.module.scss';
 import { ButtonIcon } from '@ui/ButtonIcon';
 
