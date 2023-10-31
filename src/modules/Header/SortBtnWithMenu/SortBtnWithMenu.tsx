@@ -9,9 +9,10 @@ import {
 import { ESortDirection, ESortDirectionSymbol, TSortItem } from '@/shared/interfaces/sortPanel';
 import { DEFAULT_SORT_PARAMS, SORT_PANEL } from '@/static/sortPanel';
 import SvgIconSort from '@assets/icons/icon_sort.svg?react';
-import styles from './SortPanel.module.scss';
 
-const SortPanel = () => {
+import styles from './SortBtnWithMenu.module.scss';
+
+const SortBtnWithMenu = () => {
 	const [currentSort, setCurrentSort] = useState(DEFAULT_SORT_PARAMS);
 
 	const sortItems = SORT_PANEL.map((sortItem: TSortItem) => {
@@ -47,7 +48,7 @@ const SortPanel = () => {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuButton className={styles.btn}>
+			<DropdownMenuButton>
 				<SvgIconSort />
 			</DropdownMenuButton>
 			<DropdownMenuContent>
@@ -59,4 +60,4 @@ const SortPanel = () => {
 	);
 };
 
-export default SortPanel;
+export default SortBtnWithMenu;

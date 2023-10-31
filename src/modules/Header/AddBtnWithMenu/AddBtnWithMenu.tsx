@@ -7,9 +7,9 @@ import {
 } from '@/components/ui/DropdownMenu';
 import { ADD_BTN_SUBMENU } from '@/static/addBtnSubMenu';
 
-import styles from './AddBtnMenu.module.scss';
+import styles from './AddBtnWithMenu.module.scss';
 
-const AddBtnMenu = () => {
+const AddBtnWithMenu = () => {
 	const navigate = useNavigate();
 	const queryParams = new URLSearchParams(location.search);
 
@@ -32,4 +32,4 @@ const AddBtnMenu = () => {
 	);
 };
 
-export default AddBtnMenu;
+export default AddBtnWithMenu;

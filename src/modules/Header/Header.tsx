@@ -6,11 +6,11 @@ import { ButtonIcon } from '@ui/ButtonIcon';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import Input from '@ui/Input';
 import CustomLink from '@ui/CustomLink';
-import SortPanel from './SortPanel';
-import AddBtnMenu from './AddBtnMenu';
+import SortBtnWithMenu from './SortBtnWithMenu';
+import FilterBtnWithMenu from './FilterBtnWithPopover';
+import AddBtnWithMenu from './AddBtnWithMenu';
 import ThemeSwitcher from './ThemeSwitcher';
 
-import iconFilter from '@assets/icons/icon_filter.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
 import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
@@ -54,14 +54,12 @@ const Header = () => {
 						<button type="submit" className={styles.searchBtn}></button>
 					</div>
 
-					<div className={styles.filterBLock}>
-						<img className={styles.filter} src={iconFilter} />
-					</div>
+					<FilterBtnWithMenu />
 
-					<SortPanel />
+					<SortBtnWithMenu />
 				</div>
 
-				<AddBtnMenu />
+				<AddBtnWithMenu />
 
 				<div className={styles.rightPanel}>
 					<div className={styles.userInterface}>
