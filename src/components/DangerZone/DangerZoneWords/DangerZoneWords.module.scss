@@ -1,16 +1,73 @@
 @import '@styles/colors.scss';
 @import '@styles/mixins';
 
-.container {
-	background-color: $neutral-background-main-color;
-	border: 1px solid $neutral-line-color;
-	border-radius: 10px;
-	width: 278px;
-	height: 178px;
-	padding: 10px;
+// .container {
+// 	background-color: $neutral-background-main-color;
+// 	border: 1px solid $neutral-line-color;
+// 	border-radius: 10px;
+// 	width: 278px;
+// 	height: 178px;
+// 	padding: 10px;
 
 	.icons_container {
 		display: flex;
+		align-items: center;
 		gap: 10px;
 	}
+// }
+
+.cardBody {
+	background-color: $neutral-background-main-color;
+	// box-sizing: border-box;
+	padding: 15px;
+	border: solid 1px $neutral-line-color;
+	border-radius: 10px;
+	margin-bottom: 16px;
+	margin-right: 24px;
+	
+}
+
+.cardHeader {
+	// position: relative;
+	display: flex;
+	justify-content: space-between;
+	// align-items: center;
+	// margin-bottom: 10px;
+	// z-index: 2;
+}
+
+.cardActions {
+	display: flex;
+	align-items: center;
+}
+
+.type {
+	@include font-source-sans(12px, $neutral-text-dark-color, 400, 'auto', 'Fredoka');
+	text-transform: uppercase;
+	margin-top: 0;
+	text-align: center;
+}
+
+.word {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 15px 0;
+	@include font-source-sans(20px, $neutral-text-main-color, 500, 24px, 'Inter');
+}
+
+.wordText {
+	@include font-source-sans(24px, $neutral-text-main-color, 500);
+	text-align: center;
+	text-decoration: none;
+}
+
+.levelWrapper {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }

@@ -5,6 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 5em;
+	
 
 	.container {
 		display: flex;
@@ -17,26 +18,29 @@
 			gap: 10px;
 
 			.itemRed {
-				color: $danger-color;
+				@include font-source-sans(16px, $danger-color, 400, 20px, 'Fredoka');
 			}
 
 			.itemGrey {
-				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px);
+				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px, 'Inter');
 			}
 		}
 
 		.title_right {
 			display: flex;
 			align-items: center;
-			gap: 16px;
-
+			
 			.button {
-				padding: 13px 44px;
-				font-weight: 400;
+				@include font-source-sans(12px, $neutral-text-main-color, 500, 20px, 'Inter');
+				padding: 8px 28px;
+
+				&:hover {
+					color: $neutral-text-contrast-color;
+				  }
 			}
 
 			.linkButton {
-				@include font-source-sans(12px, $neutral-text-middle-color, 400, 15px);
+				@include font-source-sans(12px, $neutral-text-danger-color, 400, 15px, 'Inter');
 				text-decoration: none;
 			}
 		}
@@ -44,15 +48,15 @@
 	.carousel {
 		width: 100%;
 		position: relative;
-
+			
 		.slider {
 			width: 100%;
-
 			padding-top: 8px;
+			margin-right: -24px;
 			& :global(.slick-list) {
 				overflow: visible;
 				// overflow-y: visible;
-				overflow-x: clip;
+				overflow-x: clip;				
 			}
 		}
 
