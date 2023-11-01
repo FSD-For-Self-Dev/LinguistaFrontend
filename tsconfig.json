@@ -18,16 +18,15 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"],
-			"@static/*": ["src/static/*"],
-			"@assets/*": ["src/assets/*"],
-			"@styles/*": ["src/styles/*"],
-			"@components/*": ["src/components/*"],
-			"@modules/*": ["src/modules/*"],
-			"@ui/*": ["src/components/ui/*"],
-			"@pages/*": ["src/pages/*"],
-			"@shared/*": ["src/shared/*"],
-			"@utils/*": ["src/utils/*"],
-			"@api/*": ["src/api/*"]
+			"@app/*": ["src/0_app"],
+			"@pages/*": ["src/1_pages/*"],
+			"@widgets/*": ["src/2_widgets/*"],
+			"@features/*": ["src/3_features/*"],
+			"@entities/*": ["src/4_entities/*"],
+			"@shared/*": ["src/5_shared/*"],
+			"@assets/*": ["src/5_shared/assets/*"],
+			"@styles/*": ["src/5_shared/styles/*"],
+			"@ui/*": ["src/5_shared/ui/*"]
 		},
 
 		/* Linting */
@@ -37,7 +36,7 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["src", "svg.d.ts"],
+	"include": ["src", "types"],
 	"references": [{ "path": "./tsconfig.node.json" }],
 	"exclude": ["node_modules"]
 }
