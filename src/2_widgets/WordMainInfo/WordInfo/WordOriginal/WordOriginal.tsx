@@ -4,14 +4,14 @@ import {
 	CardContainer,
 	SectionTitle,
 	CopyText,
-	AddToFavorite,
 	ButtonIcon,
 } from '@ui/index';
-import styles from './WordOriginal.module.scss';
+import { IWord } from '../WordInfo';
+import { AddToFavorite } from '@features/add/ui/AddToFavorite';
 import SvgLang from '@assets/icons/wordProfile/language.svg?react';
 import SvgComment from '@assets/icons/wordProfile/comment.svg?react';
 import SvgShare from '@assets/icons/wordProfile/arrow.svg?react';
-import { IWord } from '../WordInfo';
+import styles from './WordOriginal.module.scss';
 
 interface Props {
 	info: IWord;
