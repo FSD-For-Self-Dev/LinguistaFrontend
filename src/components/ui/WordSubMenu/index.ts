@@ -1,1 +1,0 @@
-export { WordSubMenu } from './WordSubMenu';

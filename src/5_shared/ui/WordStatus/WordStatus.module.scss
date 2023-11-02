@@ -1,0 +1,19 @@
+@import '@styles/mixins/font';
+@import '/src/5_shared/styles/index';
+
+.status {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 12px;
+	font-weight: 500;
+
+	&.light {
+		@include font-source-sans(12px, $neutral-text-contrast-color, 500);
+	}
+
+	&.dark {
+		@include font-source-sans(12px, $neutral-text-main-color, 500);
+	}
+}

@@ -1,0 +1,23 @@
+@import '@styles/mixins/font';
+@import '/src/5_shared/styles/colors';
+
+.badge {
+	border-radius: 5px;
+	box-sizing: border-box;
+	@include font-source-sans(10px, $neutral-text-main-color, 400, 12px);
+
+	&_tag {
+		padding: 6px 12px;
+		text-transform: uppercase;
+		background-color: $secondary-button-color;
+		border: 1px solid $secondary-button-bright-color;
+	}
+
+	&_number {
+		width: 32px;
+		height: 30px;
+		padding: 9px 5px;
+		background-color: $secondary-button-bright-color;
+		color: $neutral-text-contrast-color;
+	}
+}

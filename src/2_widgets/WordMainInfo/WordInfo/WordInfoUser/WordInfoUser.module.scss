@@ -1,0 +1,36 @@
+@import '/src/5_shared/styles/index';
+
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.icon {
+	width: 34px;
+	height: 34px;
+}
+
+.name {
+	@include font-source-sans(20px, $neutral-text-main-color, 400, 24px, 'Fredoka');
+
+	margin-left: 10px;
+}
+
+.nick {
+	@include font-source-sans(16px, $neutral-text-light-color, 400, 20px, 'Fredoka');
+}
+
+.added {
+	@include font-source-sans(14px, $neutral-text-main-color, 400, 17px);
+}
+
+.ago {
+	@include font-source-sans(10px, $neutral-text-dark-color, 400, 12px);
+}
