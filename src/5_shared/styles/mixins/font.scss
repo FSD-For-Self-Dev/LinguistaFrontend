@@ -1,3 +1,5 @@
+@import '@styles/colors';
+
 @mixin font-source-sans($size: false, $colour: false, $weight: false, $lh: false, $ff: false) {
 	@if $size {
 		font-size: $size;

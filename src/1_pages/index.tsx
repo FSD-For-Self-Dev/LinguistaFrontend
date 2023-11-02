@@ -1,6 +1,5 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Vocabulary from './Vocabulary/Vocabulary';
-import Word from './Word/Word';
 import MainLayout from '@widgets/MainLayout/MainLayout';
 import {
 	ABOUT_ROUTE,
@@ -12,6 +11,10 @@ import {
 	VOCAB_ROUTE,
 	WORD_ROUTE,
 } from '../5_shared/lib/routes';
+
+const Vocabulary = lazy(() => import('@pages/Vocabulary'));
+const Word = lazy(() => import('@pages/Word'));
+const NotFoundPage = lazy(() => import('@/1_pages/NotFoundPage/NotFoundPage'));
 
 export const Routing = () => {
 	return (
@@ -26,6 +29,7 @@ export const Routing = () => {
 					<Route path={EXERCISES_ROUTE} element={<>Exercises</>} />
 					<Route path={WORD_ROUTE} element={<Word />} />
 					<Route path={ABOUT_ROUTE} element={<>About</>} />
+					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>
 		</>

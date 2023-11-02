@@ -1,6 +1,5 @@
+import { Popover, PopoverTrigger, PopoverContent } from '@shared/ui/Popover';
 import SvgIconFilter from '@assets/icons/icon_filter.svg?react';
-//import styles from './FilterBtnWithMenu.module.scss';
-import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/Popover';
 
 const FilterBtnWithPopover = () => {
 	return (

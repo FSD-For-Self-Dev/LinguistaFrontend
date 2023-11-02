@@ -1,4 +1,4 @@
-import { ESortDirection, TSortItem } from '@/shared/interfaces/sortPanel';
+import { ESortDirection, TSortItem } from '@/5_shared/interfaces/sortPanel';
 
 export const DEFAULT_SORT_PARAMS = {
 	sortBy: 'byDateAdded',

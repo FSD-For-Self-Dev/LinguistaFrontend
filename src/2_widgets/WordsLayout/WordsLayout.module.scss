@@ -1,6 +1,5 @@
-@import '@styles/mixins/font';
 @import '@styles/mixins/media';
-@import '/src/5_shared/styles/index';
+@import '@styles/mixins/font';
 
 .header {
 	display: flex;

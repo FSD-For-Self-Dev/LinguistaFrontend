@@ -5,9 +5,9 @@ import {
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuButton,
-} from '@/components/ui/DropdownMenu';
+} from '@shared/ui/DropdownMenu';
 
-import { WORD_SUBMENU } from '@/static/wordSubMenu';
+import { WORD_SUBMENU } from '@shared/lib/wordSubMenu';
 import SvgIconDots from '@assets/icons/icon_dots.svg?react';
 import styles from './WordSubMenu.module.scss';
 
@@ -28,7 +28,7 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 	};
 
 	return (
-		<DropdownMenu>
+		<DropdownMenu modal={false}>
 			<DropdownMenuButton className={cx(styles.btnIcon, styles[colorTheme])}>
 				<SvgIconDots />
 			</DropdownMenuButton>

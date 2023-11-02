@@ -4,8 +4,8 @@ import {
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuButton,
-} from '@/components/ui/DropdownMenu';
-import { ADD_BTN_SUBMENU } from '@/static/addBtnSubMenu';
+} from '@shared/ui/DropdownMenu';
+import { ADD_BTN_SUBMENU } from '@shared/lib/addBtnSubMenu';
 
 import styles from './AddBtnWithMenu.module.scss';
 

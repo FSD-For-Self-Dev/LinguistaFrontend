@@ -4,18 +4,19 @@ import DropdownMenuContext from './DropdownMenuContext';
 
 type TProps = {
 	children: ReactNode;
+	modal?: boolean;
 };
 
-export const DropdownMenu = ({ children }: TProps) => {
+export const DropdownMenu = ({ children, modal = true }: TProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const closeMenu = () => {
-		setIsOpen(false);
+		//setIsOpen(false);
 	};
 
 	return (
 		<DropdownMenuContext.Provider value={{ closeMenu }}>
-			<RadixDropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
+			<RadixDropdownMenu.Root open={isOpen} onOpenChange={setIsOpen} modal={modal}>
 				{children}
 			</RadixDropdownMenu.Root>
 		</DropdownMenuContext.Provider>

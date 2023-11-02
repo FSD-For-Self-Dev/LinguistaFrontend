@@ -5,9 +5,9 @@ import {
 	DropdownMenuButton,
 	DropdownMenuRadioItem,
 	DropdownMenuRadioGroup,
-} from '@/components/ui/DropdownMenu';
-import { ESortDirection, ESortDirectionSymbol, TSortItem } from '@/shared/interfaces/sortPanel';
-import { DEFAULT_SORT_PARAMS, SORT_PANEL } from '@/static/sortPanel';
+} from '@shared/ui/DropdownMenu';
+import { DEFAULT_SORT_PARAMS, SORT_PANEL } from '@shared/lib/sortPanel';
+import { ESortDirection, ESortDirectionSymbol, TSortItem } from '@shared/interfaces/sortPanel';
 import SvgIconSort from '@assets/icons/icon_sort.svg?react';
 
 import styles from './SortBtnWithMenu.module.scss';

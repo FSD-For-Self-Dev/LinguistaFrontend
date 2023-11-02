@@ -1,5 +1,5 @@
-@import '@styles/mixins/font.scss';
-@import '/src/5_shared/styles/index';
+@import '@styles/mixins/font';
+@import '@styles/colors';
 
 .card {
 	position: relative;
@@ -64,7 +64,7 @@
 }
 
 .cardBody {
-	background-color: #f4f4f4;
+	background-color: $neutral-background-second-color;
 	box-sizing: border-box;
 	padding: 25px 30px;
 	border: solid 1px $neutral-line-color;

@@ -1,14 +1,14 @@
-import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import SortBtnWithMenu from './SortBtnWithMenu';
-import FilterBtnWithMenu from './FilterBtnWithPopover';
-import AddBtnWithMenu from './AddBtnWithMenu';
+import AddBtnWithMenu from '@features/add/ui/AddBtnWithMenu';
+import SortBtnWithMenu from '@features/sortWords/ui/SortBtnWithMenu';
+import FilterBtnWithPopover from '@features/filteringWords/ui/FilterBtnWithPopover';
 
-import { LanguageSwitcher } from '@features/changeLanguage';
-import { ThemeSwitcher } from '@features/switchTheme/index.';
-import { Input, CustomLink, ButtonIcon } from '@ui/index';
 import { MAIN_ROUTE } from '@shared/lib/routes';
+import { ThemeSwitcher } from '@features/switchTheme/index.';
+import { LanguageSwitcher } from '@features/changeLanguage';
+import { Input, CustomLink, ButtonIcon } from '@ui/index';
 
 import SvgIconLogo from '@assets/icons/logo.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
@@ -53,7 +53,7 @@ const HeaderLayout = () => {
 						<button type="submit" className={styles.searchBtn}></button>
 					</div>
 
-					<FilterBtnWithMenu />
+					<FilterBtnWithPopover />
 
 					<SortBtnWithMenu />
 				</div>
