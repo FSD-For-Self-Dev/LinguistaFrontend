@@ -11,7 +11,7 @@ export const DropdownMenu = ({ children, modal = true }: TProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const closeMenu = () => {
-		//setIsOpen(false);
+		setIsOpen(false);
 	};
 
 	return (
