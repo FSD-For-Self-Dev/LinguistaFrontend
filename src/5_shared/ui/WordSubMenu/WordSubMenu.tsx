@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import cx from 'classnames';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -29,7 +28,7 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuButton className={cx(styles.btnIcon, styles[colorTheme])}>
+			<DropdownMenuButton className={styles[colorTheme]}>
 				<SvgIconDots />
 			</DropdownMenuButton>
 			<DropdownMenuContent side="right" sideOffset={10} arrow={false}>

@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
+import cx from 'classnames';
+import styles from './DropdownMenuButton.module.scss';
 
 type TDropdownMenuButtonProps = {
 	children: ReactNode;
@@ -7,6 +9,9 @@ type TDropdownMenuButtonProps = {
 };
 
 export const DropdownMenuButton = ({ children, className }: TDropdownMenuButtonProps) => {
-	console.log(className);
-	return <RadixDropdownMenu.Trigger className={className}>{children}</RadixDropdownMenu.Trigger>;
+	return (
+		<RadixDropdownMenu.Trigger className={cx(styles.btn, className)}>
+			{children}
+		</RadixDropdownMenu.Trigger>
+	);
 };

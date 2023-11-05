@@ -1,3 +1,5 @@
 export { PopoverContent } from './PopoverContent';
 
-export { Popover, PopoverTrigger } from './Popover';
+export { Popover } from './Popover';
+
+export { PopoverTrigger } from './PopoverTrigger';
