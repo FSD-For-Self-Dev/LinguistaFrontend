@@ -7,7 +7,7 @@ import {
 	ButtonIcon,
 } from '@ui/index';
 import { IWord } from '../WordInfo';
-import { AddToFavorite } from '@features/add/ui/AddToFavorite';
+import { AddToFavorite } from '@features/addToFavorite';
 import SvgLang from '@assets/icons/wordProfile/language.svg?react';
 import SvgComment from '@assets/icons/wordProfile/comment.svg?react';
 import SvgShare from '@assets/icons/wordProfile/arrow.svg?react';
