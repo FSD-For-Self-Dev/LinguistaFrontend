@@ -28,7 +28,7 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
 	};
 
 	return (
-		<DropdownMenu modal={false}>
+		<DropdownMenu>
 			<DropdownMenuButton className={cx(styles.btnIcon, styles[colorTheme])}>
 				<SvgIconDots />
 			</DropdownMenuButton>

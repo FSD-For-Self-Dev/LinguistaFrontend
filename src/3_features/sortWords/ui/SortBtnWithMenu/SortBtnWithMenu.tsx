@@ -36,7 +36,6 @@ const SortBtnWithMenu = () => {
 	});
 
 	const valueChangeHandler = (value: string) => {
-		console.log(value);
 		if (currentSort.sortBy === value)
 			return setCurrentSort({
 				...currentSort,
