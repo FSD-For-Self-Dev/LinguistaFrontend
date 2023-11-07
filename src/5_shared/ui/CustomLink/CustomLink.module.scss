@@ -1,4 +1,5 @@
-@import '/src/5_shared/styles/index';
+@import '@styles/mixins/font.scss';
+@import '/src/5_shared/styles/colors';
 
 .link {
 	position: relative;

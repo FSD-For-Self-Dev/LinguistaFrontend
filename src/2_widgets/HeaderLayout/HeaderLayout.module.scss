@@ -1,4 +1,5 @@
-@import '/src/5_shared/styles/index';
+@import '@styles/colors';
+@import '@styles/mixins/font.scss';
 
 header {
 	color: #202020;
@@ -75,25 +76,17 @@ header {
 		no-repeat;
 }
 
-.filter {
-	width: 25px;
-	height: 22px;
-	cursor: pointer;
-}
-
-.sorting {
-	width: 24px;
-	height: 24px;
-	background-size: contain;
-	cursor: pointer;
-}
-
 .button {
 	max-width: 123px;
 	padding: 11px 23px;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
+
+	&:hover,
+	&:active {
+		background-color: $primary-button-dark-color;
+	}
 	text-wrap: nowrap;
 }
 

@@ -1,10 +1,10 @@
-@import '/src/5_shared/styles/index';
+@import '/src/5_shared/styles/colors';
 
 .button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-color: transparent;
+	border: none;
 	background-color: transparent;
 	outline: none;
 	transition: opacity 0.2s ease-in-out;

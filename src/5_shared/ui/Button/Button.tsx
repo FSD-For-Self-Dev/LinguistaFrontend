@@ -28,10 +28,9 @@ export const Button = ({
 	return (
 		<button
 			className={cx(
-				styles.button,
-				styles[`button_${theme}`],
-				styles[`button_${size}`],
-				active && styles[`button_${theme}_active`],
+				styles[`${theme}`],
+				styles[`${size}`],
+				active && styles[`${theme}_active`],
 				className
 			)}
 			onClick={onClick}

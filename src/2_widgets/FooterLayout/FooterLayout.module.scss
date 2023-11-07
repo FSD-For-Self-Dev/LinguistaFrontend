@@ -1,4 +1,6 @@
-@import '/src/5_shared/styles/index';
+@import '@styles/colors.scss';
+@import '@styles/mixins/font.scss';
+@import '@styles/mixins/media.scss';
 
 footer {
 	grid-column: 1/3;
