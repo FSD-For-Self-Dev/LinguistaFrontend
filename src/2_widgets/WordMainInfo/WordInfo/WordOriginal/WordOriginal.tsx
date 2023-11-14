@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { IWord } from '../WordInfo';
 import { WordStatus } from '@entities/word/ui';
 import { AddToFavorite } from '@features/addToFavorite';
@@ -9,11 +10,12 @@ import styles from './WordOriginal.module.scss';
 
 interface Props {
 	info: IWord;
+	classname?: string;
 }
 
-export default function WordOriginal({ info }: Props) {
+export function WordOriginal({ info, classname }: Props) {
 	return (
-		<CardContainer className={styles.container}>
+		<CardContainer className={cx(styles.container, classname)}>
 			<div className={styles.wrapper}>
 				<WordStatus activity={info.status} colorTheme="dark" />
 
