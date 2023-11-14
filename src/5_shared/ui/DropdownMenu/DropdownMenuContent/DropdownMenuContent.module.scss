@@ -1,0 +1,11 @@
+@use '@styles/mixins/popover' as p;
+
+.content {
+	@include p.popover;
+}
+
+.arrow {
+	@include p.arrow;
+}
+
+@include p.animation;

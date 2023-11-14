@@ -1,13 +1,7 @@
-import {
-	WordSubMenu,
-	CardContainer,
-	SectionTitle,
-	CopyText,
-	AddToFavorite,
-	ButtonIcon,
-} from '@ui/index';
 import { IWord } from '../WordInfo';
-import { WordStatus } from '@/4_entities/word/ui';
+import { WordStatus } from '@entities/word/ui';
+import { AddToFavorite } from '@features/addToFavorite';
+import { WordSubMenu, CardContainer, SectionTitle, CopyText, ButtonIcon } from '@ui/index';
 import SvgLang from '@assets/icons/wordProfile/language.svg?react';
 import SvgComment from '@assets/icons/wordProfile/comment.svg?react';
 import SvgShare from '@assets/icons/wordProfile/arrow.svg?react';

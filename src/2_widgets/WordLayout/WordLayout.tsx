@@ -1,9 +1,10 @@
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { Word } from '@entities/words';
-import { WordStatus } from '@entities/word/ui';
+import { AddToFavorite } from '@features/addToFavorite';
 import { WordSubMenu } from '@ui/index';
-import { Carousel, Badge, AddToFavorite, CopyText } from '@shared/ui';
+import { WordStatus } from '@entities/word/ui';
+import { Carousel, Badge, CopyText } from '@shared/ui';
 import styles from './WordLayout.module.scss';
 
 interface Props {

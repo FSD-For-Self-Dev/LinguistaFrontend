@@ -1,16 +1,18 @@
-import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { LanguageSwitcher } from '@features/changeLanguage';
-import { ThemeSwitcher } from '@features/switchTheme/index.';
-import { Button, Input, CustomLink, ButtonIcon } from '@ui/index';
+import AddBtnWithMenu from '@features/add/ui/AddBtnWithMenu';
+import SortBtnWithMenu from '@features/sortWords/ui/SortBtnWithMenu';
+import FilterBtnWithPopover from '@features/filteringWords/ui/FilterBtnWithPopover';
+
 import { MAIN_ROUTE } from '@shared/lib/routes';
+import { ThemeSwitcher } from '@features/switchTheme/index.';
+import { LanguageSwitcher } from '@features/changeLanguage';
+import { Input, CustomLink, ButtonIcon } from '@ui/index';
 
-import iconTags from '@assets/icons/icon_tags.svg';
-import iconFilter from '@assets/icons/icon_filter.svg';
 import SvgIconLogo from '@assets/icons/logo.svg?react';
-import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import SvgIconUserCabinet from '@assets/icons/icon_user_cabinet.svg?react';
+import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 
 import styles from './HeaderLayout.module.scss';
 
@@ -51,19 +53,12 @@ const HeaderLayout = () => {
 						<button type="submit" className={styles.searchBtn}></button>
 					</div>
 
-					<div className={styles.filterBLock}>
-						<img className={styles.filter} src={iconFilter} />
-					</div>
+					<FilterBtnWithPopover />
 
-					<div className={styles.sortingBlock}>
-						<img className={styles.sorting} src={iconTags} />
-					</div>
+					<SortBtnWithMenu />
 				</div>
 
-				{/* TODO вынести в отдельный кабинет с модальным окном */}
-				<Button className={styles.button} onClick={() => console.log('click')}>
-					{t('add')}
-				</Button>
+				<AddBtnWithMenu />
 
 				<div className={styles.rightPanel}>
 					<div className={styles.userInterface}>
