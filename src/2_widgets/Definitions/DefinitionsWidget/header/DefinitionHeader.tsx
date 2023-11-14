@@ -5,9 +5,10 @@ import styles from './DefinitionHeader.module.scss';
 
 type TProps = {
 	total: string;
+	linkToDefinitionsPage: string;
 };
 
-export const DefinitionHeader = ({ total }: TProps) => {
+export const DefinitionHeader = ({ total, linkToDefinitionsPage }: TProps) => {
 	const { t } = useTranslation('word-profile');
 
 	return (
@@ -16,7 +17,7 @@ export const DefinitionHeader = ({ total }: TProps) => {
 				<SvgIconDefinition />
 				{t('definitions')}
 			</SectionTitle>
-			<CustomLink href="#" target="_blank" apperance="button">
+			<CustomLink href={linkToDefinitionsPage} target="_blank" apperance="button">
 				{t('allDefinitions')}&nbsp;
 				<span className={styles.count}>{total}</span>
 			</CustomLink>

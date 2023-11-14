@@ -1,5 +1,5 @@
 import { TDefinition } from '@/4_entities/word/model/types';
-import { DefinitionItem } from '../item';
+import { DefinitionItem } from './item';
 import styles from './DefinitionsList.module.scss';
 
 type TProps = {
