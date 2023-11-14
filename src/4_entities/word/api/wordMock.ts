@@ -34,7 +34,7 @@ export const wordMock: IWord = {
 			author: 'Jane',
 			text: 'To come to know by chance, or by study or other application',
 			translation: 'Весна',
-			popularity: 'low',
+			popularity: 'medium',
 			created: '2023-11-13T09:03:15.483Z',
 			modified: '2023-11-13T09:03:15.483Z',
 		},

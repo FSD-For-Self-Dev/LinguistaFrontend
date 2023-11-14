@@ -1,0 +1,55 @@
+@import '@shared/styles/colors';
+@import '@shared/styles/mixins';
+
+.container {
+	min-height: 324px;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	@include font-source-sans(10px, $neutral-text-main-color, 400, 12px);
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.definition {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	@include font-source-sans(14px, $neutral-text-main-color, 500, 18px);
+	text-align: center;
+}
+
+.popularity {
+	@include font-source-sans(10px, $neutral-text-main-color, 400, 12px);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.high {
+	display: block;
+	color: $success-color;
+}
+
+.medium {
+	display: block;
+	color: $warning-color;
+}
+
+.low {
+	display: block;
+	color: $danger-color;
+}
