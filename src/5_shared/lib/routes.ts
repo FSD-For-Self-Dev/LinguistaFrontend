@@ -16,6 +16,7 @@ export const VOCAB_TROHIES_ROUTE = '/vocabulary/trophies';
 export const VOCAB_WORD_ROUTE = '/vocabulary/word';
 
 export const WORD_ROUTE = '/vocabulary/:slugWord';
+export const ALL_DEFINITIONS = '/definitions';
 
 export const CONTACTS_ROUTE = '/contacts';
 export const POLICY_ROUTE = '/privacy-policy';
