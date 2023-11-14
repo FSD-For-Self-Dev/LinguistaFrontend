@@ -8,7 +8,6 @@ export { Badge } from './Badge/Badge';
 export { AddToFavorite } from './AddToFavorite/AddToFavorite';
 export { CopyText } from './CopyText/CopyText';
 export { SectionTitle } from './SectionTitle/SectionTitle';
-export { WordStatus } from './WordStatus/WordStatus';
 export { WordSubMenu } from './WordSubMenu/WordSubMenu';
 export { CardContainer } from './CardContainer/CardContainer';
 export { Popularity } from './Popularity/Popularity';
