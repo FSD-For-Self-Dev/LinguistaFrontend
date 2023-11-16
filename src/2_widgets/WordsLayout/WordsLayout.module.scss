@@ -51,8 +51,6 @@
 }
 
 .btn {
-	width: 185px;
-	padding: 22px 15px !important;
 	@include media($max-width: 830px) {
 		padding: 10px 15px;
 	}

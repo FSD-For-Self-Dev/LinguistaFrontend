@@ -1,0 +1,21 @@
+@import '@styles/colors';
+@import '@styles/mixins/font';
+
+.container {
+	padding-top: 37px;
+}
+
+h1 {
+	@include font-source-sans(34px, $dark, 400);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.word {
+	margin-bottom: 40px;
+}

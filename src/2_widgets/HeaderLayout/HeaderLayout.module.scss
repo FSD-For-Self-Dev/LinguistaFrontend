@@ -41,6 +41,7 @@ header {
 
 	span {
 		@include font-source-sans(16px, $neutral-text-dark-color, 400, 19px, 'Fredoka');
+		white-space: nowrap;
 	}
 }
 

@@ -1,10 +1,10 @@
-/* eslint-disable react-refresh/only-export-components */
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider, withProviders } from './provider';
-import { Routing } from '../1_pages';
-import { themeSelector } from '../4_entities/theme';
-import { useAppSelector } from '../5_shared/model';
+import { Routing } from '@pages/index';
+import { themeSelector } from '@entities/theme';
+import { useAppSelector } from '@shared/model';
 
+// eslint-disable-next-line react-refresh/only-export-components
 function App() {
 	const { theme } = useAppSelector(themeSelector);
 
@@ -17,4 +17,5 @@ function App() {
 	);
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default withProviders(<App />);

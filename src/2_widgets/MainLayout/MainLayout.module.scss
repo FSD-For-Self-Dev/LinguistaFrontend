@@ -13,16 +13,9 @@
 		margin: 0 auto;
 		padding: 0 215px;
 		max-width: 1600px;
-		// @include media($min-width: 1750px) {
-		// 	max-width: 2190px;
-		// }
-
-		// @include media($max-width: 1750px, $min-width: 1350px) {
-		//
-		// }
 
 		@include media($max-width: 1350px, $min-width: 830px) {
-			padding: 0 115px;
+			padding: 0 30px 0 130px;
 		}
 
 		@include media($max-width: 830px) {

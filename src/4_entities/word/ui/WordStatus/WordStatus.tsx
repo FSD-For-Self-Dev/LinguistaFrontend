@@ -1,4 +1,4 @@
-import { Activity } from '@entities/words';
+import { TActivity } from '@entities/word/model/types';
 import SvgStatusActive from '@shared/assets/icons/status_active.svg?react';
 import SvgStatusNotActive from '@shared/assets/icons/icon_not_active.svg?react';
 import SvgStatusCompleted from '@shared/assets/icons/icon_completed.svg?react';
@@ -6,7 +6,7 @@ import SvgIconQuestion from '@shared/assets/icons/icon_question.svg?react';
 import styles from './WordStatus.module.scss';
 
 type Props = {
-	activity?: Activity;
+	activity?: TActivity;
 	colorTheme: 'dark' | 'light';
 	size?: 'mini' | 'big';
 };

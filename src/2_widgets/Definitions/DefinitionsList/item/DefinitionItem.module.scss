@@ -1,0 +1,34 @@
+@import '@styles/colors';
+@import '@styles/mixins/font';
+
+.container {
+	min-height: 324px;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	@include font-source-sans(10px, $neutral-text-main-color, 400, 12px);
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.definition {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	@include font-source-sans(14px, $neutral-text-main-color, 500, 18px);
+	text-align: center;
+}

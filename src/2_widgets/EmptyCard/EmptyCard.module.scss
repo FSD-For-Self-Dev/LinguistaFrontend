@@ -1,0 +1,13 @@
+@import '@styles/mixins/font';
+
+.container {
+	display: flex;
+	justify-content: center;
+	max-width: 322px;
+	min-height: 324px;
+	margin: 40px auto;
+	background-color: #c2c8d3;
+
+	@include font-source-sans(14px, #737782, 500, 18);
+	text-align: center;
+}

@@ -1,0 +1,58 @@
+import { TDefinition } from '../model/types';
+
+export const definitionsMock: TDefinition[] = [
+	{
+		id: 1245,
+		author: 'Mike',
+		text: 'Spring',
+		translation: 'Весна',
+		popularity: 'high',
+		created: '2023-11-13T09:03:15.483Z',
+		modified: '2023-11-13T09:03:15.483Z',
+	},
+	{
+		id: 224,
+		author: 'Jane',
+		text: 'To come to know by chance, or by study or other application',
+		translation: 'Весна',
+		popularity: 'medium',
+		created: '2023-11-13T09:03:15.483Z',
+		modified: '2023-11-13T09:03:15.483Z',
+	},
+	{
+		id: 2247,
+		author: 'Iren',
+		text: 'To come to know by chance, or by study or other application',
+		translation: 'Весна',
+		popularity: 'low',
+		created: '2023-11-13T09:03:15.483Z',
+		modified: '2023-11-13T09:03:15.483Z',
+	},
+	{
+		id: 12490,
+		author: 'Mike',
+		text: 'Spring',
+		translation: 'Весна',
+		popularity: 'high',
+		created: '2023-11-13T09:03:15.483Z',
+		modified: '2023-11-13T09:03:15.483Z',
+	},
+	{
+		id: 2244,
+		author: 'Jane',
+		text: 'To come to know by chance, or by study or other application',
+		translation: 'Весна',
+		popularity: 'medium',
+		created: '2023-11-13T09:03:15.483Z',
+		modified: '2023-11-13T09:03:15.483Z',
+	},
+	{
+		id: 22472,
+		author: 'Nick',
+		text: 'To come to know by chance',
+		translation: 'Весна',
+		popularity: 'low',
+		created: '2023-11-13T09:03:15.483Z',
+		modified: '2023-11-13T09:03:15.483Z',
+	},
+];
