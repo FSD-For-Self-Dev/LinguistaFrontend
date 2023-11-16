@@ -32,24 +32,3 @@
 	@include font-source-sans(14px, $neutral-text-main-color, 500, 18px);
 	text-align: center;
 }
-
-.popularity {
-	@include font-source-sans(10px, $neutral-text-main-color, 400, 12px);
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.high {
-	display: block;
-	color: $success-color;
-}
-
-.medium {
-	display: block;
-	color: $warning-color;
-}
-
-.low {
-	display: block;
-	color: $danger-color;
-}

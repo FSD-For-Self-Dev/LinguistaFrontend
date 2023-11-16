@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { CardContainer, WordSubMenu } from '@shared/ui';
+import { CardContainer, Popularity, WordSubMenu } from '@shared/ui';
 import { TDefinition } from '@entities/word/model/types';
 import SvgIconRelated from '@shared/assets/icons/icon_related.svg?react';
 import styles from './DefinitionItem.module.scss';
@@ -23,10 +23,7 @@ export const DefinitionItem = ({ item }: TProps) => {
 				<WordSubMenu colorTheme={'dark'} />
 			</div>
 			<p className={styles.definition}>{text}</p>
-			<p className={styles.popularity}>
-				{t('popularity')}
-				<span className={styles[`${popularity}`]}>{popularity}</span>
-			</p>
+			{popularity && <Popularity popularity={popularity} />}
 		</CardContainer>
 	);
 };

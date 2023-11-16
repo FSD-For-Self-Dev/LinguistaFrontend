@@ -1,7 +1,7 @@
 import { TDefinition } from '@entities/word/model/types';
 import { DefinitionsList } from '../DefinitionsList';
 import { DefinitionHeader } from './header';
-import { ALL_DEFINITIONS, VOCAB_ROUTE } from '@/5_shared/lib/routes';
+import { ALL_DEFINITIONS, VOCAB_ROUTE } from '@shared/lib/routes';
 
 type TProps = {
 	count: string;

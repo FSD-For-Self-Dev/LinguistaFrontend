@@ -1,3 +1,5 @@
+import { TPopularity } from '@shared/ui/Popularity/Popularity';
+
 export type TTranslation = {
 	id: number;
 	text: string;
@@ -26,7 +28,7 @@ export type TDefinition = {
 	author?: string;
 	created: string;
 	modified: string;
-	popularity?: string;
+	popularity?: TPopularity;
 };
 
 export type TNote = {
