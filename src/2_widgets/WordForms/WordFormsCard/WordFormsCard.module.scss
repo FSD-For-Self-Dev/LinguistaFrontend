@@ -1,0 +1,36 @@
+@import '@styles/colors';
+@import '@styles/mixins/font';
+
+.container {
+	width: 240px;
+	height: 164px;
+	display: flex;
+	justify-content: center;
+}
+
+.infinitiveContainer {
+	background-color: $neutral-background-main-color;
+}
+
+.pastParticipleContainer {
+	background-color: #ffd4cc;
+}
+
+.presentPerfectContainer {
+	background-color: #e0f5ff;
+}
+
+.pastPerfectContainer {
+	background-color: #c1fbb4;
+}
+
+.word {
+	@include font-source-sans(24px, $neutral-text-main-color, 500, 24px);
+	letter-spacing: 0.18px;
+	padding-bottom: 20px;
+}
+
+.form {
+	text-transform: uppercase;
+	@include font-source-sans(12px, $neutral-text-main-color, 400, 12px);
+}
