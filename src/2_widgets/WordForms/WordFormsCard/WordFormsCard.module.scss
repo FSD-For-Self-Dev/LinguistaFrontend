@@ -13,15 +13,15 @@
 }
 
 .pastParticipleContainer {
-	background-color: #ffd4cc;
+	background-color: $danger-background-light-color;
 }
 
 .presentPerfectContainer {
-	background-color: #e0f5ff;
+	background-color: $secondary-background-very-light-color;
 }
 
 .pastPerfectContainer {
-	background-color: #c1fbb4;
+	background-color: $success-background-light-color;
 }
 
 .word {
