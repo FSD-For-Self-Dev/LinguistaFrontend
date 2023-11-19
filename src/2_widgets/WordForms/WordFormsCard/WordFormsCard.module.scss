@@ -4,24 +4,16 @@
 .container {
 	width: 240px;
 	height: 164px;
-	display: flex;
-	justify-content: center;
-}
-
-.infinitiveContainer {
+	border-radius: 5px;
+	box-shadow:
+		0px 0px 8px 0px rgba(17, 17, 26, 0.1),
+		0px 1px 0px 0px rgba(17, 17, 26, 0.05);
+	padding: 14px 24px;
 	background-color: $neutral-background-main-color;
-}
-
-.pastParticipleContainer {
-	background-color: $danger-background-light-color;
-}
-
-.presentPerfectContainer {
-	background-color: $secondary-background-very-light-color;
-}
-
-.pastPerfectContainer {
-	background-color: $success-background-light-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .word {

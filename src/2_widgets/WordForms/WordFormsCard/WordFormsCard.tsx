@@ -1,26 +1,28 @@
 /* eslint-disable prettier/prettier */
-import cx from 'classnames';
-import { CardContainer } from '@ui/index';
 import styles from './WordFormsCard.module.scss';
 
 interface Props {
-    type?: 'infinitive' | 'past participle' | 'present perfect' | 'past perfect';
+    type?: string;
 }
 
-export default function WordFormsCard({ type = 'infinitive' }: Props) {
-    const cardClass = cx(
-        styles.container,
-        type === 'infinitive' && styles.infinitiveContainer,
-        type === 'past participle' && styles.pastParticipleContainer,
-        type === 'present perfect' && styles.presentPerfectContainer,
-        type === 'past perfect' && styles.pastPerfectContainer
-    );
+const getRandomColor = () => {
+    const colors = ['#FFFFFF', '#FFD4CC', '#E0F5FF', '#C1FBB4', '#D7E0FF', '#FFE89B', '#C2E8FF', '#FF8F87', '#97F48D'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+};
+
+export default function WordFormsCard({ type = "определите форму слова" }: Props) {
+    const randomColor = getRandomColor();
+
+    const containerStyle: React.CSSProperties = {
+        backgroundColor: randomColor,
+    };
 
     return (
-        <CardContainer className={cardClass}>
-            {/* TODO заменить Learn на данные с бэка */}
+        <div className={styles.container} style={containerStyle}>
+            {/* TODO заменить Learn и 'type' на данные с бэка */}
             <span className={styles.word}>Learn</span>
             <label className={styles.form}>{type}</label>
-        </CardContainer>
+        </div>
     )
 }
