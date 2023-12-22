@@ -10,7 +10,7 @@ import {
 	MAIN_ROUTE,
 	VOCAB_ROUTE,
 	WORD_ROUTE,
-} from '../5_shared/lib/routes';
+} from '@shared/lib/routes.ts';
 
 const Vocabulary = lazy(() => import('@pages/Vocabulary'));
 const Word = lazy(() => import('@pages/Word'));

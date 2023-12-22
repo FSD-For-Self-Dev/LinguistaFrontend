@@ -1,4 +1,4 @@
-import { CustomLink } from '../../5_shared/ui';
+import { CustomLink } from '@shared/ui';
 import { ABOUT_ROUTE, CONTACTS_ROUTE, POLICY_ROUTE, TERMS_ROUTE } from '@shared/lib/routes';
 import styles from './FooterLayout.module.scss';
 

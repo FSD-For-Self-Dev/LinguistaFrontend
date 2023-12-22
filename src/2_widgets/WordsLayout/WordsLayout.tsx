@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../../5_shared/ui';
+import { Button } from '@shared/ui';
 import SvgIconHistory from '../../5_shared/assets/icons/icon_history.svg?react';
 import SvgIconView from '../../5_shared/assets/icons/icon_view.svg?react';
 import styles from './WordsLayout.module.scss';

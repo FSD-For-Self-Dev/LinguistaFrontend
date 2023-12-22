@@ -1,4 +1,4 @@
-import { Button } from '../../../../5_shared/ui';
+import { Button } from '@shared/ui';
 import IconDumbbell from '../../../../5_shared/assets/icons/icon_dumbbell.svg?react';
 import styles from './ActivityBanner.module.scss';
 
