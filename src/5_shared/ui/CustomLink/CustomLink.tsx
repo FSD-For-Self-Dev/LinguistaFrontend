@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import styles from './CustomLink.module.scss';
+import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
 interface Props {
 	apperance?: 'regular' | 'underline' | 'button';
 	href: string;
 	onClick?: () => void;
-	children: React.ReactNode;
-	target: React.HTMLAttributeAnchorTarget;
+	children: ReactNode;
+	target: HTMLAttributeAnchorTarget;
 	className?: string;
 }
 

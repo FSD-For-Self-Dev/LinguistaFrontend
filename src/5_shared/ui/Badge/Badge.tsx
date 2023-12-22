@@ -1,10 +1,11 @@
 import cx from 'classnames';
 import styles from './Badge.module.scss';
+import { ReactNode } from 'react';
 
 type BadgeType = 'tag' | 'number';
 
 interface Props {
-	children: React.ReactNode;
+	children: ReactNode;
 	className?: string;
 	type?: BadgeType;
 }

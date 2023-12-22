@@ -1,8 +1,9 @@
 import cn from 'classnames';
 import styles from './CardContainer.module.scss';
+import { ReactNode } from 'react';
 
 interface Props {
-	children: React.ReactNode;
+	children: ReactNode;
 	className?: string;
 }
 

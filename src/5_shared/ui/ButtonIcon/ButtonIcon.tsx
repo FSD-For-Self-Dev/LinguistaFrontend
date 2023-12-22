@@ -1,11 +1,12 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import cx from 'classnames';
 import styles from './ButtonIcon.module.scss';
+import { ReactNode } from 'react';
 
 type ColorTheme = 'light' | 'dark';
 
 interface Props {
-	children: React.ReactNode;
+	children: ReactNode;
 	colorTheme?: ColorTheme;
 	className?: string;
 	title?: string;

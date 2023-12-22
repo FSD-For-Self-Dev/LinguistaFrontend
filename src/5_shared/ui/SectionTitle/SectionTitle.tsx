@@ -1,8 +1,9 @@
 import cx from 'classnames';
 import styles from './SectionTitle.module.scss';
+import { ReactNode } from 'react';
 
 interface Props {
-	children: React.ReactNode;
+	children: ReactNode;
 	className?: string;
 	theme?: 'regular' | 'bold';
 	svg?: string;
