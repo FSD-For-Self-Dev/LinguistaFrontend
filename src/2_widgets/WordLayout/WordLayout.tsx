@@ -26,6 +26,7 @@ export const WordLayout = ({ item, size = 'big' }: Props) => {
 							className={styles.image}
 							src={image}
 							style={{ backgroundImage: `url(${image})` }}
+							alt="card"
 						/>
 					))}
 				</Carousel>
