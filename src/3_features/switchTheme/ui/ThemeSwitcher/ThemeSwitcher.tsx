@@ -4,17 +4,18 @@ import { useAppDispatch, useAppSelector } from '@shared/model';
 import SvgIconSun from '@assets/icons/icon_not_active.svg?react';
 import SvgIconMoon from '@assets/icons/icon_moon.svg?react';
 import styles from './ThemeSwitcher.module.scss';
+import Theme from '@shared/constants/enums/Theme.ts';
 
 export const ThemeSwitcher = () => {
 	const { theme } = useAppSelector(themeSelector);
 	const dispatch = useAppDispatch();
 
 	const setDarkTheme = () => {
-		dispatch(setTheme('dark'));
+		dispatch(setTheme(Theme.dark));
 	};
 
 	const setLightTheme = () => {
-		dispatch(setTheme('light'));
+		dispatch(setTheme(Theme.light));
 	};
 
 	return (
