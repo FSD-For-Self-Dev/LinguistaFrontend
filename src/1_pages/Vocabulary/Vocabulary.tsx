@@ -9,27 +9,27 @@ import { useAppSelector, useAppDispatch } from '@shared/model';
 import styles from './Vocabulary.module.scss';
 
 const Vocabulary = () => {
-	const { filteringWords } = useAppSelector(wordsSelector);
+  const { filteringWords } = useAppSelector(wordsSelector);
 
-	const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
-	useEffect(() => {
-		dispatch(getWords());
+  useEffect(() => {
+    dispatch(getWords());
 
-		// eslint-disable-next-line
-	}, []);
+    // eslint-disable-next-line
+  }, []);
 
-	return (
-		<div className={styles['vocabulary-container']}>
-			<LanguageFilterLayout />
-			<ActivityFilterLayout />
-			<WordsLayout>
-				{filteringWords.map((word: Word) => {
-					return <WordLayout key={word.id} item={word} />;
-				})}
-			</WordsLayout>
-		</div>
-	);
+  return (
+    <div className={styles['vocabulary-container']}>
+      <LanguageFilterLayout />
+      <ActivityFilterLayout />
+      <WordsLayout>
+        {filteringWords.map((word: Word) => {
+          return <WordLayout key={word.id} item={word} />;
+        })}
+      </WordsLayout>
+    </div>
+  );
 };
 
 export default Vocabulary;

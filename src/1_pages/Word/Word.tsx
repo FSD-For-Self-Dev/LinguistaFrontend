@@ -6,15 +6,15 @@ import Antonyms from '@widgets/SynonymsAntonyms/Antonyms';
 import styles from './Word.module.scss';
 
 const Word = () => {
-	return (
-		<div className={styles.container}>
-			<WordInfo />
-			<WordCollection />
-			<Associations />
-			<Synonyms />
-			<Antonyms />
-		</div>
-	);
+  return (
+    <div className={styles.container}>
+      <WordInfo />
+      <WordCollection />
+      <Associations />
+      <Synonyms />
+      <Antonyms />
+    </div>
+  );
 };
 
 export default Word;

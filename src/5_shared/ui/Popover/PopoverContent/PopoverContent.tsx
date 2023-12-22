@@ -4,19 +4,24 @@ import * as RadixPopover from '@radix-ui/react-popover';
 import styles from './PopoverContent.module.scss';
 
 type TProps = {
-	children: ReactNode;
+  children: ReactNode;
 };
 
 export const PopoverContent = forwardRef<HTMLDivElement, TProps>(
-	({ children, ...props }, forwardedRef) => (
-		<RadixPopover.Portal>
-			<RadixPopover.Content className={styles.content} sideOffset={5} {...props} ref={forwardedRef}>
-				{children}
-				<RadixPopover.Close className={styles.closeBtn} aria-label="Close">
-					x
-				</RadixPopover.Close>
-				<RadixPopover.Arrow width={31} height={13} className={styles.arrow} />
-			</RadixPopover.Content>
-		</RadixPopover.Portal>
-	)
+  ({ children, ...props }, forwardedRef) => (
+    <RadixPopover.Portal>
+      <RadixPopover.Content
+        className={styles.content}
+        sideOffset={5}
+        {...props}
+        ref={forwardedRef}
+      >
+        {children}
+        <RadixPopover.Close className={styles.closeBtn} aria-label='Close'>
+          x
+        </RadixPopover.Close>
+        <RadixPopover.Arrow width={31} height={13} className={styles.arrow} />
+      </RadixPopover.Content>
+    </RadixPopover.Portal>
+  ),
 );

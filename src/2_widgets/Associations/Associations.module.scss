@@ -1,19 +1,19 @@
 .content {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 38px;
-	margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1350px) {
-	.content {
-		justify-content: center;
-	}
+  .content {
+    justify-content: center;
+  }
 }

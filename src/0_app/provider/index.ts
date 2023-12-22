@@ -4,5 +4,5 @@ import { ReactNode } from 'react';
 export { ThemeProvider } from './ThemeProvider';
 
 export const withProviders = (component: ReactNode) => {
-	return WithRouter(WithStore(component));
+  return WithRouter(WithStore(component));
 };

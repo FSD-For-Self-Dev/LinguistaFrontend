@@ -2,66 +2,66 @@
 @import '@styles/mixins/font.scss';
 
 @mixin btn {
-	box-sizing: border-box;
-	border: none;
-	border-radius: 5px;
-	padding: 12px 32px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 32px;
 
-	transition:
-		color 0.2s,
-		background-color 0.2s ease-in-out;
+  transition:
+    color 0.2s,
+    background-color 0.2s ease-in-out;
 
-	&:hover {
-		cursor: pointer;
-	}
+  &:hover {
+    cursor: pointer;
+  }
 
-	&:disabled {
-		background-color: $neutral-background-second-color;
-		color: $neutral-text-light-color;
-	}
+  &:disabled {
+    background-color: $neutral-background-second-color;
+    color: $neutral-text-light-color;
+  }
 }
 
 @mixin primary-btn {
-	@include btn;
+  @include btn;
 
-	background-color: $primary-button-color;
-	@include font-source-sans(12px, $neutral-text-main-color, 500);
+  background-color: $primary-button-color;
+  @include font-source-sans(12px, $neutral-text-main-color, 500);
 
-	&:hover {
-		color: $neutral-text-contrast-color;
-	}
+  &:hover {
+    color: $neutral-text-contrast-color;
+  }
 
-	&:active,
-	&_active,
-	&[data-state='open'] {
-		background-color: $primary-button-dark-color;
-	}
+  &:active,
+  &_active,
+  &[data-state='open'] {
+    background-color: $primary-button-dark-color;
+  }
 }
 
 @mixin transparent-btn {
-	@include btn;
+  @include btn;
 
-	border: 1px solid $neutral-line-color;
-	background-color: transparent;
+  border: 1px solid $neutral-line-color;
+  background-color: transparent;
 }
 
 @mixin secondary-btn {
-	@include btn;
+  @include btn;
 
-	background-color: $secondary-button-color;
+  background-color: $secondary-button-color;
 
-	&:hover {
-		color: $neutral-text-contrast-color;
-	}
+  &:hover {
+    color: $neutral-text-contrast-color;
+  }
 
-	&_active {
-		background-color: $secondary-button-bright-color;
-	}
+  &_active {
+    background-color: $secondary-button-bright-color;
+  }
 }
 
 @mixin tall-btn {
-	max-width: 216px;
-	height: 60px;
-	padding: 22px 32px;
-	font-size: 12px;
+  max-width: 216px;
+  height: 60px;
+  padding: 22px 32px;
+  font-size: 12px;
 }

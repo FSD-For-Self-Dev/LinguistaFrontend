@@ -6,27 +6,31 @@ import styles from './AddToFavorite.module.scss';
 type ColorTheme = 'light' | 'dark';
 
 interface Props {
-	colorTheme?: ColorTheme;
-	isFavorite?: boolean;
-	id: string;
+  colorTheme?: ColorTheme;
+  isFavorite?: boolean;
+  id: string;
 }
 
-export const AddToFavorite = ({ isFavorite = false, colorTheme = 'dark', id }: Props) => {
-	const [isActive, setIsActive] = useState(isFavorite);
+export const AddToFavorite = ({
+  isFavorite = false,
+  colorTheme = 'dark',
+  id,
+}: Props) => {
+  const [isActive, setIsActive] = useState(isFavorite);
 
-	const toggleClick = () => {
-		setIsActive((current) => !current);
-		console.log(`${id} add to favorite!`);
-	};
+  const toggleClick = () => {
+    setIsActive((current) => !current);
+    console.log(`${id} add to favorite!`);
+  };
 
-	return (
-		<ButtonIcon
-			onClick={toggleClick}
-			colorTheme={colorTheme}
-			title={isActive ? 'Удалить из Избранного' : 'Добавить в избранное'}
-			className={isActive ? styles.favorite : ''}
-		>
-			<SvgAddToFavorite className={isActive ? styles.favorite : ''} />
-		</ButtonIcon>
-	);
+  return (
+    <ButtonIcon
+      onClick={toggleClick}
+      colorTheme={colorTheme}
+      title={isActive ? 'Удалить из Избранного' : 'Добавить в избранное'}
+      className={isActive ? styles.favorite : ''}
+    >
+      <SvgAddToFavorite className={isActive ? styles.favorite : ''} />
+    </ButtonIcon>
+  );
 };

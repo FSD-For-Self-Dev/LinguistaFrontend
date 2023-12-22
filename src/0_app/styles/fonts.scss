@@ -1,42 +1,43 @@
 @font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src:
-		local('Inter'),
-		url(../../5_shared/assets/fonts/inter/Inter-Regular.woff2) format('woff2'),
-		url(../../5_shared/assets/fonts/inter/Inter-Regular.woff) format('woff');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('Inter'),
+    url(../../5_shared/assets/fonts/inter/Inter-Regular.woff2) format('woff2'),
+    url(../../5_shared/assets/fonts/inter/Inter-Regular.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 500;
-	font-display: swap;
-	src:
-		local('Inter'),
-		url(../../5_shared/assets/fonts/inter/Inter-Medium.woff2) format('woff2'),
-		url(../../5_shared/assets/fonts/inter/Inter-Medium.woff) format('woff');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local('Inter'),
+    url(../../5_shared/assets/fonts/inter/Inter-Medium.woff2) format('woff2'),
+    url(../../5_shared/assets/fonts/inter/Inter-Medium.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 900;
-	font-display: swap;
-	src:
-		local('Inter'),
-		url(../../5_shared/assets/fonts/inter/Inter-Black.woff2) format('woff2'),
-		url(../../5_shared/assets/fonts/inter/Inter-Black.woff) format('woff');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    local('Inter'),
+    url(../../5_shared/assets/fonts/inter/Inter-Black.woff2) format('woff2'),
+    url(../../5_shared/assets/fonts/inter/Inter-Black.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Fredoka';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src:
-		local('Fredoka'),
-		url(../../5_shared/assets/fonts/fredoka/fredoka-regular.ttf) format('truetype');
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('Fredoka'),
+    url(../../5_shared/assets/fonts/fredoka/fredoka-regular.ttf)
+      format('truetype');
 }

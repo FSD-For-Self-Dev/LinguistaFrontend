@@ -7,20 +7,20 @@ import { useWindowResize } from '@shared/model';
 import styles from './MainLayout.module.scss';
 
 const MainLayout = () => {
-	const resize = useWindowResize();
+  const resize = useWindowResize();
 
-	return (
-		<>
-			<HeaderLayout />
-			<div className={styles.content}>
-				<NavbarLayout />
-				<main className={styles.inner} style={{ width: resize }}>
-					<Outlet />
-				</main>
-				<FooterLayout />
-			</div>
-		</>
-	);
+  return (
+    <>
+      <HeaderLayout />
+      <div className={styles.content}>
+        <NavbarLayout />
+        <main className={styles.inner} style={{ width: resize }}>
+          <Outlet />
+        </main>
+        <FooterLayout />
+      </div>
+    </>
+  );
 };
 
 export default MainLayout;

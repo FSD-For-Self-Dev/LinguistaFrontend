@@ -4,12 +4,12 @@ import { initReactI18next } from 'react-i18next';
 import { LANGUAGES } from '@shared/lib/constants';
 
 export default i18n
-	.use(Backend)
-	.use(initReactI18next)
-	.init({
-		debug: true,
-		lng: LANGUAGES[0],
-		fallbackLng: LANGUAGES[0],
-		ns: [], // files to load  ns: ['app', 'common'],
-		interpolation: { escapeValue: false },
-	});
+  .use(Backend)
+  .use(initReactI18next)
+  .init({
+    debug: true,
+    lng: LANGUAGES[0],
+    fallbackLng: LANGUAGES[0],
+    ns: [], // files to load  ns: ['app', 'common'],
+    interpolation: { escapeValue: false },
+  });

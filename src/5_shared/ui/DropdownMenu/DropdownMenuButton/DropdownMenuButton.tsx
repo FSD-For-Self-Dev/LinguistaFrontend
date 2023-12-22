@@ -4,14 +4,17 @@ import cx from 'classnames';
 import styles from './DropdownMenuButton.module.scss';
 
 type TDropdownMenuButtonProps = {
-	children: ReactNode;
-	className?: string;
+  children: ReactNode;
+  className?: string;
 };
 
-export const DropdownMenuButton = ({ children, className }: TDropdownMenuButtonProps) => {
-	return (
-		<RadixDropdownMenu.Trigger className={cx(styles.btn, className)}>
-			{children}
-		</RadixDropdownMenu.Trigger>
-	);
+export const DropdownMenuButton = ({
+  children,
+  className,
+}: TDropdownMenuButtonProps) => {
+  return (
+    <RadixDropdownMenu.Trigger className={cx(styles.btn, className)}>
+      {children}
+    </RadixDropdownMenu.Trigger>
+  );
 };

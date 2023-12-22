@@ -1,3 +1,3 @@
 export const LanguageFilterWords = () => {
-	return <div>LanguageFilterWords</div>;
+  return <div>LanguageFilterWords</div>;
 };

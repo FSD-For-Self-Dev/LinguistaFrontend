@@ -1,49 +1,49 @@
 @import '@styles/colors';
 
 .container {
-	height: 316px;
-	justify-content: flex-end;
-	gap: 24px;
-	padding: 17px 22px;
-	text-align: center;
+  height: 316px;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 17px 22px;
+  text-align: center;
 
-	&_antonym {
-		padding: 20px 22px;
-		justify-content: center;
-		color: $neutral-text-contrast-color;
-		background-color: $primary-background-dark-color;
-	}
+  &_antonym {
+    padding: 20px 22px;
+    justify-content: center;
+    color: $neutral-text-contrast-color;
+    background-color: $primary-background-dark-color;
+  }
 }
 
 .word {
-	font-family: 'Inter', sans-serif;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .carousel {
-	width: 150px;
+  width: 150px;
 }
 
 .arrows {
-	color: $neutral-text-contrast-color;
+  color: $neutral-text-contrast-color;
 }
 
 .translation {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 .note {
-	height: 50px;
-	margin-top: 16px;
-	font-family: 'Inter', sans-serif;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 300;
-	color: $neutral-text-middle-color;
+  height: 50px;
+  margin-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  color: $neutral-text-middle-color;
 
-	&_antonym {
-		color: $neutral-text-light-color;
-	}
+  &_antonym {
+    color: $neutral-text-light-color;
+  }
 }

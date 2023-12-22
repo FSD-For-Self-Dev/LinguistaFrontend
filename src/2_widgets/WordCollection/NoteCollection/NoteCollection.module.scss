@@ -1,42 +1,42 @@
 @import '@styles/colors';
 
 .notebook {
-	background-color: $neutral-background-main-color;
-	height: 195px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	box-shadow:
-		0 0 8px 0 rgba(17, 17, 26, 0.1),
-		0 1px 0 0 rgba(17, 17, 26, 0.05);
-	border-radius: 5px;
+  background-color: $neutral-background-main-color;
+  height: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow:
+    0 0 8px 0 rgba(17, 17, 26, 0.1),
+    0 1px 0 0 rgba(17, 17, 26, 0.05);
+  border-radius: 5px;
 }
 
 .carousel {
-	width: 100%;
-	position: relative;
+  width: 100%;
+  position: relative;
 
-	.slider {
-		width: 100%;
+  .slider {
+    width: 100%;
 
-		& :global(.slick-list) {
-			overflow: visible;
-			overflow-x: clip;
-		}
-	}
+    & :global(.slick-list) {
+      overflow: visible;
+      overflow-x: clip;
+    }
+  }
 
-	.arrows {
-		position: absolute;
+  .arrows {
+    position: absolute;
 
-		&:first-child {
-			left: 47px;
-			bottom: 0;
-		}
+    &:first-child {
+      left: 47px;
+      bottom: 0;
+    }
 
-		&:last-child {
-			right: 47px;
-			bottom: 0;
-		}
-	}
+    &:last-child {
+      right: 47px;
+      bottom: 0;
+    }
+  }
 }

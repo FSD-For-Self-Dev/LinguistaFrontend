@@ -2,29 +2,29 @@
 @import '@styles/mixins/font';
 
 .card {
-	max-width: 270px;
-	height: 338px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 9px;
-	border-radius: 5px;
-	box-shadow:
-		0 0 8px 0 rgba(17, 17, 26, 0.1),
-		0 1px 0 0 rgba(17, 17, 26, 0.05);
+  max-width: 270px;
+  height: 338px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  border-radius: 5px;
+  box-shadow:
+    0 0 8px 0 rgba(17, 17, 26, 0.1),
+    0 1px 0 0 rgba(17, 17, 26, 0.05);
 }
 .card_bg {
-	background-size: cover;
-	align-items: end;
+  background-size: cover;
+  align-items: end;
 }
 
 .card_quote {
-	@include font-source-sans(16px, $neutral-text-main-color, 400, 19px);
-	text-transform: uppercase;
+  @include font-source-sans(16px, $neutral-text-main-color, 400, 19px);
+  text-transform: uppercase;
 }
 
 .assonant {
-	background-color: rgba(255, 255, 255, 0.8);
-	padding: 6px 72px;
-	border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px 72px;
+  border-radius: 5px;
 }

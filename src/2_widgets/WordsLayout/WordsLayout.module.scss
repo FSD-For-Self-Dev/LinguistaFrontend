@@ -2,85 +2,85 @@
 @import '@styles/mixins/font';
 
 .header {
-	display: flex;
-	gap: 40px;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 
-	@include media($max-width: 768px) {
-		flex-wrap: wrap;
-		gap: 20px;
-	}
+  @include media($max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 .headerStats {
-	display: flex;
-	align-items: center;
-	min-height: 24px;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
 
-	background-image: url(@assets/icons/add_to_dictionary.svg);
-	background-repeat: no-repeat;
-	background-size: 25px 24px;
-	background-position: 0 center;
-	padding-left: 35px;
+  background-image: url(@assets/icons/add_to_dictionary.svg);
+  background-repeat: no-repeat;
+  background-size: 25px 24px;
+  background-position: 0 center;
+  padding-left: 35px;
 }
 
 .subTitle {
-	@include sub-title;
-	line-height: 14px;
+  @include sub-title;
+  line-height: 14px;
 }
 
 .headerActions {
-	display: flex;
-	gap: 18px;
-	flex-grow: 1;
+  display: flex;
+  gap: 18px;
+  flex-grow: 1;
 
-	@include media($max-width: 768px) {
-		order: 3;
-	}
+  @include media($max-width: 768px) {
+    order: 3;
+  }
 }
 
 .headerLinks {
-	display: flex;
-	gap: 20px;
+  display: flex;
+  gap: 20px;
 
-	@include media($max-width: 768px) {
-		order: 2;
-	}
+  @include media($max-width: 768px) {
+    order: 2;
+  }
 }
 
 .btn {
-	width: 185px;
-	padding: 22px 15px !important;
-	@include media($max-width: 830px) {
-		padding: 10px 15px;
-	}
+  width: 185px;
+  padding: 22px 15px !important;
+  @include media($max-width: 830px) {
+    padding: 10px 15px;
+  }
 }
 
 .list {
-	box-sizing: border-box;
-	display: grid;
-	gap: 64px 48px;
-	margin: 0 auto;
+  box-sizing: border-box;
+  display: grid;
+  gap: 64px 48px;
+  margin: 0 auto;
 
-	@include media($min-width: 2070px) {
-		grid-template-columns: repeat(5, 1fr);
-	}
+  @include media($min-width: 2070px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 
-	@include media($max-width: 2070px, $min-width: 1750px) {
-		grid-template-columns: repeat(4, 1fr);
-	}
+  @include media($max-width: 2070px, $min-width: 1750px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-	@include media($max-width: 1750px, $min-width: 1350px) {
-		grid-template-columns: repeat(3, 1fr);
-	}
+  @include media($max-width: 1750px, $min-width: 1350px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-	@include media($max-width: 1350px, $min-width: 830px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  @include media($max-width: 1350px, $min-width: 830px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	@include media($max-width: 830px) {
-		grid-template-columns: repeat(1, 1fr);
-	}
+  @include media($max-width: 830px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -1,6 +1,6 @@
 {
-	"addToVocabulary": "Add to dictionary",
-	"addToCollection": "Add to collection",
-	"totalWords_one": "{{count}} word or phrase",
-	"totalWords_other": "{{count}} words and phrases"
+  "addToVocabulary": "Add to dictionary",
+  "addToCollection": "Add to collection",
+  "totalWords_one": "{{count}} word or phrase",
+  "totalWords_other": "{{count}} words and phrases"
 }

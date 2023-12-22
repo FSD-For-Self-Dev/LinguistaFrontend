@@ -6,15 +6,15 @@ import { themeSelector } from '@entities/theme';
 import { useAppSelector } from '@shared/model';
 
 function App() {
-	const { theme } = useAppSelector(themeSelector);
+  const { theme } = useAppSelector(themeSelector);
 
-	return (
-		<ThemeProvider>
-			<Theme appearance={theme}>
-				<Routing />
-			</Theme>
-		</ThemeProvider>
-	);
+  return (
+    <ThemeProvider>
+      <Theme appearance={theme}>
+        <Routing />
+      </Theme>
+    </ThemeProvider>
+  );
 }
 
 export default withProviders(<App />);

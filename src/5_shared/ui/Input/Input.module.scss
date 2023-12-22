@@ -2,12 +2,18 @@
 @import '@styles/colors';
 
 .input {
-	border: 1px solid $neutral-line-color;
+  border: 1px solid $neutral-line-color;
 
-	@include font-source-sans(12px, $neutral-text-dark-color, 400, 14.5px, 'Inter');
+  @include font-source-sans(
+    12px,
+    $neutral-text-dark-color,
+    400,
+    14.5px,
+    'Inter'
+  );
 
-	&:hover,
-	&:focus {
-		outline: none;
-	}
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }

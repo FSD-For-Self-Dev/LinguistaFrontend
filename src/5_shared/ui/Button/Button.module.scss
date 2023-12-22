@@ -1,17 +1,17 @@
 @import '@styles/mixins/btn';
 
 .primary {
-	@include primary-btn;
+  @include primary-btn;
 }
 
 .transparent {
-	@include transparent-btn;
+  @include transparent-btn;
 }
 
 .secondary {
-	@include secondary-btn;
+  @include secondary-btn;
 }
 
 .tall {
-	@include tall-btn;
+  @include tall-btn;
 }

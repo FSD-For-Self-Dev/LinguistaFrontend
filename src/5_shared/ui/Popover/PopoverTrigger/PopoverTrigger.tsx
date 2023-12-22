@@ -4,12 +4,17 @@ import cx from 'classnames';
 import styles from './PopoverTrigger.module.scss';
 
 type TPopoverTriggerProps = {
-	children: ReactNode;
-	className?: string;
+  children: ReactNode;
+  className?: string;
 };
 
-export const PopoverTrigger = ({ children, className }: TPopoverTriggerProps) => {
-	return (
-		<RadixPopover.Trigger className={cx(styles.btn, className)}>{children}</RadixPopover.Trigger>
-	);
+export const PopoverTrigger = ({
+  children,
+  className,
+}: TPopoverTriggerProps) => {
+  return (
+    <RadixPopover.Trigger className={cx(styles.btn, className)}>
+      {children}
+    </RadixPopover.Trigger>
+  );
 };

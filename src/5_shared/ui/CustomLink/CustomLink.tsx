@@ -4,30 +4,30 @@ import styles from './CustomLink.module.scss';
 import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
 interface Props {
-	apperance?: 'regular' | 'underline' | 'button';
-	href: string;
-	onClick?: () => void;
-	children: ReactNode;
-	target: HTMLAttributeAnchorTarget;
-	className?: string;
+  apperance?: 'regular' | 'underline' | 'button';
+  href: string;
+  onClick?: () => void;
+  children: ReactNode;
+  target: HTMLAttributeAnchorTarget;
+  className?: string;
 }
 
 export const CustomLink = ({
-	apperance = 'regular',
-	href,
-	onClick,
-	children,
-	target,
-	className,
+  apperance = 'regular',
+  href,
+  onClick,
+  children,
+  target,
+  className,
 }: Props) => {
-	return (
-		<Link
-			to={href}
-			target={target}
-			className={cx(styles.link, styles[`link_${apperance}`], className)}
-			onClick={onClick}
-		>
-			{children}
-		</Link>
-	);
+  return (
+    <Link
+      to={href}
+      target={target}
+      className={cx(styles.link, styles[`link_${apperance}`], className)}
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  );
 };

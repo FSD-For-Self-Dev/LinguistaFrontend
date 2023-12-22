@@ -3,10 +3,10 @@ import { themeReducer } from '@entities/theme';
 import { wordsReducer } from '@entities/words';
 
 export const store = configureStore({
-	reducer: {
-		theme: themeReducer,
-		words: wordsReducer,
-	},
+  reducer: {
+    theme: themeReducer,
+    words: wordsReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -7,26 +7,26 @@ import styles from './ThemeSwitcher.module.scss';
 import Theme from '@shared/constants/enums/Theme.ts';
 
 export const ThemeSwitcher = () => {
-	const { theme } = useAppSelector(themeSelector);
-	const dispatch = useAppDispatch();
+  const { theme } = useAppSelector(themeSelector);
+  const dispatch = useAppDispatch();
 
-	const setDarkTheme = () => {
-		dispatch(setTheme(Theme.dark));
-	};
+  const setDarkTheme = () => {
+    dispatch(setTheme(Theme.dark));
+  };
 
-	const setLightTheme = () => {
-		dispatch(setTheme(Theme.light));
-	};
+  const setLightTheme = () => {
+    dispatch(setTheme(Theme.light));
+  };
 
-	return (
-		// <div className={styles.switcher} onClick={() => setDarkTheme(!darkTheme)}>
-		<>
-			{theme === 'dark' ? (
-				<SvgIconSun className={styles.sun} onClick={() => setLightTheme()} />
-			) : (
-				<SvgIconMoon className={styles.moon} onClick={() => setDarkTheme()} />
-			)}
-		</>
-		// </div>
-	);
+  return (
+    // <div className={styles.switcher} onClick={() => setDarkTheme(!darkTheme)}>
+    <>
+      {theme === 'dark' ? (
+        <SvgIconSun className={styles.sun} onClick={() => setLightTheme()} />
+      ) : (
+        <SvgIconMoon className={styles.moon} onClick={() => setDarkTheme()} />
+      )}
+    </>
+    // </div>
+  );
 };

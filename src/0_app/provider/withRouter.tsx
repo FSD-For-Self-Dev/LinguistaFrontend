@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Loader } from '@ui/index';
 
 export const WithRouter = (component: ReactNode) => () => (
-	<BrowserRouter>
-		<Suspense fallback={<Loader />}>{component}</Suspense>
-	</BrowserRouter>
+  <BrowserRouter>
+    <Suspense fallback={<Loader />}>{component}</Suspense>
+  </BrowserRouter>
 );

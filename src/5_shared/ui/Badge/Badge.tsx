@@ -5,11 +5,15 @@ import { ReactNode } from 'react';
 type BadgeType = 'tag' | 'number';
 
 interface Props {
-	children: ReactNode;
-	className?: string;
-	type?: BadgeType;
+  children: ReactNode;
+  className?: string;
+  type?: BadgeType;
 }
 
 export const Badge = ({ children, className, type = 'tag' }: Props) => {
-	return <div className={cx(styles.badge, styles[`badge_${type}`], className)}>{children}</div>;
+  return (
+    <div className={cx(styles.badge, styles[`badge_${type}`], className)}>
+      {children}
+    </div>
+  );
 };

@@ -17,68 +17,68 @@ import SvgIconNotification from '@assets/icons/icon_notification.svg?react';
 import styles from './HeaderLayout.module.scss';
 
 const HeaderLayout = () => {
-	const [searchText, changeSearchText] = useState('');
-	const { t } = useTranslation('header');
+  const [searchText, changeSearchText] = useState('');
+  const { t } = useTranslation('header');
 
-	return (
-		<header>
-			<CustomLink
-				href="/"
-				target="_self"
-				className={styles.logoBlock}
-				onClick={() => console.log('click')}
-			>
-				<div className={styles.logoImg}>
-					<SvgIconLogo className={styles.icon} />
-				</div>
-			</CustomLink>
-			<div className={styles.contetnt}>
-				<CustomLink
-					href={MAIN_ROUTE}
-					target="_self"
-					className={styles.logoText}
-					onClick={() => console.log('click')}
-				>
-					{t('projectName')} <span>{t('projectSlogan')}</span>
-				</CustomLink>
-				<div className={styles.searching}>
-					<div className={styles.inputBlock}>
-						<Input
-							type="text"
-							placeholder={t('searchPlaceholder')}
-							className={styles.searchInput}
-							onChange={(evt) => changeSearchText(evt.target.value)}
-							value={searchText}
-						/>
-						<button type="submit" className={styles.searchBtn}></button>
-					</div>
+  return (
+    <header>
+      <CustomLink
+        href='/'
+        target='_self'
+        className={styles.logoBlock}
+        onClick={() => console.log('click')}
+      >
+        <div className={styles.logoImg}>
+          <SvgIconLogo className={styles.icon} />
+        </div>
+      </CustomLink>
+      <div className={styles.contetnt}>
+        <CustomLink
+          href={MAIN_ROUTE}
+          target='_self'
+          className={styles.logoText}
+          onClick={() => console.log('click')}
+        >
+          {t('projectName')} <span>{t('projectSlogan')}</span>
+        </CustomLink>
+        <div className={styles.searching}>
+          <div className={styles.inputBlock}>
+            <Input
+              type='text'
+              placeholder={t('searchPlaceholder')}
+              className={styles.searchInput}
+              onChange={(evt) => changeSearchText(evt.target.value)}
+              value={searchText}
+            />
+            <button type='submit' className={styles.searchBtn}></button>
+          </div>
 
-					<FilterBtnWithPopover />
+          <FilterBtnWithPopover />
 
-					<SortBtnWithMenu />
-				</div>
+          <SortBtnWithMenu />
+        </div>
 
-				<AddBtnWithMenu />
+        <AddBtnWithMenu />
 
-				<div className={styles.rightPanel}>
-					<div className={styles.userInterface}>
-						<ThemeSwitcher />
-						{/* TODO вынести в отдельный компонент с модальным окном*/}
-						<ButtonIcon>
-							<SvgIconNotification />
-						</ButtonIcon>
+        <div className={styles.rightPanel}>
+          <div className={styles.userInterface}>
+            <ThemeSwitcher />
+            {/* TODO вынести в отдельный компонент с модальным окном*/}
+            <ButtonIcon>
+              <SvgIconNotification />
+            </ButtonIcon>
 
-						{/* TODO вынести в отдельный компонент - с модальным окном */}
-						<ButtonIcon>
-							<SvgIconUserCabinet />
-						</ButtonIcon>
-					</div>
+            {/* TODO вынести в отдельный компонент - с модальным окном */}
+            <ButtonIcon>
+              <SvgIconUserCabinet />
+            </ButtonIcon>
+          </div>
 
-					<LanguageSwitcher />
-				</div>
-			</div>
-		</header>
-	);
+          <LanguageSwitcher />
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default HeaderLayout;
