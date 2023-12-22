@@ -14,7 +14,7 @@ export const LanguageSwitcher = () => {
 		if (newLang === language) return;
 
 		setLanguage(newLang);
-		i18n.changeLanguage(newLang);
+		i18n.changeLanguage(newLang).catch(() => {});
 		console.log('change lang');
 	};
 
