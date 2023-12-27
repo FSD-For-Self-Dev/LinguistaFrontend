@@ -8,6 +8,7 @@ import {
 
 import WORD_SUBMENU from '@shared/lib/wordSubMenu';
 import SvgIconDots from '@assets/icons/icon_dots.svg?react';
+import { nanoid } from '@reduxjs/toolkit';
 import styles from './WordSubMenu.module.scss';
 
 type ColorTheme = 'light' | 'dark';
@@ -34,7 +35,7 @@ const WordSubMenu = ({ colorTheme }: Props) => {
       <DropdownMenuContent side='right' sideOffset={10} arrow={false}>
         {WORD_SUBMENU.map(({ item, link, classes, disabled }) => (
           <DropdownMenuItem
-            key={`wsm${new Date().getTime()}`}
+            key={`wsm${nanoid()}`}
             disabled={disabled}
             className={classes}
             action={link ? () => selectHandler(link, item) : undefined}

@@ -5,6 +5,7 @@ import {
   POLICY_ROUTE,
   TERMS_ROUTE,
 } from '@shared/lib/routes';
+import { nanoid } from '@reduxjs/toolkit';
 import styles from './FooterLayout.module.scss';
 
 const links = [
@@ -28,7 +29,7 @@ const links = [
 
 export default function FooterLayout() {
   const footerLinks = links.map((link) => (
-    <li key={`link_${new Date().getTime()}`}>
+    <li key={`link_${nanoid()}`}>
       <CustomLink
         apperance='underline'
         target='_blank'

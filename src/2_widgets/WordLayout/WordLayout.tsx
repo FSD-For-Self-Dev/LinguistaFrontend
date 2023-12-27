@@ -4,6 +4,7 @@ import { Word } from '@entities/words';
 import { AddToFavorite } from '@features/addToFavorite';
 import { WordSubMenu, WordStatus } from '@ui/index';
 import { Carousel, Badge, CopyText } from '@shared/ui';
+import { nanoid } from '@reduxjs/toolkit';
 import styles from './WordLayout.module.scss';
 
 interface Props {
@@ -81,7 +82,7 @@ export default function WordLayout({ item, size = 'big' }: Props) {
         </p>
         <ul className={styles.levelWrapper} aria-label='Теги для слова'>
           {tags?.map((tag) => (
-            <li key={`levelWrapper_${new Date().getTime()}`}>
+            <li key={`levelWrapper_${nanoid()}`}>
               <Badge>{tag}</Badge>
             </li>
           ))}
@@ -95,9 +96,7 @@ export default function WordLayout({ item, size = 'big' }: Props) {
           sliderClass={styles.slider}
         >
           {translations?.map((translation) => (
-            <span key={`translation_${new Date().getTime()}`}>
-              {translation.text}
-            </span>
+            <span key={`translation_${nanoid()}`}>{translation.text}</span>
           ))}
         </Carousel>
       ) : (

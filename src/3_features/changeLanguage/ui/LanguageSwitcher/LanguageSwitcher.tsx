@@ -4,6 +4,7 @@ import * as Select from '@radix-ui/react-select';
 import { LANGUAGES } from '@shared/lib/constants';
 
 import SvgIconLang from '@shared/assets/icons/icon_globus.svg?react';
+import { nanoid } from '@reduxjs/toolkit';
 import styles from './LanguageSwitcher.module.scss';
 
 export const LanguageSwitcher = () => {
@@ -38,7 +39,7 @@ export const LanguageSwitcher = () => {
               {LANGUAGES.map((lang) => (
                 <Select.Item
                   className={styles.item}
-                  key={`langItem${new Date().getTime()}`}
+                  key={`langItem${nanoid()}`}
                   value={lang}
                 >
                   <Select.ItemText>{lang}</Select.ItemText>

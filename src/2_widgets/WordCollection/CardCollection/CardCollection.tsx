@@ -1,5 +1,6 @@
 import { CustomLink } from '@ui/index';
 
+import { nanoid } from '@reduxjs/toolkit';
 import styles from './CardCollection.module.scss';
 
 const CardCollection = () => {
@@ -14,7 +15,7 @@ const CardCollection = () => {
         </div>
         <div className={styles.description}>
           {items.map((item) => (
-            <p key={`description_${new Date().getTime()}`}>{item}</p>
+            <p key={`description_${nanoid()}`}>{item}</p>
           ))}
         </div>
       </div>
