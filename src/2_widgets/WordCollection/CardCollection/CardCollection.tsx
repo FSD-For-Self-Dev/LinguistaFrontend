@@ -13,8 +13,8 @@ const CardCollection = () => {
           <span className={styles.label}>49</span>
         </div>
         <div className={styles.description}>
-          {items.map((item, id) => (
-            <p key={id}>{item}</p>
+          {items.map((item) => (
+            <p key={`description_${new Date().getTime()}`}>{item}</p>
           ))}
         </div>
       </div>

@@ -35,10 +35,10 @@ export const LanguageSwitcher = () => {
             sideOffset={5}
           >
             <Select.Viewport className={styles.viewport}>
-              {LANGUAGES.map((lang, idx) => (
+              {LANGUAGES.map((lang) => (
                 <Select.Item
                   className={styles.item}
-                  key={`langItem${idx}`}
+                  key={`langItem${new Date().getTime()}`}
                   value={lang}
                 >
                   <Select.ItemText>{lang}</Select.ItemText>

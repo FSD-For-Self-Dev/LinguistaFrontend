@@ -27,8 +27,8 @@ const links = [
 ];
 
 export default function FooterLayout() {
-  const footerLinks = links.map((link, idx) => (
-    <li key={idx}>
+  const footerLinks = links.map((link) => (
+    <li key={`link_${new Date().getTime()}`}>
       <CustomLink
         apperance='underline'
         target='_blank'

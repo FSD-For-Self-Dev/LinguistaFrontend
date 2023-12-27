@@ -80,8 +80,8 @@ export default function WordLayout({ item, size = 'big' }: Props) {
           <CopyText text={text} />
         </p>
         <ul className={styles.levelWrapper} aria-label='Теги для слова'>
-          {tags?.map((tag, index) => (
-            <li key={index}>
+          {tags?.map((tag) => (
+            <li key={`levelWrapper_${new Date().getTime()}`}>
               <Badge>{tag}</Badge>
             </li>
           ))}
@@ -94,8 +94,10 @@ export default function WordLayout({ item, size = 'big' }: Props) {
           className={styles.cardFooter}
           sliderClass={styles.slider}
         >
-          {translations?.map((translation, index) => (
-            <span key={index}>{translation.text}</span>
+          {translations?.map((translation) => (
+            <span key={`translation_${new Date().getTime()}`}>
+              {translation.text}
+            </span>
           ))}
         </Carousel>
       ) : (

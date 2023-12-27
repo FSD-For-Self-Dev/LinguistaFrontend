@@ -34,7 +34,6 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/button-has-type': 'off',
     'no-console': 'off',
-    'react/no-array-index-key': 'off',
     'no-return-assign': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',

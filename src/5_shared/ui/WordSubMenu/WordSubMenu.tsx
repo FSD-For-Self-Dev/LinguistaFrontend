@@ -32,9 +32,9 @@ const WordSubMenu = ({ colorTheme }: Props) => {
         <SvgIconDots />
       </DropdownMenuButton>
       <DropdownMenuContent side='right' sideOffset={10} arrow={false}>
-        {WORD_SUBMENU.map(({ item, link, classes, disabled }, idx) => (
+        {WORD_SUBMENU.map(({ item, link, classes, disabled }) => (
           <DropdownMenuItem
-            key={`wsm${idx}`}
+            key={`wsm${new Date().getTime()}`}
             disabled={disabled}
             className={classes}
             action={link ? () => selectHandler(link, item) : undefined}
