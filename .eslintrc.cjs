@@ -39,7 +39,6 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     '@typescript-eslint/no-shadow': 'off',
-    'no-param-reassign': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
