@@ -45,9 +45,9 @@ export default function ThemeProvider({
   const value: ThemeContextValue = useMemo(
     () => ({
       theme,
-      setTheme: (theme: string) => {
-        localStorage.setItem('ui-theme', theme);
-        setTheme(theme);
+      setTheme: (newTheme: string) => {
+        localStorage.setItem('ui-theme', newTheme);
+        setTheme(newTheme);
       },
     }),
     [theme],
