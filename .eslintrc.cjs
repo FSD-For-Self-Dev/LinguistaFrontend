@@ -28,8 +28,6 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'object-shorthand': 'off',
-    'no-restricted-exports': 'off',
     'react/no-unused-prop-types': 'off',
     'react/function-component-definition': 'off',
     'react/button-has-type': 'off',

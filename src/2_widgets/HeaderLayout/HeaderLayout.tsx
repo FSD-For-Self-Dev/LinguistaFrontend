@@ -1,9 +1,9 @@
 import { ChangeEvent, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import AddBtnWithMenu from '@features/add/ui/AddBtnWithMenu';
-import SortBtnWithMenu from '@features/sortWords/ui/SortBtnWithMenu';
-import FilterBtnWithPopover from '@features/filteringWords/ui/FilterBtnWithPopover';
+import { AddBtnWithMenu } from '@features/add/ui/AddBtnWithMenu';
+import { SortBtnWithMenu } from '@features/sortWords/ui/SortBtnWithMenu';
+import { FilterBtnWithPopover } from '@features/filteringWords/ui/FilterBtnWithPopover';
 
 import { MAIN_ROUTE } from '@shared/lib/routes';
 import { ThemeSwitcher } from '@features/switchTheme/index.';

@@ -1,1 +1,1 @@
-export { default } from './SynonymsList';
+export { default as SynonymsList } from './SynonymsList';

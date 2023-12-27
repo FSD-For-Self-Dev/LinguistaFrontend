@@ -1,1 +1,1 @@
-export { default } from './SynonymAntonymCard';
+export { default as SynonymAntonymCard } from './SynonymAntonymCard';

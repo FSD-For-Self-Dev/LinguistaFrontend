@@ -1,1 +1,1 @@
-export { default } from './ui/AddBtnWithMenu';
+export { AddBtnWithMenu } from './ui/AddBtnWithMenu';

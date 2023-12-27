@@ -1,5 +1,5 @@
 import { Carousel } from '@ui/index';
-import CardNote from '../CardNote';
+import { CardNote } from '../CardNote';
 import styles from './NoteCollection.module.scss';
 
 const NoteCollection = () => {

@@ -1,4 +1,4 @@
-import SynonymAntonymCard from '../SynonymAntonymCard';
+import { SynonymAntonymCard } from '../SynonymAntonymCard';
 import styles from './SynonymsList.module.scss';
 
 export default function SynonymsList() {

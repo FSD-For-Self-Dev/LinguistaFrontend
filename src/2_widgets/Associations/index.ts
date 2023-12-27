@@ -1,1 +1,1 @@
-export { default } from './Associations';
+export { default as Associations } from './Associations';

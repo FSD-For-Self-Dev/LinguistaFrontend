@@ -1,1 +1,1 @@
-export { default } from './AddBtnWithMenu';
+export { default as AddBtnWithMenu } from './AddBtnWithMenu';

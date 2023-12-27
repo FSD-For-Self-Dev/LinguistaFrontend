@@ -1,4 +1,4 @@
-import CardAssociation from '../CardAssociation';
+import { CardAssociation } from '../CardAssociation';
 import styles from './AssociationsList.module.scss';
 import { dataAssociation } from '../mocks';
 

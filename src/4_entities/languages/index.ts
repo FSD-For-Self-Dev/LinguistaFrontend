@@ -1,1 +1,1 @@
-export { default } from './model/i18n';
+export { default as i18n } from './model/i18n';

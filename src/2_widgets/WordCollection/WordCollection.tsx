@@ -1,6 +1,6 @@
 import styles from './WordCollection.module.scss';
-import CollectionsOfWords from './CollectionsOfWords';
-import Notes from './Notes';
+import { CollectionsOfWords } from './CollectionsOfWords';
+import { Notes } from './Notes';
 
 const WordCollection = () => {
   return (

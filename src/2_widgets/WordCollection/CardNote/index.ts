@@ -1,1 +1,1 @@
-export { default } from './CardNote';
+export { default as CardNote } from './CardNote';

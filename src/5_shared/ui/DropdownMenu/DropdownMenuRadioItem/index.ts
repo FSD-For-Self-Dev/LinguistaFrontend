@@ -1,1 +1,1 @@
-export { default } from './DropdownMenuRadioItem';
+export { default as DropdownMenuRadioItem } from './DropdownMenuRadioItem';

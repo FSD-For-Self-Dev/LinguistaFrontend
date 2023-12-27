@@ -21,7 +21,7 @@ export const ActivityFilterWords = () => {
 
   const setActive = () => {
     if (filter === 'ACTIVE') {
-      dispatch(setFilter({ filter: 'ALL', words: words }));
+      dispatch(setFilter({ filter: 'ALL', words }));
       return;
     }
 
@@ -31,7 +31,7 @@ export const ActivityFilterWords = () => {
 
   const setNotActive = () => {
     if (filter === 'INACTIVE') {
-      dispatch(setFilter({ filter: 'ALL', words: words }));
+      dispatch(setFilter({ filter: 'ALL', words }));
       return;
     }
 
@@ -41,7 +41,7 @@ export const ActivityFilterWords = () => {
 
   const setCompleted = () => {
     if (filter === 'MASTERED') {
-      dispatch(setFilter({ filter: 'ALL', words: words }));
+      dispatch(setFilter({ filter: 'ALL', words }));
       return;
     }
 

@@ -1,1 +1,1 @@
-export { default } from './NoteCollection';
+export { default as NoteCollection } from './NoteCollection';

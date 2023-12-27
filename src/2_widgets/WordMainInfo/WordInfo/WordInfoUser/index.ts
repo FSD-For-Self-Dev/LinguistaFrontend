@@ -1,1 +1,1 @@
-export { default } from './WordInfoUser';
+export { default as WordInfoUser } from './WordInfoUser';

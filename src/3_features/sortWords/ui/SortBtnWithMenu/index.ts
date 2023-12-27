@@ -1,1 +1,1 @@
-export { default } from './SortBtnWithMenu';
+export { default as SortBtnWithMenu } from './SortBtnWithMenu';

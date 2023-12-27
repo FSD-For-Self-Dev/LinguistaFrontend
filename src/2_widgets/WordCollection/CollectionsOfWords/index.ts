@@ -1,1 +1,1 @@
-export { default } from './CollectionsOfWords';
+export { default as CollectionsOfWords } from './CollectionsOfWords';

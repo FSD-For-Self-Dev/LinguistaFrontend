@@ -1,4 +1,4 @@
-import CardCollection from '../CardCollection';
+import { CardCollection } from '../CardCollection';
 import styles from './ListCardCollection.module.scss';
 
 const ListCardCollection = () => {

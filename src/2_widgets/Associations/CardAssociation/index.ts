@@ -1,1 +1,1 @@
-export { default } from './CardAssociation';
+export { default as CardAssociation } from './CardAssociation';

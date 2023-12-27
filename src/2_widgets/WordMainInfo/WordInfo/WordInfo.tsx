@@ -3,7 +3,7 @@ import { Badge, Carousel } from '@ui/index';
 import image1 from '@assets/mock-for-card.png';
 import image2 from '@assets/mock-for-card-2.png';
 import { Activity } from '@entities/words';
-import WordInfoUser from './WordInfoUser';
+import { WordInfoUser } from './WordInfoUser';
 import WordOriginal from './WordOriginal/WordOriginal';
 import styles from './WordInfo.module.scss';
 

@@ -1,1 +1,1 @@
-export { default } from './FilterBtnWithPopover';
+export { default as FilterBtnWithPopover } from './FilterBtnWithPopover';

@@ -40,16 +40,16 @@ const Carousel = ({
   };
 
   const settings = {
-    className: `${styles.slider}`,
-    infinite: true,
-    cssEase: 'linear',
     arrows: false,
-    fade: fade,
-    autoplay: autoplay,
+    autoplay,
     autoplaySpeed: 8000,
-    speed: 600,
+    className: `${styles.slider}`,
+    cssEase: 'linear',
+    fade,
+    infinite: true,
     slidesToScroll: 1,
     slidesToShow: slides,
+    speed: 600,
   };
 
   const settingsWithDots = {

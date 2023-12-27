@@ -1,1 +1,1 @@
-export { default } from './Antonyms';
+export { default as Antonyms } from './Antonyms';

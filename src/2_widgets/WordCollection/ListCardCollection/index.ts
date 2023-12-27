@@ -1,1 +1,1 @@
-export { default } from './ListCardCollection';
+export { default as ListCardCollection } from './ListCardCollection';
