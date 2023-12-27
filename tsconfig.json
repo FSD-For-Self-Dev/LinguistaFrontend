@@ -5,7 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
+    "allowJs": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -13,12 +13,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client", "vite-plugin-svgr/client", "node"],
-
+    "types": ["vite/client", "vite-plugin-svgr/client", "@types/node"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@app/*": ["src/0_app"],
+      "@app/*": ["src/0_app/*"],
       "@pages/*": ["src/1_pages/*"],
       "@widgets/*": ["src/2_widgets/*"],
       "@features/*": ["src/3_features/*"],

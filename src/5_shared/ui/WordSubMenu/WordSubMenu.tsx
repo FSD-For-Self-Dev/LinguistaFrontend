@@ -6,7 +6,7 @@ import {
   DropdownMenuButton,
 } from '@shared/ui/DropdownMenu';
 
-import { WORD_SUBMENU } from '@shared/lib/wordSubMenu';
+import WORD_SUBMENU from '@shared/lib/wordSubMenu';
 import SvgIconDots from '@assets/icons/icon_dots.svg?react';
 import styles from './WordSubMenu.module.scss';
 
@@ -16,9 +16,9 @@ interface Props {
   colorTheme: ColorTheme;
 }
 
-export const WordSubMenu = ({ colorTheme }: Props) => {
+const WordSubMenu = ({ colorTheme }: Props) => {
   const navigate = useNavigate();
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = new URLSearchParams(window.location.search);
 
   const selectHandler = (link: string, text: string) => {
     queryParams.set('title', text);
@@ -46,3 +46,5 @@ export const WordSubMenu = ({ colorTheme }: Props) => {
     </DropdownMenu>
   );
 };
+
+export default WordSubMenu;

@@ -4,18 +4,14 @@ import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
 
 import styles from './DropdownMenuRadioItem.module.scss';
 
-type TProps = {
+interface TProps {
   children: ReactNode;
   value: string;
   textValue: string;
   className: string;
-};
+}
 
-export const DropdownMenuRadioItem = ({
-  children,
-  value,
-  className,
-}: TProps) => {
+const DropdownMenuRadioItem = ({ children, value, className }: TProps) => {
   return (
     <RadixDropdownMenu.RadioItem
       value={value}
@@ -25,3 +21,5 @@ export const DropdownMenuRadioItem = ({
     </RadixDropdownMenu.RadioItem>
   );
 };
+
+export default DropdownMenuRadioItem;

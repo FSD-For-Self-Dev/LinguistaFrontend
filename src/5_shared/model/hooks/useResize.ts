@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useWindowResize = () => {
+export default function useWindowResize() {
   const [width, setWidth] = useState<number>(document.body.clientWidth);
 
   useEffect(() => {
@@ -15,4 +15,4 @@ export const useWindowResize = () => {
   }, []);
 
   return width;
-};
+}

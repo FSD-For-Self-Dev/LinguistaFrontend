@@ -3,12 +3,12 @@ import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
 import cx from 'classnames';
 import styles from './DropdownMenuButton.module.scss';
 
-type TDropdownMenuButtonProps = {
+interface TDropdownMenuButtonProps {
   children: ReactNode;
   className?: string;
-};
+}
 
-export const DropdownMenuButton = ({
+const DropdownMenuButton = ({
   children,
   className,
 }: TDropdownMenuButtonProps) => {
@@ -18,3 +18,5 @@ export const DropdownMenuButton = ({
     </RadixDropdownMenu.Trigger>
   );
 };
+
+export default DropdownMenuButton;

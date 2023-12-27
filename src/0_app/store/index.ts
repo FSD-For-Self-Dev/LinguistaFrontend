@@ -1,12 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { themeReducer } from '@entities/theme';
 import { wordsReducer } from '@entities/words';
 
+const rootReducer = combineReducers({
+  theme: themeReducer,
+  words: wordsReducer,
+});
+
 export const store = configureStore({
-  reducer: {
-    theme: themeReducer,
-    words: wordsReducer,
-  },
+  reducer: rootReducer,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

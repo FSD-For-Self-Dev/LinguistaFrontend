@@ -1,4 +1,4 @@
-export const WORD_SUBMENU = [
+const WORD_SUBMENU = [
   {
     item: 'Тренировать',
     link: '/workout',
@@ -30,3 +30,5 @@ export const WORD_SUBMENU = [
     disabled: true,
   },
 ];
+
+export default WORD_SUBMENU;

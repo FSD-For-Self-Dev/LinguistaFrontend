@@ -1,6 +1,6 @@
+import { ReactNode } from 'react';
 import cx from 'classnames';
 import styles from './Button.module.scss';
-import { ReactNode } from 'react';
 
 type ButtonTheme = 'primary' | 'transparent' | 'secondary' | 'no-border';
 type ButtonSize = 'normal' | 'tall';

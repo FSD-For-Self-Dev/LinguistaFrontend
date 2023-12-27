@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import Theme from '@shared/constants/enums/Theme.ts';
-import ThemeState from '@shared/interfaces/ThemeState.ts';
+import ThemeState from '@shared/interfaces/ThemeState';
+import Theme from '@shared/interfaces/Theme';
+import { RootState } from '@app/store';
 
 const initialState: ThemeState = {
-  theme: Theme.light,
+  theme: 'light',
 };
 
 const themeSlice = createSlice({

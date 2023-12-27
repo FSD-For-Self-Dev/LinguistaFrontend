@@ -1,8 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 
-const NotFoundPage = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [searchParams, _] = useSearchParams();
+export default function NotFoundPage() {
+  const [searchParams] = useSearchParams();
 
   return (
     <section>
@@ -10,6 +9,4 @@ const NotFoundPage = () => {
       {searchParams.get('title')}
     </section>
   );
-};
-
-export default NotFoundPage;
+}

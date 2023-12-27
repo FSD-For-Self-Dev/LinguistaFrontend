@@ -6,7 +6,7 @@ export interface IAssociationCard {
   assonant?: string;
 }
 
-export const dataAssociation: Array<IAssociationCard> = [
+export const dataAssociation: IAssociationCard[] = [
   {
     img: image,
   },

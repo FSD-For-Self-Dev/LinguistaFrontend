@@ -1,6 +1,4 @@
-import React from 'react';
-import { FC } from 'react';
-import { useRef } from 'react';
+import { Children, ReactElement, ReactNode, useRef } from 'react';
 import cx from 'classnames';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,7 +7,7 @@ import SvgArrow from '@assets/icons/icon_arrow_up.svg?react';
 import styles from './Carousel.module.scss';
 
 interface CarouselProps {
-  children: Iterable<React.ReactNode> | React.ReactElement;
+  children: Iterable<ReactNode> | ReactElement;
   autoplay?: boolean;
   fade?: boolean;
   arrows?: boolean;
@@ -21,7 +19,7 @@ interface CarouselProps {
   dotsClass?: string;
 }
 
-export const Carousel: FC<CarouselProps> = ({
+const Carousel = ({
   children,
   autoplay,
   fade = false,
@@ -32,13 +30,13 @@ export const Carousel: FC<CarouselProps> = ({
   sliderClass,
   buttonClass,
   dotsClass,
-}) => {
+}: CarouselProps) => {
   const sliderRef = useRef<Slider | null>();
   const nextSlide = () => {
-    sliderRef.current && sliderRef.current.slickNext();
+    if (sliderRef.current) sliderRef.current.slickNext();
   };
   const prevSlide = () => {
-    sliderRef.current && sliderRef.current.slickPrev();
+    if (sliderRef.current) sliderRef.current.slickPrev();
   };
 
   const settings = {
@@ -68,9 +66,7 @@ export const Carousel: FC<CarouselProps> = ({
         <button
           onClick={() => prevSlide()}
           className={cx(styles.button, buttonClass)}
-          style={
-            React.Children.count(children) > slides ? {} : { display: 'none' }
-          }
+          style={Children.count(children) > slides ? {} : { display: 'none' }}
         >
           <SvgArrow className={styles.prev_arrow} />
         </button>
@@ -88,9 +84,7 @@ export const Carousel: FC<CarouselProps> = ({
         <button
           onClick={() => nextSlide()}
           className={cx(styles.button, buttonClass)}
-          style={
-            React.Children.count(children) > slides ? {} : { display: 'none' }
-          }
+          style={Children.count(children) > slides ? {} : { display: 'none' }}
         >
           <SvgArrow className={styles.next_arrow} />
         </button>
@@ -98,3 +92,5 @@ export const Carousel: FC<CarouselProps> = ({
     </div>
   );
 };
+
+export default Carousel;

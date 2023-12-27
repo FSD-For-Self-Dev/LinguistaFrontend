@@ -1,6 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import App from './0_app/App';
-import './0_app/styles/global.scss';
+import '@app/styles/global.scss';
 import '@entities/languages';
+import App from '@app/App';
+import withProviders from '@app/provider';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  withProviders(<App />),
+);

@@ -1,9 +1,7 @@
-import { createContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useEffect, useState, ReactNode, useMemo } from 'react';
 
 interface ThemeProviderProps {
   children: ReactNode;
-  defaultTheme?: string;
-  storageKey?: string;
 }
 
 interface ThemeContextValue {
@@ -16,16 +14,14 @@ const initialState: ThemeContextValue = {
   setTheme: () => {},
 };
 
-export const ThemeProviderContext = createContext(initialState);
+const ThemeProviderContext = createContext(initialState);
 
-export function ThemeProvider({
+export default function ThemeProvider({
   children,
-  defaultTheme = 'system',
-  storageKey = 'ui-theme',
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem(storageKey) || defaultTheme,
+    () => localStorage.getItem('ui-theme') ?? 'system',
   );
 
   useEffect(() => {
@@ -46,13 +42,16 @@ export function ThemeProvider({
     root.classList.add(theme);
   }, [theme]);
 
-  const value: ThemeContextValue = {
-    theme,
-    setTheme: (theme: string) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
-  };
+  const value: ThemeContextValue = useMemo(
+    () => ({
+      theme,
+      setTheme: (theme: string) => {
+        localStorage.setItem('ui-theme', theme);
+        setTheme(theme);
+      },
+    }),
+    [theme],
+  );
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>

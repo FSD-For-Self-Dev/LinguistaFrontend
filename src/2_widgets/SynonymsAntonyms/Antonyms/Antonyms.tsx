@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import AntonymsList from '../AntonymsList';
 import { CustomLink, SectionTitle } from '@ui/index';
 import SvgAntonyms from '@assets/icons/icon_antonyms.svg?react';
+import AntonymsList from '../AntonymsList';
 import styles from './Antonyms.module.scss';
 
 export default function Antonyms() {

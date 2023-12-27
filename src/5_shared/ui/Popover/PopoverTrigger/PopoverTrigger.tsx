@@ -3,18 +3,18 @@ import { ReactNode } from 'react';
 import cx from 'classnames';
 import styles from './PopoverTrigger.module.scss';
 
-type TPopoverTriggerProps = {
+interface TPopoverTriggerProps {
   children: ReactNode;
   className?: string;
-};
+}
 
-export const PopoverTrigger = ({
+export default function PopoverTrigger({
   children,
   className,
-}: TPopoverTriggerProps) => {
+}: TPopoverTriggerProps) {
   return (
     <RadixPopover.Trigger className={cx(styles.btn, className)}>
       {children}
     </RadixPopover.Trigger>
   );
-};
+}

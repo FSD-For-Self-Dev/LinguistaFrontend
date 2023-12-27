@@ -1,6 +1,6 @@
+import { ReactNode } from 'react';
 import cx from 'classnames';
 import styles from './SectionTitle.module.scss';
-import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -9,14 +9,14 @@ interface Props {
   svg?: string;
 }
 
-export const SectionTitle = ({
+export default function SectionTitle({
   children,
   className,
   theme = 'regular',
-}: Props) => {
+}: Props) {
   return (
     <h2 className={cx(styles.title, styles[`title_${theme}`], className)}>
       {children}
     </h2>
   );
-};
+}

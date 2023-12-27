@@ -1,9 +1,8 @@
 import { useCallback } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import cx from 'classnames';
 import { CustomLink } from '@ui/index';
-
 import {
   ABOUT_ROUTE,
   COLLECT_ROUTE,
@@ -28,7 +27,8 @@ const NavbarLayout = () => {
 
   const scrollToUp = useCallback((id: string) => {
     const element = document.getElementById(id);
-    element && element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (element)
+      element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }, []);
 
   return (
@@ -106,7 +106,7 @@ const NavbarLayout = () => {
               <h2 className={styles.title}>{t('favorite')}</h2>
             </CustomLink>
           </li>
-          <hr className={styles.border}></hr>
+          <hr className={styles.border} />
           <li className={styles.exercises}>
             <CustomLink
               className={cx(
@@ -122,7 +122,7 @@ const NavbarLayout = () => {
               <h2 className={styles.title}>{t('exercises')}</h2>
             </CustomLink>
           </li>
-          <hr className={styles.border}></hr>
+          <hr className={styles.border} />
           <li>
             <CustomLink
               className={cx(
@@ -142,8 +142,9 @@ const NavbarLayout = () => {
       <button
         className={styles.btn_up}
         type='button'
+        aria-label='Up'
         onClick={() => scrollToUp('navigation')}
-      ></button>
+      />
     </aside>
   );
 };

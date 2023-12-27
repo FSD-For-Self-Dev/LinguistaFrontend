@@ -1,6 +1,6 @@
 import { Word } from '../model/types';
 
-export const words: Array<Word> = [
+export const words: Word[] = [
   {
     id: 1,
     slug: 'word1',

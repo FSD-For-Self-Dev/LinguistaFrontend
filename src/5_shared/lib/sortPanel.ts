@@ -1,11 +1,11 @@
-import { ESortDirection, TSortItem } from '@/5_shared/interfaces/sortPanel';
+import TSortItem, { ESortDirection } from '@shared/interfaces/sortPanel';
 
 export const DEFAULT_SORT_PARAMS = {
   sortBy: 'byDateAdded',
   dir: ESortDirection.ASC,
 };
 
-export const SORT_PANEL: Array<TSortItem> = [
+export const SORT_PANEL: TSortItem[] = [
   {
     label: 'По дате добавления',
     field: 'byDateAdded',

@@ -3,11 +3,11 @@ import * as RadixPopover from '@radix-ui/react-popover';
 
 import styles from './PopoverContent.module.scss';
 
-type TProps = {
+interface TProps {
   children: ReactNode;
-};
+}
 
-export const PopoverContent = forwardRef<HTMLDivElement, TProps>(
+const PopoverContent = forwardRef<HTMLDivElement, TProps>(
   ({ children, ...props }, forwardedRef) => (
     <RadixPopover.Portal>
       <RadixPopover.Content
@@ -25,3 +25,6 @@ export const PopoverContent = forwardRef<HTMLDivElement, TProps>(
     </RadixPopover.Portal>
   ),
 );
+PopoverContent.displayName = 'Forward';
+
+export default PopoverContent;

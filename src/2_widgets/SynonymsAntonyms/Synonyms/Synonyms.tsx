@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
+import { CustomLink, SectionTitle } from '@ui/index';
 import SvgSynonyms from '@assets/icons/icon_synonyms.svg?react';
 import styles from './Synonyms.module.scss';
 import SynonymsList from '../SynonymsList/SynonymsList';
-import { CustomLink, SectionTitle } from '@ui/index';
 
 export default function Synonyms() {
   const { t } = useTranslation('word-profile');

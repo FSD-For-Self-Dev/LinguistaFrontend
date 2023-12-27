@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import AssociationsList from './AssociationsList';
 import { SectionTitle, CustomLink } from '@ui/index';
 import SvgIconAssociations from '@assets/icons/icon_associations.svg?react';
+import AssociationsList from './AssociationsList';
 import styles from './Associations.module.scss';
 
 import { dataAssociation } from './mocks';

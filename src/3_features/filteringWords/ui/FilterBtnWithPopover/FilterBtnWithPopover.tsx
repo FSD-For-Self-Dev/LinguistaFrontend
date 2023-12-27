@@ -1,5 +1,7 @@
-import { Popover, PopoverTrigger, PopoverContent } from '@shared/ui/Popover';
+import { Popover } from '@shared/ui/Popover';
 import SvgIconFilter from '@assets/icons/icon_filter.svg?react';
+import { PopoverTrigger } from '@ui/Popover';
+import { PopoverContent } from '@radix-ui/themes';
 
 const FilterBtnWithPopover = () => {
   return (

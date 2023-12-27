@@ -6,8 +6,10 @@ interface Props {
   text: string;
 }
 
-export const CopyText = ({ text }: Props) => {
-  const copyClick = () => navigator.clipboard.writeText(text);
+const CopyText = ({ text }: Props) => {
+  const copyClick = () => {
+    navigator.clipboard.writeText(text).catch(() => {});
+  };
 
   return (
     <ButtonIcon onClick={copyClick} title='Скопировать'>
@@ -15,3 +17,5 @@ export const CopyText = ({ text }: Props) => {
     </ButtonIcon>
   );
 };
+
+export default CopyText;

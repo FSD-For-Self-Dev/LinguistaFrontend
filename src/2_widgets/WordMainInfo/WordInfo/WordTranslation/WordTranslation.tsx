@@ -10,7 +10,7 @@ import SvgLang from '@assets/icons/wordProfile/language.svg?react';
 import styles from './WordTranslation.module.scss';
 
 interface Props {
-  translations: Array<string>;
+  translations: string[];
 }
 
 export default function WordTranslation({ translations }: Props) {

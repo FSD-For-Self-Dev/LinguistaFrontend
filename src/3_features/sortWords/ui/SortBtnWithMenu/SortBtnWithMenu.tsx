@@ -7,10 +7,9 @@ import {
   DropdownMenuRadioGroup,
 } from '@shared/ui/DropdownMenu';
 import { DEFAULT_SORT_PARAMS, SORT_PANEL } from '@shared/lib/sortPanel';
-import {
+import TSortItem, {
   ESortDirection,
   ESortDirectionSymbol,
-  TSortItem,
 } from '@shared/interfaces/sortPanel';
 import SvgIconSort from '@assets/icons/icon_sort.svg?react';
 

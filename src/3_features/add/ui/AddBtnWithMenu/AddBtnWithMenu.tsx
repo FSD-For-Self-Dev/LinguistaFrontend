@@ -11,7 +11,7 @@ import styles from './AddBtnWithMenu.module.scss';
 
 const AddBtnWithMenu = () => {
   const navigate = useNavigate();
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = new URLSearchParams(window.location.search);
 
   const onSelectHandler = (link: string, text: string) => {
     queryParams.set('title', text);

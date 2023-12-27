@@ -5,17 +5,17 @@ import SvgStatusCompleted from '@shared/assets/icons/icon_completed.svg?react';
 import SvgIconQuestion from '@shared/assets/icons/icon_question.svg?react';
 import styles from './WordStatus.module.scss';
 
-type Props = {
+interface Props {
   activity?: Activity;
   colorTheme: 'dark' | 'light';
   size?: 'mini' | 'big';
-};
+}
 
-export const WordStatus = ({
+export default function WordStatus({
   activity = 'ACTIVE',
   colorTheme = 'light',
   size = 'big',
-}: Props) => {
+}: Props) {
   return (
     <span className={`${styles.status} ${styles[colorTheme]}`}>
       {activity === 'ACTIVE' && (
@@ -37,4 +37,4 @@ export const WordStatus = ({
       {size === 'big' && <SvgIconQuestion />}
     </span>
   );
-};
+}

@@ -31,7 +31,7 @@ export const LanguageSwitcher = () => {
         <Select.Portal>
           <Select.Content
             className={styles.content}
-            position={'popper'}
+            position='popper'
             sideOffset={5}
           >
             <Select.Viewport className={styles.viewport}>

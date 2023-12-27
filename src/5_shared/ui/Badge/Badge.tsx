@@ -1,6 +1,6 @@
+import { ReactNode } from 'react';
 import cx from 'classnames';
 import styles from './Badge.module.scss';
-import { ReactNode } from 'react';
 
 type BadgeType = 'tag' | 'number';
 

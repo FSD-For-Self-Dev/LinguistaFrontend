@@ -1,9 +1,9 @@
 import { ReactNode, useState } from 'react';
 import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
 
-type TProps = {
+interface TProps {
   children: ReactNode;
-};
+}
 
 export const DropdownMenu = ({ children }: TProps) => {
   const [isOpen, setIsOpen] = useState(false);

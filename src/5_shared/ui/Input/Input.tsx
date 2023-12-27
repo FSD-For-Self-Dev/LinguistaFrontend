@@ -12,7 +12,7 @@ interface Props {
   className?: string;
 }
 
-export const Input = ({
+export default function Input({
   type,
   name,
   id,
@@ -20,7 +20,7 @@ export const Input = ({
   onChange,
   value,
   className,
-}: Props) => {
+}: Props) {
   return (
     <input
       type={type}
@@ -32,4 +32,4 @@ export const Input = ({
       value={value}
     />
   );
-};
+}

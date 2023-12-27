@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import styles from './Notes.module.scss';
 import SvgIconNotes from '@assets/icons/icon_notes.svg?react';
 import { CustomLink, SectionTitle } from '@ui/index';
 import NoteCollection from '../NoteCollection';
+import styles from './Notes.module.scss';
 
 const Notes = () => {
   const { t } = useTranslation('word-profile');

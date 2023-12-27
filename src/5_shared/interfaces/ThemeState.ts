@@ -1,4 +1,4 @@
-import Theme from '@shared/constants/enums/Theme.ts';
+import Theme from '@shared/interfaces/Theme';
 
 export default interface ThemeState {
   theme: Theme;

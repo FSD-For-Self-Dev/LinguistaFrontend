@@ -1,12 +1,12 @@
 import { ActivityFilterWords } from '@features/filteringWords';
 import { wordsSelector } from '@entities/words';
 import { useAppSelector } from '@shared/model';
+import { WordsState } from '@entities/words/model/types';
 import { ActivityBanner } from './ui/ActivityBanner/ActivityBanner';
-
 import styles from './ActivityFilterLayout.module.scss';
 
 export const ActivityFilterLayout = () => {
-  const { filteringWords, filter } = useAppSelector(wordsSelector);
+  const { filteringWords, filter } = useAppSelector<WordsState>(wordsSelector);
 
   return (
     <div className={styles.container}>

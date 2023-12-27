@@ -2,14 +2,14 @@ import cx from 'classnames';
 import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
 import styles from './DropdownMenuItem.module.scss';
 
-type TDropdownMenuItemProps = {
+interface TDropdownMenuItemProps {
   children: string | string[];
   action?: ((event: Event) => void) | undefined;
   disabled?: boolean;
   className?: string;
-};
+}
 
-export const DropdownMenuItem = ({
+const DropdownMenuItem = ({
   children,
   action = undefined,
   disabled = false,
@@ -25,3 +25,5 @@ export const DropdownMenuItem = ({
     </RadixDropdownMenu.Item>
   );
 };
+
+export default DropdownMenuItem;

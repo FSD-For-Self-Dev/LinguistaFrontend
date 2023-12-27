@@ -1,36 +1,36 @@
-export type Translation = {
+export interface Translation {
   text: string;
-};
+}
 
-export type Example = {
+export interface Example {
   text: string;
   translation?: string;
-};
+}
 
-export type Definition = {
+export interface Definition {
   text: string;
-  translations?: Array<string>;
-};
+  translations?: string[];
+}
 
-export type Synonym = {
+export interface Synonym {
   text: string;
-};
+}
 
-export type Antonym = {
+export interface Antonym {
   text: string;
-};
+}
 
-export type Forms = {
+export interface Forms {
   text: string;
-};
+}
 
-export type Similar = {
+export interface Similar {
   text: string;
-};
+}
 
-export type Note = {
+export interface Note {
   text: string;
-};
+}
 
 export type Activity = 'INACTIVE' | 'ACTIVE' | 'MASTERED';
 
@@ -41,19 +41,19 @@ export type ActivityFilter = 'INACTIVE' | 'ACTIVE' | 'MASTERED' | 'ALL';
 export interface NewWord {
   language: string;
   text: string;
-  translations?: Array<Translation>;
-  examples?: Array<Example>;
-  definitions?: Array<Definition>;
-  types?: Array<number>;
-  tags?: Array<number>;
+  translations?: Translation[];
+  examples?: Example[];
+  definitions?: Definition[];
+  types?: number[];
+  tags?: number[];
   is_problematic?: boolean;
   activity?: Activity;
-  collections?: Array<string>;
-  synonyms?: Array<Synonym>;
-  antonyms?: Array<Antonym>;
-  forms?: Array<Forms>;
-  similars?: Array<Similar>;
-  notes?: Array<Note>;
+  collections?: string[];
+  synonyms?: Synonym[];
+  antonyms?: Antonym[];
+  forms?: Forms[];
+  similars?: Similar[];
+  notes?: Note[];
 }
 
 // Интерфейса слова, который находится в result при получении запроса с сервера
@@ -65,11 +65,11 @@ export interface Word extends Omit<NewWord, 'types'> {
   modified: string;
   translations_count: number;
   favorite: boolean;
-  types?: Array<string>;
+  types?: string[];
 }
 
 export interface WordsState {
-  words: Array<Word>;
-  filteringWords: Array<Word>;
+  words: Word[];
+  filteringWords: Word[];
   filter: ActivityFilter;
 }

@@ -3,14 +3,14 @@ import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
 
 import styles from './DropdownMenuContent.module.scss';
 
-type TProps = {
+interface TProps {
   children: ReactNode;
   side?: 'bottom' | 'top' | 'right' | 'left';
   sideOffset?: number;
   arrow?: boolean;
-};
+}
 
-export const DropdownMenuContent = ({
+const DropdownMenuContent = ({
   children,
   side = 'bottom',
   sideOffset = 10,
@@ -37,3 +37,5 @@ export const DropdownMenuContent = ({
     </RadixDropdownMenu.Portal>
   );
 };
+
+export default DropdownMenuContent;

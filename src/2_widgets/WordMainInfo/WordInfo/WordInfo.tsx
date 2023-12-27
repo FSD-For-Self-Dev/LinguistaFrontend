@@ -1,20 +1,20 @@
-import WordInfoUser from '../WordInfo/WordInfoUser';
-import WordOriginal from './WordOriginal';
-import WordTranslation from './WordTranslation';
+import WordTranslation from '@widgets/WordMainInfo/WordInfo/WordTranslation/WordTranslation';
 import { Badge, Carousel } from '@ui/index';
 import image1 from '@assets/mock-for-card.png';
 import image2 from '@assets/mock-for-card-2.png';
-import styles from './WordInfo.module.scss';
 import { Activity } from '@entities/words';
+import WordInfoUser from './WordInfoUser';
+import WordOriginal from './WordOriginal/WordOriginal';
+import styles from './WordInfo.module.scss';
 
 export interface IWord {
-  img: Array<string>;
+  img: string[];
   word: string;
   status: Activity;
   level: string;
   type: string;
   favorite: boolean;
-  translate: Array<string>;
+  translate: string[];
 }
 
 const info: IWord = {

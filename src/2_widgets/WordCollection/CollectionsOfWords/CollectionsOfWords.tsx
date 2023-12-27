@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import styles from './CollectionsOfWords.module.scss';
 import { SectionTitle, CustomLink } from '@ui/index';
 import SvgIconCollections from '@assets/icons/icon_collections.svg?react';
 import ListCardCollection from '../ListCardCollection';
+import styles from './CollectionsOfWords.module.scss';
 
 const CollectionsOfWords = () => {
   const { t } = useTranslation('word-profile');

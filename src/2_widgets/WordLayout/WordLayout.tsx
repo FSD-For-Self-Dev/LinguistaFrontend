@@ -11,7 +11,7 @@ interface Props {
   size?: 'mini' | 'big';
 }
 
-export const WordLayout = ({ item, size = 'big' }: Props) => {
+export default function WordLayout({ item, size = 'big' }: Props) {
   const {
     text,
     favorite,
@@ -27,7 +27,7 @@ export const WordLayout = ({ item, size = 'big' }: Props) => {
     <div
       className={cx(
         styles.card,
-        collections && size === 'big' && styles['withBg'],
+        collections && size === 'big' && styles.withBg,
         styles[size],
       )}
     >
@@ -99,8 +99,8 @@ export const WordLayout = ({ item, size = 'big' }: Props) => {
           ))}
         </Carousel>
       ) : (
-        <></>
+        ''
       )}
     </div>
   );
-};
+}

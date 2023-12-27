@@ -6,6 +6,6 @@ export { DropdownMenuButton } from './DropdownMenuButton';
 
 export { DropdownMenuItem } from './DropdownMenuItem';
 
-export { DropdownMenuRadioItem } from './DropdownMenuRadioItem';
+export { default as DropdownMenuRadioItem } from './DropdownMenuRadioItem';
 
-export { DropdownMenuRadioGroup } from './DropdownMenuRadioGroup';
+export { default as DropdownMenuRadioGroup } from './DropdownMenuRadioGroup';

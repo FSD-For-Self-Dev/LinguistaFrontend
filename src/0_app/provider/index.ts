@@ -1,8 +1,9 @@
-import { WithRouter } from './withRouter';
-import { WithStore } from './withStore';
 import { ReactNode } from 'react';
-export { ThemeProvider } from './ThemeProvider';
+import WithRouter from './withRouter';
+import WithStore from './withStore';
 
-export const withProviders = (component: ReactNode) => {
+const withProviders = (component: ReactNode) => {
   return WithRouter(WithStore(component));
 };
+
+export default withProviders;

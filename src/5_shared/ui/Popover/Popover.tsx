@@ -1,3 +1,5 @@
 import * as RadixPopover from '@radix-ui/react-popover';
 
-export const Popover = RadixPopover.Root;
+const Popover = RadixPopover.Root;
+
+export default Popover;

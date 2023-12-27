@@ -14,9 +14,9 @@ type TOption = {
   [key in TSortDirection]: string;
 };
 
-export type TSortItem = {
+export default interface TSortItem {
   label: string;
   field: string;
   direction?: TSortDirection;
   options: TOption;
-};
+}

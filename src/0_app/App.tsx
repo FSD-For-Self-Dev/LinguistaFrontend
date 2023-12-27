@@ -1,12 +1,11 @@
-/* eslint-disable react-refresh/only-export-components */
 import { Theme } from '@radix-ui/themes';
-import { ThemeProvider, withProviders } from './provider';
-import { Routing } from '@/1_pages';
-import { themeSelector } from '@entities/theme';
-import { useAppSelector } from '@shared/model';
+import Routing from '@pages/index';
+import { useSelector } from 'react-redux';
+import { RootState } from '@app/store';
+import ThemeProvider from './provider/ThemeProvider';
 
 function App() {
-  const { theme } = useAppSelector(themeSelector);
+  const { theme } = useSelector((state: RootState) => state.theme);
 
   return (
     <ThemeProvider>
@@ -17,4 +16,4 @@ function App() {
   );
 }
 
-export default withProviders(<App />);
+export default App;

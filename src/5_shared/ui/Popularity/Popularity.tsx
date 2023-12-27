@@ -5,7 +5,7 @@ interface Props {
   popularity: 'высокая' | 'средняя' | 'низкая';
 }
 
-export function Popularity({ popularity }: Props) {
+export default function Popularity({ popularity }: Props) {
   return (
     <div className={styles.container}>
       <span className={styles.popularity}>Популярность:</span>

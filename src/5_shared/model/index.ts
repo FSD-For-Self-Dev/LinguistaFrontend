@@ -1,3 +1,3 @@
-export { useWindowResize } from './hooks/useResize';
-export { useAppDispatch } from './hooks/useAppDispatch';
-export { useAppSelector } from './hooks/useAppSelector';
+export { default as useWindowResize } from './hooks/useResize';
+export { default as useAppDispatch } from './hooks/useAppDispatch';
+export { default as useAppSelector } from './hooks/useAppSelector';

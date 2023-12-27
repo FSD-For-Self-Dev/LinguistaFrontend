@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import AddBtnWithMenu from '@features/add/ui/AddBtnWithMenu';
@@ -47,10 +47,16 @@ const HeaderLayout = () => {
               type='text'
               placeholder={t('searchPlaceholder')}
               className={styles.searchInput}
-              onChange={(evt) => changeSearchText(evt.target.value)}
+              onChange={(evt: ChangeEvent<HTMLInputElement>) =>
+                changeSearchText(evt.target.value)
+              }
               value={searchText}
             />
-            <button type='submit' className={styles.searchBtn}></button>
+            <button
+              type='submit'
+              aria-label='Search'
+              className={styles.searchBtn}
+            />
           </div>
 
           <FilterBtnWithPopover />
@@ -63,7 +69,7 @@ const HeaderLayout = () => {
         <div className={styles.rightPanel}>
           <div className={styles.userInterface}>
             <ThemeSwitcher />
-            {/* TODO вынести в отдельный компонент с модальным окном*/}
+            {/* TODO вынести в отдельный компонент с модальным окном */}
             <ButtonIcon>
               <SvgIconNotification />
             </ButtonIcon>
