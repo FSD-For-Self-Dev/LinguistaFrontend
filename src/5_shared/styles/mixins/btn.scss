@@ -34,7 +34,7 @@
 	&:active,
 	&_active,
 	&[data-state='open'] {
-		background-color: $primary-button-dark-color;
+		background-color: $primary-button-active-color;
 	}
 }
 
@@ -55,7 +55,7 @@
 	}
 
 	&_active {
-		background-color: $secondary-button-bright-color;
+		background-color: $secondary-button-color;
 	}
 }
 

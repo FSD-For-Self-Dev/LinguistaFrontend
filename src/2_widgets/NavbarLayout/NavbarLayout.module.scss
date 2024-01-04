@@ -52,10 +52,10 @@
 	}
 
 	&_active {
-		background-color: $primary-button-dark-color;
+		background-color: $primary-button-active-color;
 		color: $neutral-text-contrast-color;
 		&:hover {
-			background-color: $primary-button-dark-color;
+			background-color: $primary-button-active-color;
 		}
 	}
 	&_active .title {
