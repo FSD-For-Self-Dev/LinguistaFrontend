@@ -1,0 +1,70 @@
+@import '@styles/colors.scss';
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.checkbox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0;
+
+	&--right {
+		justify-content: space-between;
+	}
+}
+
+.checkbox__icon {
+	display: flex;
+	margin-right: 10px;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	border: 2px solid $neutral-text-light-color;
+	border-radius: 6px;
+	color: rgb(255, 255, 255, 0);
+
+	&--right {
+		margin-right: 0;
+	}
+
+	&--error {
+		border: 2px solid $danger-bright-color;
+	}
+}
+
+label:hover .checkbox__icon {
+	border-color: $primary-background-color;
+}
+
+input:checked ~ .checkbox__icon {
+	background-color: $primary-button-active-color;
+	border: 2px solid $primary-button-active-color;
+	color: $neutral-background-main-color;
+}
+
+input:disabled ~ .checkbox__icon {
+	background-color: $neutral-background-second-color;
+	border: 2px solid $neutral-line-color;
+}
+
+input:checked:disabled ~ .checkbox__icon {
+	background-color: $neutral-background-second-color;
+	border: 2px solid $neutral-text-light-color;
+	color: $neutral-text-light-color;
+}
+
+.checkbox__label {
+	font-size: 14px;
+	line-height: 16px;
+}
