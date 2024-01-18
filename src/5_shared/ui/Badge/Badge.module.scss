@@ -10,14 +10,14 @@
 		padding: 6px 12px;
 		text-transform: uppercase;
 		background-color: $secondary-button-color;
-		border: 1px solid $secondary-button-bright-color;
+		border: 1px solid $secondary-button-color;
 	}
 
 	&_number {
 		width: 32px;
 		height: 30px;
 		padding: 9px 5px;
-		background-color: $secondary-button-bright-color;
+		background-color: $secondary-button-color;
 		color: $neutral-text-contrast-color;
 	}
 }
