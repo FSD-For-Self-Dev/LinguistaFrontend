@@ -1,6 +1,6 @@
 @import '@styles/colors.scss';
 
-.visually-hidden {
+.visuallyHidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -22,7 +22,7 @@
 	}
 }
 
-.radio__icon {
+.icon {
 	display: flex;
 	margin-right: 10px;
 	justify-content: center;
@@ -43,16 +43,16 @@
 	}
 }
 
-label:hover .radio__icon {
+label:hover .icon {
 	border-color: $primary-background-color;
 }
 
-input:checked ~ .radio__icon {
+input:checked ~ .icon {
 	background-color: $primary-button-active-color;
 	border: 2px solid $primary-button-active-color;
 }
 
-input:checked ~ .radio__icon::before {
+input:checked ~ .icon::before {
 	content: '';
 	width: 8px;
 	height: 8px;
@@ -60,17 +60,17 @@ input:checked ~ .radio__icon::before {
 	background-color: $neutral-background-main-color;
 }
 
-input:disabled ~ .radio__icon {
+input:disabled ~ .icon {
 	background-color: $neutral-background-second-color;
 	border: 2px solid $neutral-line-color;
 }
 
-input:checked:disabled ~ .radio__icon {
+input:checked:disabled ~ .icon {
 	background-color: $neutral-background-main-color;
 	border: 2px solid $neutral-text-light-color;
 }
 
-input:checked:disabled ~ .radio__icon::before {
+input:checked:disabled ~ .icon::before {
 	content: '';
 	width: 8px;
 	height: 8px;
@@ -78,7 +78,7 @@ input:checked:disabled ~ .radio__icon::before {
 	background-color: $neutral-text-light-color;
 }
 
-.radio__label {
+.label {
 	font-size: 14px;
 	line-height: 16px;
 }

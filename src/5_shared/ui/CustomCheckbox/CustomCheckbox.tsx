@@ -41,7 +41,7 @@ export const CustomCheckbox = ({
 				value={value}
 				name={name}
 				id={id}
-				className={cx(styles['visually-hidden'], inputClassName)}
+				className={cx(styles.visuallyHidden, inputClassName)}
 				onChange={onChange}
 				disabled={isDisabled}
 				checked={isChecked}
@@ -49,25 +49,19 @@ export const CustomCheckbox = ({
 
 			{isPositionRight ? (
 				<>
-					<span className={styles['checkbox__label']}>{labelText}</span>
+					<span className={styles.label}>{labelText}</span>
 					<span
-						className={cx(
-							styles['checkbox__icon'],
-							styles['checkbox__icon--right'],
-							isError && styles['checkbox__icon--error']
-						)}
+						className={cx(styles.icon, styles['icon--right'], isError && styles['icon--error'])}
 					>
 						<SvgIconTick />
 					</span>
 				</>
 			) : (
 				<>
-					<span
-						className={cx(styles['checkbox__icon'], isError && styles['checkbox__icon--error'])}
-					>
+					<span className={cx(styles.icon, isError && styles['icon--error'])}>
 						<SvgIconTick />
 					</span>
-					<span className={styles['checkbox__label']}>{labelText}</span>
+					<span className={styles.label}>{labelText}</span>
 				</>
 			)}
 		</label>

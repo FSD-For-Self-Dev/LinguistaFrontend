@@ -37,7 +37,7 @@ export const CustomRadio = ({
 				name={name}
 				value={value}
 				id={id}
-				className={cx(styles['visually-hidden'], inputClassName)}
+				className={cx(styles.visuallyHidden, inputClassName)}
 				onChange={onChange}
 				disabled={isDisabled}
 				checked={isChecked}
@@ -45,21 +45,15 @@ export const CustomRadio = ({
 
 			{isPositionRight ? (
 				<>
-					<span className={styles['radio__label']}>{labelText}</span>
+					<span className={styles.label}>{labelText}</span>
 					<span
-						className={cx(
-							styles['radio__icon'],
-							styles['radio__icon--right'],
-							isError && styles['radio__icon--error']
-						)}
+						className={cx(styles.icon, styles['icon--right'], isError && styles['icon--error'])}
 					></span>
 				</>
 			) : (
 				<>
-					<span
-						className={cx(styles['radio__icon'], isError && styles['radio__icon--error'])}
-					></span>
-					<span className={styles['radio__label']}>{labelText}</span>
+					<span className={cx(styles.icon, isError && styles['icon--error'])}></span>
+					<span className={styles.label}>{labelText}</span>
 				</>
 			)}
 		</label>

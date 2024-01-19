@@ -1,6 +1,6 @@
 @import '@styles/colors.scss';
 
-.visually-hidden {
+.visuallyHidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -22,7 +22,7 @@
 	}
 }
 
-.toggle__icon {
+.icon {
 	position: relative;
 	margin-right: 10px;
 	justify-content: center;
@@ -39,7 +39,7 @@
 	}
 }
 
-.toggle__icon::before {
+.icon::before {
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -50,12 +50,12 @@
 	background-color: $neutral-background-main-color;
 }
 
-input:checked ~ .toggle__icon {
+input:checked ~ .icon {
 	background-color: $primary-button-active-color;
 	border: 2px solid $primary-button-active-color;
 }
 
-input:checked ~ .toggle__icon::before {
+input:checked ~ .icon::before {
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -66,12 +66,12 @@ input:checked ~ .toggle__icon::before {
 	background-color: $neutral-background-main-color;
 }
 
-input:disabled ~ .toggle__icon {
+input:disabled ~ .icon {
 	background-color: $neutral-line-color;
 	border: 2px solid $neutral-line-color;
 }
 
-input:disabled ~ .toggle__icon::before {
+input:disabled ~ .icon::before {
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -82,12 +82,12 @@ input:disabled ~ .toggle__icon::before {
 	background-color: $neutral-background-main-color;
 }
 
-input:checked:disabled ~ .toggle__icon {
+input:checked:disabled ~ .icon {
 	background-color: $neutral-line-color;
 	border: 2px solid$neutral-line-color;
 }
 
-input:checked:disabled ~ .toggle__icon::before {
+input:checked:disabled ~ .icon::before {
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -98,7 +98,7 @@ input:checked:disabled ~ .toggle__icon::before {
 	background-color: $neutral-background-main-color;
 }
 
-.toggle__label {
+.label {
 	font-size: 14px;
 	line-height: 16px;
 }

@@ -37,7 +37,7 @@ export const CustomToggle = ({
 				name={name}
 				value={value}
 				id={id}
-				className={cx(styles['visually-hidden'], inputClassName)}
+				className={cx(styles.visuallyHidden, inputClassName)}
 				onChange={onChange}
 				disabled={isDisabled}
 				checked={isChecked}
@@ -45,13 +45,13 @@ export const CustomToggle = ({
 
 			{isPositionRight ? (
 				<>
-					<span className={styles['toggle__label']}>{labelText}</span>
-					<span className={cx(styles['toggle__icon'], styles['toggle__icon--right'])}></span>
+					<span className={styles.label}>{labelText}</span>
+					<span className={cx(styles.icon, styles['icon--right'])}></span>
 				</>
 			) : (
 				<>
-					<span className={styles['toggle__icon']}></span>
-					<span className={styles['toggle__label']}>{labelText}</span>
+					<span className={styles.icon}></span>
+					<span className={styles.label}>{labelText}</span>
 				</>
 			)}
 		</label>
