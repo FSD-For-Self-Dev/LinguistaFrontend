@@ -34,7 +34,9 @@ export const CustomCheckbox = ({
 }: CustomCheckboxProps) => {
 	return (
 		<label
-			className={cx(styles.checkbox, labelClassName, isPositionRight && styles['checkbox--right'])}
+			className={cx(styles.checkbox, labelClassName, {
+				[styles['checkbox--right']]: isPositionRight,
+			})}
 		>
 			<input
 				type="checkbox"
@@ -51,14 +53,14 @@ export const CustomCheckbox = ({
 				<>
 					<span className={styles.label}>{labelText}</span>
 					<span
-						className={cx(styles.icon, styles['icon--right'], isError && styles['icon--error'])}
+						className={cx(styles.icon, styles['icon--right'], { [styles['icon--error']]: isError })}
 					>
 						<SvgIconTick />
 					</span>
 				</>
 			) : (
 				<>
-					<span className={cx(styles.icon, isError && styles['icon--error'])}>
+					<span className={cx(styles.icon, { [styles['icon--error']]: isError })}>
 						<SvgIconTick />
 					</span>
 					<span className={styles.label}>{labelText}</span>

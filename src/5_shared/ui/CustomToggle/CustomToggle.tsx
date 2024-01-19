@@ -30,7 +30,7 @@ export const CustomToggle = ({
 }: CustomToggleProps) => {
 	return (
 		<label
-			className={cx(styles.toggle, labelClassName, isPositionRight && styles['toggle--right'])}
+			className={cx(styles.toggle, labelClassName, { [styles['toggle--right']]: isPositionRight })}
 		>
 			<input
 				type="checkbox"

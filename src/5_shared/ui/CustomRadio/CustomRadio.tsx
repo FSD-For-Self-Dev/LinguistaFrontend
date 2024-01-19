@@ -31,7 +31,9 @@ export const CustomRadio = ({
 	isError,
 }: CustomRadioProps) => {
 	return (
-		<label className={cx(styles.radio, labelClassName, isPositionRight && styles['radio--right'])}>
+		<label
+			className={cx(styles.radio, labelClassName, { [styles['radio--right']]: isPositionRight })}
+		>
 			<input
 				type="radio"
 				name={name}
@@ -47,12 +49,12 @@ export const CustomRadio = ({
 				<>
 					<span className={styles.label}>{labelText}</span>
 					<span
-						className={cx(styles.icon, styles['icon--right'], isError && styles['icon--error'])}
+						className={cx(styles.icon, styles['icon--right'], { [styles['icon--error']]: isError })}
 					></span>
 				</>
 			) : (
 				<>
-					<span className={cx(styles.icon, isError && styles['icon--error'])}></span>
+					<span className={cx(styles.icon, { [styles['icon--error']]: isError })}></span>
 					<span className={styles.label}>{labelText}</span>
 				</>
 			)}
