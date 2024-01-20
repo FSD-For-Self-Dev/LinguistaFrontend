@@ -12,11 +12,11 @@ interface CustomCheckboxProps {
 	onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 	inputClassName?: string;
 	labelClassName?: string;
-	labelText?: string;
 	isDisabled?: boolean;
 	isChecked?: boolean;
 	isPositionRight?: boolean;
 	isError?: boolean;
+	children?: JSX.Element | string;
 }
 
 export const CustomCheckbox = ({
@@ -26,11 +26,11 @@ export const CustomCheckbox = ({
 	onChange,
 	inputClassName,
 	labelClassName,
-	labelText,
 	isDisabled,
 	isChecked,
 	isPositionRight,
 	isError,
+	children,
 }: CustomCheckboxProps) => {
 	return (
 		<label
@@ -51,7 +51,7 @@ export const CustomCheckbox = ({
 
 			{isPositionRight ? (
 				<>
-					<span className={styles.label}>{labelText}</span>
+					<span className={styles.label}>{children}</span>
 					<span
 						className={cx(styles.icon, styles['icon--right'], { [styles['icon--error']]: isError })}
 					>
@@ -63,7 +63,7 @@ export const CustomCheckbox = ({
 					<span className={cx(styles.icon, { [styles['icon--error']]: isError })}>
 						<SvgIconTick />
 					</span>
-					<span className={styles.label}>{labelText}</span>
+					<span className={styles.label}>{children}</span>
 				</>
 			)}
 		</label>
