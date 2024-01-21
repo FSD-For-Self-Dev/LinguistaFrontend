@@ -1,7 +1,8 @@
-import { TDefinition } from '@entities/word/model/types';
+import { useTranslation } from 'react-i18next';
 import { DefinitionsList } from '../DefinitionsList';
-import { DefinitionHeader } from './header';
+import { WidgetContainer, WidgetHeader, WidgetFooter, WidgetContent } from '@shared/ui/widget';
 import { ALL_DEFINITIONS, VOCAB_ROUTE } from '@shared/lib/routes';
+import type { TDefinition } from '@entities/word/model/types';
 
 type TProps = {
 	count: string;
@@ -10,11 +11,16 @@ type TProps = {
 };
 
 export const DefinitionsWidget = ({ count, items, wordId }: TProps) => {
+	const { t } = useTranslation('word-profile');
 	const link = `${VOCAB_ROUTE}/${wordId}${ALL_DEFINITIONS}`;
+
 	return (
-		<section>
-			<DefinitionHeader total={count} linkToDefinitionsPage={link} />
-			<DefinitionsList items={items} />
-		</section>
+		<WidgetContainer>
+			<WidgetHeader title={t('definitions')} count={count} />
+			<WidgetContent>
+				<DefinitionsList items={items} />
+			</WidgetContent>
+			<WidgetFooter title={t('allDefinitions')} link={link} />
+		</WidgetContainer>
 	);
 };

@@ -1,0 +1,9 @@
+@use '@styles/colors' as colors;
+
+.container {
+	border-radius: 20px;
+	box-shadow:
+		0px 0px 8px 0px rgba(17, 17, 26, 0.1),
+		0px 1px 0px 0px rgba(16, 16, 25, 0.05);
+	background-color: colors.$neutral-background-main-color;
+}

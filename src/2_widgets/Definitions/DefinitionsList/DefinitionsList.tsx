@@ -8,10 +8,10 @@ type TProps = {
 
 export const DefinitionsList = ({ items }: TProps) => {
 	return (
-		<div className={styles.list}>
-			{items.map((item) => (
-				<DefinitionItem key={item.id} item={item} />
+		<ul className={styles.list}>
+			{items.map((item, index) => (
+				<DefinitionItem key={item.id} item={item} index={index + 1} />
 			))}
-		</div>
+		</ul>
 	);
 };

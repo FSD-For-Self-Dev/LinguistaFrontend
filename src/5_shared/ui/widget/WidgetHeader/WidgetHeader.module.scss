@@ -1,0 +1,23 @@
+@use '@styles/colors' as colors;
+@import '@styles/mixins/font';
+
+$totalColor: colors.$neutral-text-middle-color;
+
+.header {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid 1px #cdcdcd;
+	padding: 0.6rem 1.25rem;
+}
+
+.total {
+	@include font-source-sans(1.5rem, $totalColor, 500, 1.5, 'Inter');
+}
+
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}

@@ -1,29 +1,25 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { CardContainer, Popularity, WordSubMenu } from '@shared/ui';
+import { CopyText, Popularity } from '@shared/ui';
 import { TDefinition } from '@entities/word/model/types';
-import SvgIconRelated from '@shared/assets/icons/icon_related.svg?react';
 import styles from './DefinitionItem.module.scss';
 
 type TProps = {
 	item: TDefinition;
+	index: number;
 };
 
-export const DefinitionItem = ({ item }: TProps) => {
+export const DefinitionItem = ({ item, index }: TProps) => {
 	const { text, popularity } = item;
-	const { t } = useTranslation('word-profile');
 
 	return (
-		<CardContainer className={styles.container}>
-			<div className={styles.top}>
-				<Link to="/" className={styles.link}>
-					<SvgIconRelated />
-					{t('relatedExamples')}
-				</Link>
-				<WordSubMenu colorTheme={'dark'} />
+		<li className={styles.item}>
+			<p className={styles.index}>{index}</p>
+			<div className={styles.definition}>
+				{text}
+				{popularity && <Popularity popularity={popularity} />}
 			</div>
-			<p className={styles.definition}>{text}</p>
-			{popularity && <Popularity popularity={popularity} />}
-		</CardContainer>
+			<p className={styles.copy}>
+				<CopyText text={text} />
+			</p>
+		</li>
 	);
 };
