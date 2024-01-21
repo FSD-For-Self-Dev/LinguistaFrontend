@@ -12,8 +12,7 @@ export function Popularity({ popularity }: TProps) {
 
 	return (
 		<p className={styles.popularity}>
-			{t('popularity')}
-			<span className={styles[`${popularity}`]}>{t(popularity)}</span>
+			{t('popularity')}: <span className={styles[`${popularity}`]}>{t(popularity)}</span>
 		</p>
 	);
 }

@@ -12,6 +12,6 @@
 	}
 
 	&_bold {
-		@include font-source-sans(20px, $neutral-text-dark-color, 500, 'auto', 'Inter');
+		@include font-source-sans(20px, $neutral-text-main-color, 500, 'auto', 'Inter');
 	}
 }

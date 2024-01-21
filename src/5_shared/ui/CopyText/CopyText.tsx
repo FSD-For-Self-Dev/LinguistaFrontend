@@ -1,5 +1,5 @@
-import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
-import SvgIconCopy from '../../assets/icons/icon_copy.svg?react';
+import { ButtonIcon } from '@shared/ui';
+import SvgIconCopy from '@assets/icons/actions/copy.svg?react';
 import styles from './CopyText.module.scss';
 
 interface Props {
