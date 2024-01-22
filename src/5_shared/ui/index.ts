@@ -10,3 +10,4 @@ export { SectionTitle } from './SectionTitle/SectionTitle';
 export { WordSubMenu } from './WordSubMenu/WordSubMenu';
 export { CardContainer } from './CardContainer/CardContainer';
 export { Popularity } from './Popularity/Popularity';
+export { ShadowBlock, ShadowBlockContent, ShadowBlockFooter } from './ShadowBlock';

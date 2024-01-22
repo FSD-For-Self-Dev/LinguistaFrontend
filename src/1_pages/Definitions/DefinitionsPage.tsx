@@ -3,20 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Button } from '@shared/ui';
 import { wordApi } from '@entities/word/api/wordApi';
+import { EmptyCard } from '@widgets/EmptyCard';
 import { TDefinition } from '@entities/word/model/types';
+import { WordPageStatus } from '@entities/word/ui';
 import { DefinitionsList } from '@widgets/Definitions';
-import { WordOriginal } from '@widgets/WordMainInfo/WordInfo';
+import SVGIconDefinitions from '@shared/assets/icons/sections/definitions.svg?react';
 import styles from './DefinitionsPage.module.scss';
-import { IWord } from '@widgets/WordMainInfo/WordInfo/WordInfo';
-import { EmptyCard } from '@/2_widgets/EmptyCard';
-
-const info: IWord = {
-	word: 'Jump in at the deep end',
-	status: 'ACTIVE',
-	level: 'A1',
-	type: 'глагол',
-	favorite: true,
-};
 
 const DefinitionPage = () => {
 	const { t } = useTranslation('definition-page');
@@ -32,15 +24,29 @@ const DefinitionPage = () => {
 			);
 	}, [wordId]);
 
+	if (!definitions?.length) {
+		return (
+			<EmptyCard
+				message={t('emptyDefinitionMessage')}
+				btnTitle={t('addDefinition')}
+				icon={<SVGIconDefinitions />}
+			/>
+		);
+	}
+
 	return (
 		<div className={styles.container}>
-			<div className={styles.header}>
-				<h1>{t('title')}</h1>
-				<Button size="tall">+&nbsp;{t('addDefinition')}</Button>
-			</div>
-			<WordOriginal info={info} classname={styles.word} />
+			<WordPageStatus
+				title={t('title', { count: definitions?.length })}
+				icon={<SVGIconDefinitions />}
+			>
+				<Button theme={'transparent'} size="small">
+					+&nbsp;{t('addDefinition')}
+				</Button>
+				<Button size="small">Тренировать</Button>
+			</WordPageStatus>
+
 			{definitions?.length && <DefinitionsList items={definitions} />}
-			<EmptyCard message="Нет добавленных определений" />
 		</div>
 	);
 };

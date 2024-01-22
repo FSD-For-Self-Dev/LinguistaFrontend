@@ -1,13 +1,15 @@
-@import '@styles/mixins/font';
+@use '@styles/colors' as colors;
+@use '@styles/mixins/font' as mixins;
 
 .container {
 	display: flex;
-	justify-content: center;
-	max-width: 322px;
-	min-height: 324px;
-	margin: 40px auto;
-	background-color: #c2c8d3;
+	justify-content: space-between;
+	align-items: center;
+	@include mixins.font-source-sans(1.25rem, colors.$neutrals-900, 500, 1.5rem);
+}
 
-	@include font-source-sans(14px, #737782, 500, 18);
-	text-align: center;
+.message {
+	display: flex;
+	gap: 1rem;
+	margin: 0;
 }

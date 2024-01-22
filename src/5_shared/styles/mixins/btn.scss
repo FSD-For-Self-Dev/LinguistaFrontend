@@ -1,11 +1,10 @@
-@import '@styles/colors';
+@use '@styles/colors';
 @import '@styles/mixins/font.scss';
 
 @mixin btn {
 	box-sizing: border-box;
-	border: none;
-	border-radius: 5px;
-	padding: 12px 32px;
+	border: solid 1px transparent;
+	border-radius: 0.625rem;
 
 	transition:
 		color 0.2s,
@@ -24,17 +23,18 @@
 @mixin primary-btn {
 	@include btn;
 
-	background-color: $primary-button-color;
-	@include font-source-sans(12px, $neutral-text-main-color, 500);
+	color: colors.$neutrals-900;
+	background-color: colors.$primary-400;
 
 	&:hover {
-		color: $neutral-text-contrast-color;
+		background-color: colors.$primary-300;
 	}
 
 	&:active,
 	&_active,
 	&[data-state='open'] {
-		background-color: $primary-button-active-color;
+		background-color: colors.$primary-500;
+		color: colors.$neutrals-100;
 	}
 }
 

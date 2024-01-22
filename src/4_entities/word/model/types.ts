@@ -27,6 +27,7 @@ export type TDefinition = {
 	translation: string;
 	author?: string;
 	created: string;
+	examples?: Array<string>;
 	modified: string;
 	popularity?: TPopularity;
 };

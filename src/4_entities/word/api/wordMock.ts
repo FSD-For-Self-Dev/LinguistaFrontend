@@ -23,7 +23,7 @@ export const wordMock: IWord = {
 		{
 			id: 1245,
 			author: 'Mike',
-			text: 'Spring',
+			text: 'Become aware of (something) by information or from observation.',
 			translation: 'Весна',
 			popularity: 'high',
 			created: '2023-11-13T09:03:15.483Z',
@@ -41,8 +41,9 @@ export const wordMock: IWord = {
 		{
 			id: 2247,
 			author: 'Iren',
-			text: 'To come to know by chance, or by study or other application',
-			translation: 'Весна',
+			text: 'Gain or acquire knowledge of or skill in (something) by study, experience, or being taught.',
+			translation:
+				'Приобретать знания или умения в (чем-либо) путем изучения, приобретения опыта или обучения.',
 			popularity: 'low',
 			created: '2023-11-13T09:03:15.483Z',
 			modified: '2023-11-13T09:03:15.483Z',
