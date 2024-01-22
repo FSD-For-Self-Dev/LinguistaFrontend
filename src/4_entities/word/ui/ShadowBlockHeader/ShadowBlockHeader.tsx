@@ -1,15 +1,14 @@
-import { SectionTitle } from '../../SectionTitle/SectionTitle';
+import { SectionTitle, ButtonIcon } from '@shared/ui';
 import SVGPlus from '@assets/icons/actions/plus.svg?react';
 import SVGLearn from '@assets/icons/actions/hat.svg?react';
-import styles from './WidgetHeader.module.scss';
-import { ButtonIcon } from '../..';
+import styles from './ShadowBlockHeader.module.scss';
 
 type TWidgetHeader = {
 	title: string;
 	count: string;
 };
 
-export const WidgetHeader = ({ title, count }: TWidgetHeader) => {
+export const ShadowBlockHeader = ({ title, count }: TWidgetHeader) => {
 	return (
 		<div className={styles.header}>
 			<SectionTitle theme="bold">

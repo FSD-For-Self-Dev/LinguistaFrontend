@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
-import styles from './WidgetContent.module.scss';
+import styles from './ShadowBlockContent.module.scss';
 
 type TWidgetContent = {
 	children: ReactNode;
 };
 
-export const WidgetContent = ({ children }: TWidgetContent) => {
+export const ShadowBlockContent = ({ children }: TWidgetContent) => {
 	return <div className={styles.main}>{children}</div>;
 };

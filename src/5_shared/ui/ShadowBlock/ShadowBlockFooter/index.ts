@@ -1,0 +1,1 @@
+export { ShadowBlockFooter } from './ShadowBlockFooter';

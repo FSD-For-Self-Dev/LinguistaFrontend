@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import styles from './WidgetFooter.module.scss';
+import styles from './ShadowBlockFooter.module.scss';
 
-type TWidgetFooter = {
+type TShadowBlockFooter = {
 	title: string;
 	link: string;
 };
 
-export const WidgetFooter = ({ title, link }: TWidgetFooter) => {
+export const ShadowBlockFooter = ({ title, link }: TShadowBlockFooter) => {
 	return (
 		<div className={styles.footer}>
 			<Link to={link} className={styles.link}>
