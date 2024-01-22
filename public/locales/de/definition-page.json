@@ -1,4 +1,5 @@
 {
 	"title": "Alle Definitionen",
-	"addDefinition": "Definition hinzufügen"
+	"addDefinition": "Definition hinzufügen",
+	"emptyDefinitionMessage": "No definitions"
 }

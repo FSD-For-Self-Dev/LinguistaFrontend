@@ -1,4 +1,8 @@
 {
-	"title": "Все определения",
-	"addDefinition": "Добавить определение"
+	"title_one": "{{count}} определение",
+	"title_few": "{{count}} определения",
+	"title_many": "{{count}} определений",
+	"title_other": "{{count}} определения",
+	"addDefinition": "Добавить определение",
+	"emptyDefinitionMessage": "Нет определений"
 }
