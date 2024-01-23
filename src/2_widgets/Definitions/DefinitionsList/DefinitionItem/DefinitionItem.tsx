@@ -1,4 +1,4 @@
-import { CopyText, Popularity } from '@shared/ui';
+import { CopyText, Popularity, ShadowBlock } from '@shared/ui';
 import { TDefinition } from '@entities/word/model/types';
 import styles from './DefinitionItem.module.scss';
 
@@ -11,15 +11,17 @@ export const DefinitionItem = ({ item, index }: TProps) => {
 	const { text, popularity } = item;
 
 	return (
-		<li className={styles.item}>
-			<p className={styles.index}>{index}</p>
-			<div className={styles.definition}>
-				{text}
-				{popularity && <Popularity popularity={popularity} />}
-			</div>
-			<p className={styles.copy}>
-				<CopyText text={text} />
-			</p>
+		<li className={styles.definition}>
+			<ShadowBlock bgColor="dark" addClass={styles.inner}>
+				<p className={styles.index}>{index}</p>
+				<p className={styles.content}>
+					{text}
+					{popularity && <Popularity popularity={popularity} />}
+				</p>
+				<p className={styles.copy}>
+					<CopyText text={text} />
+				</p>
+			</ShadowBlock>
 		</li>
 	);
 };
