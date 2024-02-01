@@ -14,7 +14,7 @@ const MainLayout = () => {
 			<HeaderLayout />
 			<div className={styles.content}>
 				<NavbarLayout />
-				<main className={styles.inner} style={{ width: resize }}>
+				<main className={styles.inner} style={{ maxWidth: resize }}>
 					<Outlet />
 				</main>
 				<FooterLayout />

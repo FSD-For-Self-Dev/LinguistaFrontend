@@ -21,7 +21,7 @@ export default function SynonymAntonymCard({ type = 'synonym' }: Props) {
 			<span className={cx(styles.note, type === 'antonym' && styles.note_antonym)}>
 				Заметка для синонима
 			</span>
-			{type === 'synonym' && <Popularity popularity="высокая" />}
+			{type === 'synonym' && <Popularity popularity="high" />}
 		</CardContainer>
 	);
 }

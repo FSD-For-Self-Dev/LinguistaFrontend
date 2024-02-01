@@ -1,4 +1,4 @@
-@import '/src/5_shared/styles/colors';
+@use '@styles/colors' as colors;
 
 .button {
 	display: flex;
@@ -10,15 +10,22 @@
 	transition: opacity 0.2s ease-in-out;
 
 	&_light {
-		color: $neutral-background-second-color;
+		color: colors.$neutral-background-second-color;
 	}
 
 	&_dark {
-		color: $neutral-text-dark-color;
+		color: colors.$neutral-text-dark-color;
 	}
 
 	&:hover {
 		opacity: 0.7;
 		cursor: pointer;
 	}
+}
+
+.withBorder {
+	border: solid 1px colors.$neutral-line-color;
+	border-radius: 0.75rem;
+	width: 2rem;
+	height: 2rem;
 }

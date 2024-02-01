@@ -1,0 +1,1 @@
+export { WordPageStatus } from './WordPageStatus';

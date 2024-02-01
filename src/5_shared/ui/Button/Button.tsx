@@ -2,7 +2,7 @@ import cx from 'classnames';
 import styles from './Button.module.scss';
 
 type ButtonTheme = 'primary' | 'transparent' | 'secondary' | 'no-border';
-type ButtonSize = 'normal' | 'tall';
+type ButtonSize = 'large' | 'normal' | 'medium' | 'small' | 'micro' | 'tall';
 
 interface Props {
 	children: React.ReactNode;
@@ -29,7 +29,7 @@ export const Button = ({
 		<button
 			className={cx(
 				styles[`${theme}`],
-				styles[`${size}`],
+				styles[size],
 				active && styles[`${theme}_active`],
 				className
 			)}

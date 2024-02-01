@@ -1,0 +1,20 @@
+@use '@styles/colors' as colors;
+@use '@styles/mixins/font' as mixins;
+
+.footer {
+	background-color: colors.$primary-100;
+	border-top: solid 1px colors.$neutrals-500;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	text-align: center;
+	padding: 0.6rem;
+}
+
+.link {
+	@include mixins.font-source-sans(0.875rem, colors.$neutrals-600, 400, 1rem);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

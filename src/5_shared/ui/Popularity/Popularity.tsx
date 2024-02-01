@@ -1,23 +1,18 @@
-import cx from 'classnames';
+import { useTranslation } from 'react-i18next';
 import styles from './Popularity.module.scss';
 
-interface Props {
-	popularity: 'высокая' | 'средняя' | 'низкая';
-}
+export type TPopularity = 'high' | 'medium' | 'low';
 
-export function Popularity({ popularity }: Props) {
+type TProps = {
+	popularity: TPopularity;
+};
+
+export function Popularity({ popularity }: TProps) {
+	const { t } = useTranslation('popularity');
+
 	return (
-		<div className={styles.container}>
-			<span className={styles.popularity}>Популярность:</span>
-			<span
-				className={cx(
-					styles.popularity,
-					styles.popularity_level,
-					styles[`popularity_level_${popularity}`]
-				)}
-			>
-				{popularity}
-			</span>
-		</div>
+		<p className={styles.popularity}>
+			{t('popularity')}: <span className={styles[`${popularity}`]}>{t(popularity)}</span>
+		</p>
 	);
 }

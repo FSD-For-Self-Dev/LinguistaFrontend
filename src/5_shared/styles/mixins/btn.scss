@@ -1,11 +1,12 @@
-@import '@styles/colors';
+@use '@styles/colors';
 @import '@styles/mixins/font.scss';
 
 @mixin btn {
+	display: flex;
+	gap: 0.34rem;
 	box-sizing: border-box;
-	border: none;
-	border-radius: 5px;
-	padding: 12px 32px;
+	border: solid 1px transparent;
+	border-radius: 0.625rem;
 
 	transition:
 		color 0.2s,
@@ -19,22 +20,34 @@
 		background-color: $neutral-background-second-color;
 		color: $neutral-text-light-color;
 	}
+
+	svg {
+		width: 1em;
+		height: 1em;
+	}
 }
 
 @mixin primary-btn {
 	@include btn;
 
-	background-color: $primary-button-color;
-	@include font-source-sans(12px, $neutral-text-main-color, 500);
+	color: colors.$neutrals-900;
+	background-color: colors.$primary-400;
 
 	&:hover {
-		color: $neutral-text-contrast-color;
+		background-color: colors.$primary-300;
 	}
 
 	&:active,
-	&_active,
+	&:focus,
 	&[data-state='open'] {
-		background-color: $primary-button-active-color;
+		background-color: colors.$primary-500;
+		color: colors.$neutrals-100;
+	}
+
+	&:focus-visible {
+		outline: solid 2px colors.$primary-900;
+		background-color: colors.$primary-300;
+		color: colors.$neutrals-900;
 	}
 }
 
@@ -43,6 +56,20 @@
 
 	border: 1px solid $neutral-line-color;
 	background-color: transparent;
+
+	&:hover {
+		border-color: colors.$primary-300;
+	}
+
+	&:active,
+	&:focus {
+		border-color: colors.$primary-500;
+	}
+
+	&:focus-visible {
+		border-color: transparent;
+		outline: solid 2px colors.$primary-900;
+	}
 }
 
 @mixin secondary-btn {
@@ -60,8 +87,8 @@
 }
 
 @mixin tall-btn {
-	max-width: 216px;
-	height: 60px;
-	padding: 22px 32px;
-	font-size: 12px;
+	padding: 16px 39px;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 400;
 }

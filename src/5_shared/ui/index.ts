@@ -7,7 +7,7 @@ export { Carousel } from './Carousel/Carousel';
 export { Badge } from './Badge/Badge';
 export { CopyText } from './CopyText/CopyText';
 export { SectionTitle } from './SectionTitle/SectionTitle';
-export { WordStatus } from './WordStatus/WordStatus';
 export { WordSubMenu } from './WordSubMenu/WordSubMenu';
 export { CardContainer } from './CardContainer/CardContainer';
 export { Popularity } from './Popularity/Popularity';
+export { ShadowBlock, ShadowBlockContent, ShadowBlockFooter } from './ShadowBlock';

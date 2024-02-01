@@ -14,6 +14,7 @@ interface Props {
 	disabled?: boolean;
 	active?: boolean;
 	onClick?: () => void;
+	withBorder?: boolean;
 }
 
 export const ButtonIcon = ({
@@ -25,6 +26,7 @@ export const ButtonIcon = ({
 	type = 'button',
 	disabled = false,
 	onClick,
+	withBorder = false,
 }: Props) => {
 	return trigger === 'dropdown' ? (
 		<DropdownMenu.Trigger
@@ -38,7 +40,12 @@ export const ButtonIcon = ({
 		</DropdownMenu.Trigger>
 	) : (
 		<button
-			className={cx(styles.button, styles[`button_${colorTheme}`], className)}
+			className={cx(
+				styles.button,
+				styles[`button_${colorTheme}`],
+				{ [styles.withBorder]: withBorder },
+				className
+			)}
 			onClick={onClick}
 			type={type}
 			disabled={disabled}

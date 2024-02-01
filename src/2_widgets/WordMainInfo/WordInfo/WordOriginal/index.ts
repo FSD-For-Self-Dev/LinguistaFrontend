@@ -1,1 +1,1 @@
-export { default } from './WordOriginal';
+export { WordOriginal } from './WordOriginal';
