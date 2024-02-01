@@ -33,7 +33,7 @@ export const definitionsMock: TDefinition[] = [
 		id: 12490,
 		author: 'Mike',
 		text: 'Spring',
-		translation: 'Весна',
+		translation: '',
 		popularity: 'high',
 		examples: [
 			"We learn from the record kept at the Freedmen's Bureau, that there are two thousand two hundred children here",
@@ -54,7 +54,8 @@ export const definitionsMock: TDefinition[] = [
 		id: 22472,
 		author: 'Nick',
 		text: 'Become aware of (something) by information or from observation.',
-		translation: 'Весна',
+		translation:
+			'Приобретать знания или умения в (чем-либо) путем изучения, приобретения опыта или обучения.',
 		popularity: 'low',
 		examples: [
 			"We learn from the record kept at the Freedmen's Bureau, that there are two thousand two hundred children here",

@@ -1,5 +1,6 @@
 {
 	"title": "All Definitions",
 	"addDefinition": "Add Definition",
-	"emptyDefinitionMessage": "No definitions"
+	"emptyDefinitionMessage": "No definitions",
+	"relatedExamples": "Related examples"
 }

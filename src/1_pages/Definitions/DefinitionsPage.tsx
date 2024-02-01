@@ -17,11 +17,7 @@ const DefinitionPage = () => {
 
 	useEffect(() => {
 		if (!wordId) return;
-		wordApi
-			.getAllDefinitions(wordId)
-			.then((data: TDefinition[]) =>
-				setDefinitions((prevState) => (prevState ? [...prevState, ...data] : data))
-			);
+		wordApi.getAllDefinitions(wordId).then((data: TDefinition[]) => setDefinitions(data));
 	}, [wordId]);
 
 	if (!definitions?.length) {

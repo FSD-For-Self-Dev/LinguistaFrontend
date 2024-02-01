@@ -24,7 +24,8 @@ export const wordMock: IWord = {
 			id: 1245,
 			author: 'Mike',
 			text: 'Become aware of (something) by information or from observation.',
-			translation: 'Весна',
+			translation:
+				'Приобретать знания или умения в (чем-либо) путем изучения, приобретения опыта или обучения.',
 			popularity: 'high',
 			created: '2023-11-13T09:03:15.483Z',
 			modified: '2023-11-13T09:03:15.483Z',

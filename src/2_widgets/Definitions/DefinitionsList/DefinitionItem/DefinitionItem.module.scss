@@ -23,9 +23,20 @@
 	flex-direction: column;
 	gap: 0.7rem;
 	margin: 0;
-	@include font-source-sans(1rem, $neutral-text-main-color, 400, 1.25);
+	@include font-source-sans(1rem, $neutral-text-main-color, 500, 1.25);
 }
 
 .copy {
 	margin: 0;
+}
+
+.translateTitle {
+	color: $neutrals-600;
+}
+
+.translate {
+	flex-grow: 1;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.25;
 }

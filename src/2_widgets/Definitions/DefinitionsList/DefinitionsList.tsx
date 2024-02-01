@@ -1,4 +1,4 @@
-import { TDefinition } from '@/4_entities/word/model/types';
+import { TDefinition } from '@entities/word/model/types';
 import { DefinitionItem } from './DefinitionItem';
 import styles from './DefinitionsList.module.scss';
 
