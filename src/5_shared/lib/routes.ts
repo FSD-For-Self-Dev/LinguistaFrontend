@@ -20,3 +20,5 @@ export const WORD_ROUTE = '/vocabulary/:slugWord';
 export const CONTACTS_ROUTE = '/contacts';
 export const POLICY_ROUTE = '/privacy-policy';
 export const TERMS_ROUTE = '/terms-of-use';
+export const FEEDBACK_ROUTE = '/feedback';
+export const DPA_ROUTE = 'data-processing-agreement';
