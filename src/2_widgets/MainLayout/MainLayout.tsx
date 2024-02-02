@@ -17,8 +17,8 @@ const MainLayout = () => {
 				<main className={styles.inner} style={{ width: resize }}>
 					<Outlet />
 				</main>
-				<FooterLayout />
 			</div>
+			<FooterLayout />
 		</>
 	);
 };

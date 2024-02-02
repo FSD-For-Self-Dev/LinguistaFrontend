@@ -1,11 +1,15 @@
 @import '@styles/colors.scss';
 @import '@styles/mixins/font.scss';
 @import '@styles/mixins/media.scss';
+@import '@styles/mixins/btn';
 
-footer {
-	grid-column: 1/3;
+.footer {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+
 	@include media($min-width: 960px) {
-		padding: 0 100px;
+		padding: 30px 100px;
 	}
 
 	@include media($max-width: 960px) {
@@ -13,21 +17,112 @@ footer {
 	}
 }
 
-.links {
+.logoBlock {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.logoPicture {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #202020;
+}
+
+.logoImg {
+	display: flex;
+	align-items: center;
+}
+
+.logoText {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	text-decoration: none;
+}
+
+.logoName {
+	@include font-source-sans(20px, $neutral-text-main-color, 500, 24px, 'Fredoka');
+}
+
+.logoSlogan {
+	@include font-source-sans(12px, $neutral-text-dark-color, 400, 16px, 'Fredoka');
+}
+
+.svg {
+	width: 40px;
+	height: 38px;
+}
+
+.nav {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
 	list-style: none;
-	justify-content: center;
-	align-items: center;
-	gap: 14px;
-	padding: 2em;
+	justify-content: space-between;
+	align-items: flex-start;
 
 	@include media($max-width: 835px) {
 		flex-direction: column;
 	}
 }
 
+.links {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	row-gap: 16px;
+	margin-bottom: 16px;
+}
+
+.inputGroup {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 16px;
+}
+
+.input {
+	width: 303px;
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 10px;
+}
+
+.form ::placeholder {
+	font-size: 14px;
+	line-height: 16px;
+	color: $neutral-text-light-color;
+}
+
 .link,
+.label,
 .copyright {
 	@include font-source-sans(14px, $neutral-text-dark-color, 400, 16px);
+}
+
+.submitBtn {
+	@include primary-btn;
+
+	padding: 10px 24px;
+	font-size: 12px;
+	border-radius: 10px;
+}
+
+.copyright {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
 }
