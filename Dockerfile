@@ -2,8 +2,8 @@
 # Build React static files
 FROM node:15.8-alpine as build
 WORKDIR /app/frontend
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json package-lock.json ./
+# COPY ../package-lock.json ./
 RUN npm install
 COPY ./ ./
 RUN npm run build
