@@ -4,20 +4,22 @@ import { LanguageFilterLayout } from '@widgets/LanguageFilterLayout/LanguageFilt
 import { ActivityFilterLayout } from '@widgets/ActivityFilterLayout/ActivityFilterLayout';
 import { WordsLayout } from '@widgets/WordsLayout/WordsLayout';
 import { WordLayout } from '@widgets/WordLayout/WordLayout';
-import { wordsSelector, getWords, Word } from '@entities/words';
+import { sessionSelector } from '@entities/session';
+import { wordsSelector, getVocabulary, Word } from '@entities/words';
 import { useAppSelector, useAppDispatch } from '@shared/model';
 import styles from './Vocabulary.module.scss';
 
 const Vocabulary = () => {
 	const { filteringWords } = useAppSelector(wordsSelector);
+	const { sessionKey } = useAppSelector(sessionSelector);
 
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		dispatch(getWords());
+		if (sessionKey) dispatch(getVocabulary(sessionKey));
 
 		// eslint-disable-next-line
-	}, []);
+	}, [sessionKey]);
 
 	return (
 		<div className={styles['vocabulary-container']}>

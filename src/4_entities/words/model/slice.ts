@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { ActivityFilter, Word, WordsState } from './types';
-import { words } from '../api/mock';
+import { api } from '../api';
 
 const initialState: WordsState = {
 	words: [],
@@ -8,22 +8,28 @@ const initialState: WordsState = {
 	filter: 'ALL',
 };
 
+export const getVocabulary = createAsyncThunk('words/getVocabulary', async (sessionKey: string) => {
+	const data = await api.getVocabulary(sessionKey);
+	return data.results;
+});
+
 const wordsSlice = createSlice({
 	name: 'words',
 	initialState,
 	reducers: {
-		getWords: (state) => {
-			state.words = words;
-			state.filteringWords = words;
-		},
-
 		setFilter(state, action: { payload: { filter: ActivityFilter; words: Array<Word> } }) {
 			state.filteringWords = action.payload.words;
 			state.filter = action.payload.filter;
 		},
 	},
+	extraReducers: (builder) => {
+		builder.addCase(getVocabulary.fulfilled, (state, action) => {
+			state.words = action.payload;
+			state.filteringWords = action.payload;
+		});
+	},
 });
 
 export const wordsReducer = wordsSlice.reducer;
 export const wordsSelector = (state: RootState) => state.words;
-export const { getWords, setFilter } = wordsSlice.actions;
+export const { setFilter } = wordsSlice.actions;

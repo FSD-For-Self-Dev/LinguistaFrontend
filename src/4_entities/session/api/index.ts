@@ -1,24 +1,19 @@
+import axios from 'axios';
 import { BACKEND_URL } from '@shared/lib/constants';
+import { User } from '../model/types';
 
 class Api {
-	url: string;
+	private _url: string;
 
-	constructor() {
-		this.url = BACKEND_URL;
+	constructor(url: string) {
+		this._url = url;
 	}
 
-	async login(user: { username: string; email: string; password: string }) {
-		const data = await fetch(`${BACKEND_URL}/auth/login/`, {
-			method: 'POST',
-			credentials: 'include',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(user),
-		});
+	async login(user: User) {
+		const { data } = await axios.post(`${this._url}/auth/login/`, user);
 
-		console.log(data);
+		return data;
 	}
 }
 
-export const api = new Api();
+export const api = new Api(BACKEND_URL);
