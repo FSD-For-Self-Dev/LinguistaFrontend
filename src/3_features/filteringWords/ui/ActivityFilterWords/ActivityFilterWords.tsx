@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
 import cx from 'classnames';
 
-import { wordsSelector, setFilter, getWords } from '@entities/words';
+import { wordsSelector, setFilter } from '@entities/words';
 import { useAppSelector, useAppDispatch } from '@shared/model';
 import iconNotActive from '@shared/assets/icons/icon_not_active.svg';
 import iconActive from '@shared/assets/icons/icon_active.svg';
@@ -13,11 +12,6 @@ export const ActivityFilterWords = () => {
 	const { filter, words } = useAppSelector(wordsSelector);
 
 	const dispatch = useAppDispatch();
-
-	useEffect(() => {
-		dispatch(getWords());
-		// eslint-disable-next-line
-	}, []);
 
 	const setActive = () => {
 		if (filter === 'ACTIVE') {
